@@ -1,0 +1,2227 @@
+
+                            *********************
+                            *  INPUT DATA LIST  *     PAGE-0001
+                            *********************
+
+        ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+     1: PIN1 : Case name (A4)
+     2: Variasi rasio P/D 1.0
+     3: ************************************************************************
+     4: *  Benchmark Reference :
+     5: *  A.Yamamoto, T.Ikehara, T.Ito, and E.Saji : "Benchmark Problem for
+     6: *  Reactor Physics Study of LWR Next Generation Fuels",
+     7: *  J. Nucl. Sci. Technol., Vol.39, No.8, pp.900-912, (2002).
+     8: ************************************************************************
+     9: 1 1 1 1 2   1 4 3 -2 1   0 0 0 0 1   2 1 0 0 0 / SRAC CONTROL, kolom 20 diubah m
+    10: 1.000E-20 / Geometrical buckling for P1/B1 calculation
+    11: *- PDS files ------2---------3---------4---------5---------6---------7--
+    12: * Note : All input line must be written in 72 columns except comments
+    13: *        even when environmental variables are expanded.
+    14: C:/SRACW/SRACLIB-EDF70/pds/pfast   Old  File
+    15: C:/SRACW/SRACLIB-EDF70/pds/pthml   O    F
+    16: C:/SRACW/SRACLIB-EDF70/pds/pmcrs   O    F
+    17: C:\SRACW\SRAC\tmp\pin_pd_33/UFAST      Scratch  Core
+    18: C:\SRACW\SRAC\tmp\pin_pd_33/UTHERMAL   S        C
+    19: C:\SRACW\SRAC\tmp\pin_pd_33/UMCROSS    S        C
+    20: C:\SRACW\SRAC\tmp\pin_pd_33/MACROWRK   S        C
+    21: C:\SRACW\SRAC\tmp\pin_pd_33/MACRO      S        C
+    22: C:\SRACW\SRAC\tmp\pin_pd_33/FLUX       S        C
+    23: C:\SRACW\SRAC\tmp\pin_pd_33/MICREF     S        C
+    24: ************************************************************************
+    25: 62 45  3 3 /  107 group => 6 group
+    26: 62(1)      /  Energy group structure suggested for LWR analyses
+    27: 45(1)      /
+    28: 20 21 21  / Fast 62 group
+    29: 15 15 15  / Thermal 45 group
+    30: ***** Enter one blank line after input for energy group structure
+    31:  
+    32: ***** Input for PIJ (Collision Probability Method)
+    33: 4 8 8 4 1   1 8 0 0 0   5 0 10 15 0   0 45 0         / Pij Control
+    34: 0 50 50 5 5 5 -1  0.0001 0.00001 0.001 1.0 10. 0.5  /
+    35: 1 1 1 2 3 4 4 4  /  R-S
+    36: 4(1)             /  X-R
+    37: 1 2 3 4          /  M-R
+    38: 0.0  0.226  0.320  0.392  0.400  0.457  0.4570001  0.4570002  0.4570003 / RX, ka
+    39: ****** Input for material specification
+    40: 4 / NMAT
+    41: FUELX01X  0 3  1073.15  0.78436    0.0  / 1 : UO2 Fuel, kol.3 (NISO) = 3 nuklida
+    42: XU050000  2 0  3.7503E-04    /1 U-235, Kolom 2 (IRES) bernilai 2 karena berupa n
+    43: XU080000  2 0  2.2625E-02    /2 U-238, nuklida resonan
+    44: XO060000  0 0  4.5897E-02    /3 O-16, bukan nuklida resonan, kolom IRES bernilai
+    45: HELIX02X  0 1  773.15  0.03117     0.0  / 2 : Gap Helium
+    46: XHE40000  0 0  1.8737E-04       /1 Helium-4
+    47: CLADX03X  0 5  598.15  0.21431    0.0  / 3 : Cladding Zirconium-Alloy, berdasark
+    48: XZRN0000  2 0  4.2540E-02       /1 ZRN
+    49: XSNN0000  2 0  4.8253E-04       /2 SNN
+    50: XFEN0000  2 0  1.4854E-04       /3 FEN
+        ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                              *** CONTINUE ***
+
+                            *********************
+                            *  INPUT DATA LIST  *     PAGE-0002
+                            *********************
+
+        ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+    51: XCRN0000  2 0  7.5986E-05       /4 CRN
+    52: XHFN0000  2 0  2.2133E-06       /5 HFN
+    53: MODEX04X  0 2  573.15  0.0      0.0  / 4 : Moderator Water
+    54: XH01H000  0 0  4.85485E-02    /1 H1
+    55: XO060000  0 0  2.42742E-02    /2 O-16
+    56: ****** Input for cell burn-up calculation (when IC20=1)
+    57: *  12 1 1 0 0  0 0 0 0 0  10(0)   / IBC
+    58: *  12(1.790E-04)   / Power level  (MWt/cm)
+    59: *  0.10E+03  1.00E+03  2.50E+03  5.00E+03  7.50E+03  1.00E+04
+    60: *  1.25E+04  1.50E+04  1.75E+04  2.00E+04  2.25E+04  2.50E+04
+    61: *  2.75E+04  3.00E+04  3.25E+04  3.50E+04  3.75E+04  4.00E+04
+    62: *  4.25E+04  4.50E+04  4.75E+04  5.00E+04  5.25E+04  5.50E+04
+    63: *  5.75E+04  6.00E+04  6.25E+04  6.50E+04  6.75E+04  7.00E+04
+    64: *  7.25E+04  /  keff calculation is not done at the last step
+    65: ************************
+    66: 0
+    67: ************************************************************************
+    68: PIN2 : Case name (A4)
+    69: Variasi rasio P/D 1.1
+    70: 1 1 1 1 2   1 4 3 -2 1   0 0 0 0 1   2 1 0 0 0 / SRAC CONTROL
+    71: 1.000E-20 / Geometrical buckling for P1/B1 calculation
+    72: ***** Input for PIJ (Collision Probability Method)
+    73: 4 8 8 4 1   1 8 0 0 0   5 0 10 15 0   0 45 0         / Pij Control
+    74: 0 50 50 5 5 5 -1  0.0001 0.00001 0.001 1.0 10. 0.5  /
+    75: 1 1 1 2 3 4 4 4  /  R-S
+    76: 4(1)             /  X-R
+    77: 1 2 3 4          /  M-R
+    78: 0.0  0.226  0.320  0.392  0.400  0.457  0.465  0.473  0.480 / RX
+    79: ****** Input for material specification*****************************
+    80: 4 / NMAT
+    81: FUELX01X  0 3  1073.15  0.78436    0.0  / 1 : UO2 Fuel, kol.3 (NISO) = 3 nuklida
+    82: XU050000  2 0  3.7503E-04    /1 U-235, Kolom 2 (IRES) bernilai 2 karena berupa n
+    83: XU080000  2 0  2.2625E-02    /2 U-238, nuklida resonan
+    84: XO060000  0 0  4.5897E-02    /3 O-16, bukan nuklida resonan, kolom IRES bernilai
+    85: HELIX02X  0 1  773.15  0.03117     0.0  / 2 : Gap Helium
+    86: XHE40000  0 0  1.8737E-04       /1 Helium-4
+    87: CLADX03X  0 5  598.15  0.21431    0.0  / 3 : Cladding Zirconium-Alloy, berdasark
+    88: XZRN0000  2 0  4.2540E-02       /1 ZRN
+    89: XSNN0000  2 0  4.8253E-04       /2 SNN
+    90: XFEN0000  2 0  1.4854E-04       /3 FEN
+    91: XCRN0000  2 0  7.5986E-05       /4 CRN
+    92: XHFN0000  2 0  2.2133E-06       /5 HFN
+    93: MODEX04X  0 2  573.15  0.08926285714      0.0  / 4 : Moderator Water
+    94: XH01H000  0 0  4.85485E-02    /1 H1
+    95: XO060000  0 0  2.42742E-02    /2 O-16
+    96: ****** Input for cell burn-up calculation (when IC20=1)
+    97: *  12 1 1 0 0  0 0 0 0 0  10(0)   / IBC
+    98: *  12(1.790E-04)   / Power level  (MWt/cm)
+    99: *  12(1.790E-04) 6(0) 6(1.790E-04)  / Power level  (MWt/cm)
+   100: *  0.10E+03  1.00E+03  2.50E+03  5.00E+03  7.50E+03  1.00E+04
+        ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                              *** CONTINUE ***
+
+                            *********************
+                            *  INPUT DATA LIST  *     PAGE-0003
+                            *********************
+
+        ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+   101: *  1.25E+04  1.50E+04  1.75E+04  2.00E+04  2.25E+04  2.50E+04
+   102: *        -10       -10      -10        -10      -10       -10
+   103: *  2.75E+04  3.00E+04  3.25E+04  3.50E+04  3.75E+04  4.00E+04
+   104: *  4.25E+04  4.50E+04  4.75E+04  5.00E+04  5.25E+04  5.50E+04
+   105: *  5.75E+04  6.00E+04  6.25E+04  6.50E+04  6.75E+04  7.00E+04
+   106: *  7.25E+04  /  keff calculation is not done at the last step
+   107: ************************
+   108: 0
+   109: ************************************************************************
+   110: PIN3 : Case name (A4)
+   111: Variasi rasio P/D 1.2
+   112: 1 1 1 1 2   1 4 3 -2 1   0 0 0 0 1   2 1 0 0 0 / SRAC CONTROL
+   113: 1.000E-20 / Geometrical buckling for P1/B1 calculation
+   114: ***** Input for PIJ (Collision Probability Method)
+   115: 4 8 8 4 1   1 8 0 0 0   5 0 10 15 0   0 45 0         / Pij Control
+   116: 0 50 50 5 5 5 -1  0.0001 0.00001 0.001 1.0 10. 0.5  /
+   117: 1 1 1 2 3 4 4 4  /  R-S
+   118: 4(1)             /  X-R
+   119: 1 2 3 4          /  M-R
+   120: 0.0  0.226  0.320  0.392  0.400  0.457  0.473  0.488  0.503 / RX
+   121: ****** Input for material specification*****************************
+   122: 4 / NMAT
+   123: FUELX01X  0 3  1073.15  0.78436    0.0  / 1 : UO2 Fuel, kol.3 (NISO) = 3 nuklida
+   124: XU050000  2 0  3.7503E-04    /1 U-235, Kolom 2 (IRES) bernilai 2 karena berupa n
+   125: XU080000  2 0  2.2625E-02    /2 U-238, nuklida resonan
+   126: XO060000  0 0  4.5897E-02    /3 O-16, bukan nuklida resonan, kolom IRES bernilai
+   127: HELIX02X  0 1  773.15  0.03117     0.0  / 2 : Gap Helium
+   128: XHE40000  0 0  1.8737E-04       /1 Helium-4
+   129: CLADX03X  0 5  598.15  0.21431    0.0  / 3 : Cladding Zirconium-Alloy, berdasark
+   130: XZRN0000  2 0  4.2540E-02       /1 ZRN
+   131: XSNN0000  2 0  4.8253E-04       /2 SNN
+   132: XFEN0000  2 0  1.4854E-04       /3 FEN
+   133: XCRN0000  2 0  7.5986E-05       /4 CRN
+   134: XHFN0000  2 0  2.2133E-06       /5 HFN
+   135: MODEX04X  0 2  573.15  0.1745672727      0.0  / 4 : Moderator Water
+   136: XH01H000  0 0  4.85485E-02    /1 H1
+   137: XO060000  0 0  2.42742E-02    /2 O-16
+   138: ****** Input for cell burn-up calculation (when IC20=1)
+   139: *  12 1 1 0 0  0 0 0 0 0  10(0)   / IBC
+   140: *  12(1.790E-04)   / Power level  (MWt/cm)
+   141: *  12(1.790E-04) 6(0) 6(1.790E-04)  / Power level  (MWt/cm)
+   142: *  0.10E+03  1.00E+03  2.50E+03  5.00E+03  7.50E+03  1.00E+04
+   143: *  1.25E+04  1.50E+04  1.75E+04  2.00E+04  2.25E+04  2.50E+04
+   144: *        -10       -10      -10        -10      -10       -10
+   145: *  2.75E+04  3.00E+04  3.25E+04  3.50E+04  3.75E+04  4.00E+04
+   146: *  4.25E+04  4.50E+04  4.75E+04  5.00E+04  5.25E+04  5.50E+04
+   147: *  5.75E+04  6.00E+04  6.25E+04  6.50E+04  6.75E+04  7.00E+04
+   148: *  7.25E+04  /  keff calculation is not done at the last step
+   149: ************************
+   150: 0
+        ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                              *** CONTINUE ***
+
+                            *********************
+                            *  INPUT DATA LIST  *     PAGE-0004
+                            *********************
+
+        ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+   151: ************************************************************************
+   152: PIN4 : Case name (A4)
+   153: Variasi rasio P/D 1.3
+   154: 1 1 1 1 2   1 4 3 -2 1   0 0 0 0 1   2 1 0 0 0 / SRAC CONTROL
+   155: 1.000E-20 / Geometrical buckling for P1/B1 calculation
+   156: ***** Input for PIJ (Collision Probability Method)
+   157: 4 8 8 4 1   1 8 0 0 0   5 0 10 15 0   0 45 0         / Pij Control
+   158: 0 50 50 5 5 5 -1  0.0001 0.00001 0.001 1.0 10. 0.5  /
+   159: 1 1 1 2 3 4 4 4  /  R-S
+   160: 4(1)             /  X-R
+   161: 1 2 3 4          /  M-R
+   162: 0.0  0.226  0.320  0.392  0.400  0.457  0.481  0.504  0.526 / RX
+   163: ****** Input for material specification*****************************
+   164: 4 / NMAT
+   165: FUELX01X  0 3  1073.15  0.78436    0.0  / 1 : UO2 Fuel, kol.3 (NISO) = 3 nuklida
+   166: XU050000  2 0  3.7503E-04    /1 U-235, Kolom 2 (IRES) bernilai 2 karena berupa n
+   167: XU080000  2 0  2.2625E-02    /2 U-238, nuklida resonan
+   168: XO060000  0 0  4.5897E-02    /3 O-16, bukan nuklida resonan, kolom IRES bernilai
+   169: HELIX02X  0 1  773.15  0.03117     0.0  / 2 : Gap Helium
+   170: XHE40000  0 0  1.8737E-04       /1 Helium-4
+   171: CLADX03X  0 5  598.15  0.21431    0.0  / 3 : Cladding Zirconium-Alloy, berdasark
+   172: XZRN0000  2 0  4.2540E-02       /1 ZRN
+   173: XSNN0000  2 0  4.8253E-04       /2 SNN
+   174: XFEN0000  2 0  1.4854E-04       /3 FEN
+   175: XCRN0000  2 0  7.5986E-05       /4 CRN
+   176: XHFN0000  2 0  2.2133E-06       /5 HFN
+   177: MODEX04X  0 2  573.15  0.2564295652      0.0  / 4 : Moderator Water
+   178: XH01H000  0 0  4.85485E-02    /1 H1
+   179: XO060000  0 0  2.42742E-02    /2 O-16
+   180: ****** Input for cell burn-up calculation (when IC20=1)
+   181: *  12 1 1 0 0  0 0 0 0 0  10(0)   / IBC
+   182: *  12(1.790E-04)   / Power level  (MWt/cm)
+   183: *  12(1.790E-04) 6(0) 6(1.790E-04)  / Power level  (MWt/cm)
+   184: *  0.10E+03  1.00E+03  2.50E+03  5.00E+03  7.50E+03  1.00E+04
+   185: *  1.25E+04  1.50E+04  1.75E+04  2.00E+04  2.25E+04  2.50E+04
+   186: *        -10       -10      -10        -10      -10       -10
+   187: *  2.75E+04  3.00E+04  3.25E+04  3.50E+04  3.75E+04  4.00E+04
+   188: *  4.25E+04  4.50E+04  4.75E+04  5.00E+04  5.25E+04  5.50E+04
+   189: *  5.75E+04  6.00E+04  6.25E+04  6.50E+04  6.75E+04  7.00E+04
+   190: *  7.25E+04  /  keff calculation is not done at the last step
+   191: ************************
+   192: 0
+   193: ************************************************************************
+   194: PIN5 : Case name (A4)
+   195: Variasi rasio P/D 1.4
+   196: 1 1 1 1 2   1 4 3 -2 1   0 0 0 0 1   2 1 0 0 0 / SRAC CONTROL
+   197: 1.000E-20 / Geometrical buckling for P1/B1 calculation
+   198: ***** Input for PIJ (Collision Probability Method)
+   199: 4 8 8 4 1   1 8 0 0 0   5 0 10 15 0   0 45 0         / Pij Control
+   200: 0 50 50 5 5 5 -1  0.0001 0.00001 0.001 1.0 10. 0.5  /
+        ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                              *** CONTINUE ***
+
+                            *********************
+                            *  INPUT DATA LIST  *     PAGE-0005
+                            *********************
+
+        ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+   201: 1 1 1 2 3 4 4 4  /  R-S
+   202: 4(1)             /  X-R
+   203: 1 2 3 4          /  M-R
+   204: 0.0  0.226  0.320  0.392  0.400  0.457  0.490  0.520  0.549 / RX
+   205: ****** Input for material specification*****************************
+   206: 4 / NMAT
+   207: FUELX01X  0 3  1073.15  0.78436    0.0  / 1 : UO2 Fuel, kol.3 (NISO) = 3 nuklida
+   208: XU050000  2 0  3.7503E-04    /1 U-235, Kolom 2 (IRES) bernilai 2 karena berupa n
+   209: XU080000  2 0  2.2625E-02    /2 U-238, nuklida resonan
+   210: XO060000  0 0  4.5897E-02    /3 O-16, bukan nuklida resonan, kolom IRES bernilai
+   211: HELIX02X  0 1  773.15  0.03117     0.0  / 2 : Gap Helium
+   212: XHE40000  0 0  1.8737E-04       /1 Helium-4
+   213: CLADX03X  0 5  598.15  0.21431    0.0  / 3 : Cladding Zirconium-Alloy, berdasark
+   214: XZRN0000  2 0  4.2540E-02       /1 ZRN
+   215: XSNN0000  2 0  4.8253E-04       /2 SNN
+   216: XFEN0000  2 0  1.4854E-04       /3 FEN
+   217: XCRN0000  2 0  7.5986E-05       /4 CRN
+   218: XHFN0000  2 0  2.2133E-06       /5 HFN
+   219: MODEX04X  0 2  573.15  0.33528      0.0  / 4 : Moderator Water
+   220: XH01H000  0 0  4.85485E-02    /1 H1
+   221: XO060000  0 0  2.42742E-02    /2 O-16
+   222: ****** Input for cell burn-up calculation (when IC20=1)
+   223: *  12 1 1 0 0  0 0 0 0 0  10(0)   / IBC
+   224: *  12(1.790E-04)   / Power level  (MWt/cm)
+   225: *  12(1.790E-04) 6(0) 6(1.790E-04)  / Power level  (MWt/cm)
+   226: *  0.10E+03  1.00E+03  2.50E+03  5.00E+03  7.50E+03  1.00E+04
+   227: *  1.25E+04  1.50E+04  1.75E+04  2.00E+04  2.25E+04  2.50E+04
+   228: *        -10       -10      -10        -10      -10       -10
+   229: *  2.75E+04  3.00E+04  3.25E+04  3.50E+04  3.75E+04  4.00E+04
+   230: *  4.25E+04  4.50E+04  4.75E+04  5.00E+04  5.25E+04  5.50E+04
+   231: *  5.75E+04  6.00E+04  6.25E+04  6.50E+04  6.75E+04  7.00E+04
+   232: *  7.25E+04  /  keff calculation is not done at the last step
+   233: ************************
+   234: 0
+   235: ************************************************************************
+   236: PIN6 : Case name (A4)
+   237: Variasi rasio P/D 1.5
+   238: 1 1 1 1 2   1 4 3 -2 1   0 0 0 0 1   2 1 0 0 0 / SRAC CONTROL
+   239: 1.000E-20 / Geometrical buckling for P1/B1 calculation
+   240: ***** Input for PIJ (Collision Probability Method)
+   241: 4 8 8 4 1   1 8 0 0 0   5 0 10 15 0   0 45 0         / Pij Control
+   242: 0 50 50 5 5 5 -1  0.0001 0.00001 0.001 1.0 10. 0.5  /
+   243: 1 1 1 2 3 4 4 4  /  R-S
+   244: 4(1)             /  X-R
+   245: 1 2 3 4          /  M-R
+   246: 0.0  0.226  0.320  0.392  0.400  0.457  0.498  0.536  0.572 / RX
+   247: ****** Input for material specification*****************************
+   248: 4 / NMAT
+   249: FUELX01X  0 3  1073.15  0.78436    0.0  / 1 : UO2 Fuel, kol.3 (NISO) = 3 nuklida
+   250: XU050000  2 0  3.7503E-04    /1 U-235, Kolom 2 (IRES) bernilai 2 karena berupa n
+        ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                              *** CONTINUE ***
+
+                            *********************
+                            *  INPUT DATA LIST  *     PAGE-0006
+                            *********************
+
+        ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+   251: XU080000  2 0  2.2625E-02    /2 U-238, nuklida resonan
+   252: XO060000  0 0  4.5897E-02    /3 O-16, bukan nuklida resonan, kolom IRES bernilai
+   253: HELIX02X  0 1  773.15  0.03117     0.0  / 2 : Gap Helium
+   254: XHE40000  0 0  1.8737E-04       /1 Helium-4
+   255: CLADX03X  0 5  598.15  0.21431    0.0  / 3 : Cladding Zirconium-Alloy, berdasark
+   256: XZRN0000  2 0  4.2540E-02       /1 ZRN
+   257: XSNN0000  2 0  4.8253E-04       /2 SNN
+   258: XFEN0000  2 0  1.4854E-04       /3 FEN
+   259: XCRN0000  2 0  7.5986E-05       /4 CRN
+   260: XHFN0000  2 0  2.2133E-06       /5 HFN
+   261: MODEX04X  0 2  573.15  0.41148      0.0  / 4 : Moderator Water
+   262: XH01H000  0 0  4.85485E-02    /1 H1
+   263: XO060000  0 0  2.42742E-02    /2 O-16
+   264: ****** Input for cell burn-up calculation (when IC20=1)
+   265: *  12 1 1 0 0  0 0 0 0 0  10(0)   / IBC
+   266: *  12(1.790E-04)   / Power level  (MWt/cm)
+   267: *  12(1.790E-04) 6(0) 6(1.790E-04)  / Power level  (MWt/cm)
+   268: *  0.10E+03  1.00E+03  2.50E+03  5.00E+03  7.50E+03  1.00E+04
+   269: *  1.25E+04  1.50E+04  1.75E+04  2.00E+04  2.25E+04  2.50E+04
+   270: *        -10       -10      -10        -10      -10       -10
+   271: *  2.75E+04  3.00E+04  3.25E+04  3.50E+04  3.75E+04  4.00E+04
+   272: *  4.25E+04  4.50E+04  4.75E+04  5.00E+04  5.25E+04  5.50E+04
+   273: *  5.75E+04  6.00E+04  6.25E+04  6.50E+04  6.75E+04  7.00E+04
+   274: *  7.25E+04  /  keff calculation is not done at the last step
+   275: ************************
+   276: 0
+   277: ************************************************************************
+   278: PIN7 : Case name (A4)
+   279: Variasi rasio P/D 1.6
+   280: 1 1 1 1 2   1 4 3 -2 1   0 0 0 0 1   2 1 0 0 0 / SRAC CONTROL
+   281: 1.000E-20 / Geometrical buckling for P1/B1 calculation
+   282: ***** Input for PIJ (Collision Probability Method)
+   283: 4 8 8 4 1   1 8 0 0 0   5 0 10 15 0   0 45 0         / Pij Control
+   284: 0 50 50 5 5 5 -1  0.0001 0.00001 0.001 1.0 10. 0.5  /
+   285: 1 1 1 2 3 4 4 4  /  R-S
+   286: 4(1)             /  X-R
+   287: 1 2 3 4          /  M-R
+   288: 0.0  0.226  0.320  0.392  0.400  0.457  0.507  0.552  0.594 / RX
+   289: ****** Input for material specification*****************************
+   290: 4 / NMAT
+   291: FUELX01X  0 3  1073.15  0.78436    0.0  / 1 : UO2 Fuel, kol.3 (NISO) = 3 nuklida
+   292: XU050000  2 0  3.7503E-04    /1 U-235, Kolom 2 (IRES) bernilai 2 karena berupa n
+   293: XU080000  2 0  2.2625E-02    /2 U-238, nuklida resonan
+   294: XO060000  0 0  4.5897E-02    /3 O-16, bukan nuklida resonan, kolom IRES bernilai
+   295: HELIX02X  0 1  773.15  0.03117     0.0  / 2 : Gap Helium
+   296: XHE40000  0 0  1.8737E-04       /1 Helium-4
+   297: CLADX03X  0 5  598.15  0.21431    0.0  / 3 : Cladding Zirconium-Alloy, berdasark
+   298: XZRN0000  2 0  4.2540E-02       /1 ZRN
+   299: XSNN0000  2 0  4.8253E-04       /2 SNN
+   300: XFEN0000  2 0  1.4854E-04       /3 FEN
+        ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                              *** CONTINUE ***
+
+                            *********************
+                            *  INPUT DATA LIST  *     PAGE-0007
+                            *********************
+
+        ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+   301: XCRN0000  2 0  7.5986E-05       /4 CRN
+   302: XHFN0000  2 0  2.2133E-06       /5 HFN
+   303: MODEX04X  0 2  573.15  0.4853353846      0.0  / 4 : Moderator Water
+   304: XH01H000  0 0  4.85485E-02    /1 H1
+   305: XO060000  0 0  2.42742E-02    /2 O-16
+   306: ****** Input for cell burn-up calculation (when IC20=1)
+   307: *  12 1 1 0 0  0 0 0 0 0  10(0)   / IBC
+   308: *  12(1.790E-04)   / Power level  (MWt/cm)
+   309: *  12(1.790E-04) 6(0) 6(1.790E-04)  / Power level  (MWt/cm)
+   310: *  0.10E+03  1.00E+03  2.50E+03  5.00E+03  7.50E+03  1.00E+04
+   311: *  1.25E+04  1.50E+04  1.75E+04  2.00E+04  2.25E+04  2.50E+04
+   312: *        -10       -10      -10        -10      -10       -10
+   313: *  2.75E+04  3.00E+04  3.25E+04  3.50E+04  3.75E+04  4.00E+04
+   314: *  4.25E+04  4.50E+04  4.75E+04  5.00E+04  5.25E+04  5.50E+04
+   315: *  5.75E+04  6.00E+04  6.25E+04  6.50E+04  6.75E+04  7.00E+04
+   316: *  7.25E+04  /  keff calculation is not done at the last step
+   317: ************************
+   318: 0
+   319: ************************************************************************
+   320: PIN8 : Case name (A4)
+   321: Variasi rasio P/D 1.7
+   322: 1 1 1 1 2   1 4 3 -2 1   0 0 0 0 1   2 1 0 0 0 / SRAC CONTROL
+   323: 1.000E-20 / Geometrical buckling for P1/B1 calculation
+   324: ***** Input for PIJ (Collision Probability Method)
+   325: 4 8 8 4 1   1 8 0 0 0   5 0 10 15 0   0 45 0         / Pij Control
+   326: 0 50 50 5 5 5 -1  0.0001 0.00001 0.001 1.0 10. 0.5  /
+   327: 1 1 1 2 3 4 4 4  /  R-S
+   328: 4(1)             /  X-R
+   329: 1 2 3 4          /  M-R
+   330: 0.0  0.226  0.320  0.392  0.400  0.457  0.516  0.569  0.617 / RX
+   331: ****** Input for material specification*****************************
+   332: 4 / NMAT
+   333: FUELX01X  0 3  1073.15  0.78436    0.0  / 1 : UO2 Fuel, kol.3 (NISO) = 3 nuklida
+   334: XU050000  2 0  3.7503E-04    /1 U-235, Kolom 2 (IRES) bernilai 2 karena berupa n
+   335: XU080000  2 0  2.2625E-02    /2 U-238, nuklida resonan
+   336: XO060000  0 0  4.5897E-02    /3 O-16, bukan nuklida resonan, kolom IRES bernilai
+   337: HELIX02X  0 1  773.15  0.03117     0.0  / 2 : Gap Helium
+   338: XHE40000  0 0  1.8737E-04       /1 Helium-4
+   339: CLADX03X  0 5  598.15  0.21431    0.0  / 3 : Cladding Zirconium-Alloy, berdasark
+   340: XZRN0000  2 0  4.2540E-02       /1 ZRN
+   341: XSNN0000  2 0  4.8253E-04       /2 SNN
+   342: XFEN0000  2 0  1.4854E-04       /3 FEN
+   343: XCRN0000  2 0  7.5986E-05       /4 CRN
+   344: XHFN0000  2 0  2.2133E-06       /5 HFN
+   345: MODEX04X  0 2  573.15  0.5571066667      0.0  / 4 : Moderator Water
+   346: XH01H000  0 0  4.85485E-02    /1 H1
+   347: XO060000  0 0  2.42742E-02    /2 O-16
+   348: ****** Input for cell burn-up calculation (when IC20=1)
+   349: *  12 1 1 0 0  0 0 0 0 0  10(0)   / IBC
+   350: *  12(1.790E-04)   / Power level  (MWt/cm)
+        ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                              *** CONTINUE ***
+
+                            *********************
+                            *  INPUT DATA LIST  *     PAGE-0008
+                            *********************
+
+        ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+   351: *  12(1.790E-04) 6(0) 6(1.790E-04)  / Power level  (MWt/cm)
+   352: *  0.10E+03  1.00E+03  2.50E+03  5.00E+03  7.50E+03  1.00E+04
+   353: *  1.25E+04  1.50E+04  1.75E+04  2.00E+04  2.25E+04  2.50E+04
+   354: *        -10       -10      -10        -10      -10       -10
+   355: *  2.75E+04  3.00E+04  3.25E+04  3.50E+04  3.75E+04  4.00E+04
+   356: *  4.25E+04  4.50E+04  4.75E+04  5.00E+04  5.25E+04  5.50E+04
+   357: *  5.75E+04  6.00E+04  6.25E+04  6.50E+04  6.75E+04  7.00E+04
+   358: *  7.25E+04  /  keff calculation is not done at the last step
+   359: ************************
+   360: 0
+   361: ************************************************************************
+   362: PIN9 : Case name (A4)
+   363: Variasi rasio P/D 1.8
+   364: 1 1 1 1 2   1 4 3 -2 1   0 0 0 0 1   2 1 0 0 0 / SRAC CONTROL
+   365: 1.000E-20 / Geometrical buckling for P1/B1 calculation
+   366: ***** Input for PIJ (Collision Probability Method)
+   367: 4 8 8 4 1   1 8 0 0 0   5 0 10 15 0   0 45 0         / Pij Control
+   368: 0 50 50 5 5 5 -1  0.0001 0.00001 0.001 1.0 10. 0.5  /
+   369: 1 1 1 2 3 4 4 4  /  R-S
+   370: 4(1)             /  X-R
+   371: 1 2 3 4          /  M-R
+   372: 0.0  0.226  0.320  0.392  0.400  0.457  0.525  0.586  0.640 / RX
+   373: ****** Input for material specification*****************************
+   374: 4 / NMAT
+   375: FUELX01X  0 3  1073.15  0.78436    0.0  / 1 : UO2 Fuel, kol.3 (NISO) = 3 nuklida
+   376: XU050000  2 0  3.7503E-04    /1 U-235, Kolom 2 (IRES) bernilai 2 karena berupa n
+   377: XU080000  2 0  2.2625E-02    /2 U-238, nuklida resonan
+   378: XO060000  0 0  4.5897E-02    /3 O-16, bukan nuklida resonan, kolom IRES bernilai
+   379: HELIX02X  0 1  773.15  0.03117     0.0  / 2 : Gap Helium
+   380: XHE40000  0 0  1.8737E-04       /1 Helium-4
+   381: CLADX03X  0 5  598.15  0.21431    0.0  / 3 : Cladding Zirconium-Alloy, berdasark
+   382: XZRN0000  2 0  4.2540E-02       /1 ZRN
+   383: XSNN0000  2 0  4.8253E-04       /2 SNN
+   384: XFEN0000  2 0  1.4854E-04       /3 FEN
+   385: XCRN0000  2 0  7.5986E-05       /4 CRN
+   386: XHFN0000  2 0  2.2133E-06       /5 HFN
+   387: MODEX04X  0 2  573.15  0.6270171429      0.0  / 4 : Moderator Water
+   388: XH01H000  0 0  4.85485E-02    /1 H1
+   389: XO060000  0 0  2.42742E-02    /2 O-16
+   390: ****** Input for cell burn-up calculation (when IC20=1)
+   391: *  12 1 1 0 0  0 0 0 0 0  10(0)   / IBC
+   392: *  12(1.790E-04)   / Power level  (MWt/cm)
+   393: *  12(1.790E-04) 6(0) 6(1.790E-04)  / Power level  (MWt/cm)
+   394: *  0.10E+03  1.00E+03  2.50E+03  5.00E+03  7.50E+03  1.00E+04
+   395: *  1.25E+04  1.50E+04  1.75E+04  2.00E+04  2.25E+04  2.50E+04
+   396: *        -10       -10      -10        -10      -10       -10
+   397: *  2.75E+04  3.00E+04  3.25E+04  3.50E+04  3.75E+04  4.00E+04
+   398: *  4.25E+04  4.50E+04  4.75E+04  5.00E+04  5.25E+04  5.50E+04
+   399: *  5.75E+04  6.00E+04  6.25E+04  6.50E+04  6.75E+04  7.00E+04
+   400: *  7.25E+04  /  keff calculation is not done at the last step
+        ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                              *** CONTINUE ***
+
+                            *********************
+                            *  INPUT DATA LIST  *     PAGE-0009
+                            *********************
+
+        ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+   401: ************************
+   402: 0
+   403: ************************************************************************
+   404: PIN10 : Case name (A4)
+   405: Variasi rasio P/D 1.9
+   406: 1 1 1 1 2   1 4 3 -2 1   0 0 0 0 1   2 1 0 0 0 / SRAC CONTROL
+   407: 1.000E-20 / Geometrical buckling for P1/B1 calculation
+   408: ***** Input for PIJ (Collision Probability Method)
+   409: 4 8 8 4 1   1 8 0 0 0   5 0 10 15 0   0 45 0         / Pij Control
+   410: 0 50 50 5 5 5 -1  0.0001 0.00001 0.001 1.0 10. 0.5  /
+   411: 1 1 1 2 3 4 4 4  /  R-S
+   412: 4(1)             /  X-R
+   413: 1 2 3 4          /  M-R
+   414: 0.0  0.226  0.320  0.392  0.400  0.457  0.535  0.602  0.663 / RX
+   415: ****** Input for material specification*****************************
+   416: 4 / NMAT
+   417: FUELX01X  0 3  1073.15  0.78436    0.0  / 1 : UO2 Fuel, kol.3 (NISO) = 3 nuklida
+   418: XU050000  2 0  3.7503E-04    /1 U-235, Kolom 2 (IRES) bernilai 2 karena berupa n
+   419: XU080000  2 0  2.2625E-02    /2 U-238, nuklida resonan
+   420: XO060000  0 0  4.5897E-02    /3 O-16, bukan nuklida resonan, kolom IRES bernilai
+   421: HELIX02X  0 1  773.15  0.03117     0.0  / 2 : Gap Helium
+   422: XHE40000  0 0  1.8737E-04       /1 Helium-4
+   423: CLADX03X  0 5  598.15  0.21431    0.0  / 3 : Cladding Zirconium-Alloy, berdasark
+   424: XZRN0000  2 0  4.2540E-02       /1 ZRN
+   425: XSNN0000  2 0  4.8253E-04       /2 SNN
+   426: XFEN0000  2 0  1.4854E-04       /3 FEN
+   427: XCRN0000  2 0  7.5986E-05       /4 CRN
+   428: XHFN0000  2 0  2.2133E-06       /5 HFN
+   429: MODEX04X  0 2  573.15  0.6952593103      0.0  / 4 : Moderator Water
+   430: XH01H000  0 0  4.85485E-02    /1 H1
+   431: XO060000  0 0  2.42742E-02    /2 O-16
+   432: ****** Input for cell burn-up calculation (when IC20=1)
+   433: *  12 1 1 0 0  0 0 0 0 0  10(0)   / IBC
+   434: *  12(1.790E-04)   / Power level  (MWt/cm)
+   435: *  12(1.790E-04) 6(0) 6(1.790E-04)  / Power level  (MWt/cm)
+   436: *  0.10E+03  1.00E+03  2.50E+03  5.00E+03  7.50E+03  1.00E+04
+   437: *  1.25E+04  1.50E+04  1.75E+04  2.00E+04  2.25E+04  2.50E+04
+   438: *        -10       -10      -10        -10      -10       -10
+   439: *  2.75E+04  3.00E+04  3.25E+04  3.50E+04  3.75E+04  4.00E+04
+   440: *  4.25E+04  4.50E+04  4.75E+04  5.00E+04  5.25E+04  5.50E+04
+   441: *  5.75E+04  6.00E+04  6.25E+04  6.50E+04  6.75E+04  7.00E+04
+   442: *  7.25E+04  /  keff calculation is not done at the last step
+   443: ************************
+   444: 0
+   445: ************************************************************************
+   446: PIN11 : Case name (A4)
+   447: Variasi rasio P/D 2.0
+   448: 1 1 1 1 2   1 4 3 -2 1   0 0 0 0 1   2 1 0 0 0 / SRAC CONTROL
+   449: 1.000E-20 / Geometrical buckling for P1/B1 calculation
+   450: ***** Input for PIJ (Collision Probability Method)
+        ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+                              *** CONTINUE ***
+
+                            *********************
+                            *  INPUT DATA LIST  *     PAGE-0010
+                            *********************
+
+        ....*....1....*....2....*....3....*....4....*....5....*....6....*....7....*....8
+   451: 4 8 8 4 1   1 8 0 0 0   5 0 10 15 0   0 45 0         / Pij Control
+   452: 0 50 50 5 5 5 -1  0.0001 0.00001 0.001 1.0 10. 0.5  /
+   453: 1 1 1 2 3 4 4 4  /  R-S
+   454: 4(1)             /  X-R
+   455: 1 2 3 4          /  M-R
+   456: 0.0  0.226  0.320  0.392  0.400  0.457  0.544  0.619  0.686 / RX
+   457: ****** Input for material specification*****************************
+   458: 4 / NMAT
+   459: FUELX01X  0 3  1073.15  0.78436    0.0  / 1 : UO2 Fuel, kol.3 (NISO) = 3 nuklida
+   460: XU050000  2 0  3.7503E-04    /1 U-235, Kolom 2 (IRES) bernilai 2 karena berupa n
+   461: XU080000  2 0  2.2625E-02    /2 U-238, nuklida resonan
+   462: XO060000  0 0  4.5897E-02    /3 O-16, bukan nuklida resonan, kolom IRES bernilai
+   463: HELIX02X  0 1  773.15  0.03117     0.0  / 2 : Gap Helium
+   464: XHE40000  0 0  1.8737E-04       /1 Helium-4
+   465: CLADX03X  0 5  598.15  0.21431    0.0  / 3 : Cladding Zirconium-Alloy, berdasark
+   466: XZRN0000  2 0  4.2540E-02       /1 ZRN
+   467: XSNN0000  2 0  4.8253E-04       /2 SNN
+   468: XFEN0000  2 0  1.4854E-04       /3 FEN
+   469: XCRN0000  2 0  7.5986E-05       /4 CRN
+   470: XHFN0000  2 0  2.2133E-06       /5 HFN
+   471: MODEX04X  0 2  573.15  0.762      0.0  / 4 : Moderator Water
+   472: XH01H000  0 0  4.85485E-02    /1 H1
+   473: XO060000  0 0  2.42742E-02    /2 O-16
+   474: ****** Input for cell burn-up calculation (when IC20=1)
+   475: *  12 1 1 0 0  0 0 0 0 0  10(0)   / IBC
+   476: *  12(1.790E-04)   / Power level  (MWt/cm)
+   477: *  12(1.790E-04) 6(0) 6(1.790E-04)  / Power level  (MWt/cm)
+   478: *  0.10E+03  1.00E+03  2.50E+03  5.00E+03  7.50E+03  1.00E+04
+   479: *  1.25E+04  1.50E+04  1.75E+04  2.00E+04  2.25E+04  2.50E+04
+   480: *        -10       -10      -10        -10      -10       -10
+   481: *  2.75E+04  3.00E+04  3.25E+04  3.50E+04  3.75E+04  4.00E+04
+   482: *  4.25E+04  4.50E+04  4.75E+04  5.00E+04  5.25E+04  5.50E+04
+   483: *  5.75E+04  6.00E+04  6.25E+04  6.50E+04  6.75E+04  7.00E+04
+   484: *  7.25E+04  /  keff calculation is not done at the last step
+   485: ************************
+   486: 0
+   487: ************************************************************************
+   488:  
+
+
+                            *********************
+                            *  INPUT DATA END   *
+                            *********************
+
+0     *** === SRAC CODE SYSTEM RUN    DATE : 92-28-09 START TIME= 0: 0: 0:
+              (SRAC:Ver.2005.00, LAST MODIFIED 2005.01.28)
+0*** ENTRANCE STEP  1**INPUT 1 **         0 SEC ELAPSED AFTER STEP 0**
+0     **** CASE ID === PIN1 : C *** TITLE === Variasi rasio P/D 1.0                                                    ***
+
+
+          FILE DD=FASTP    OPENED BY MODE 1 AS  OLD FILE     
+          FILE DD=THERMALP OPENED BY MODE 1 AS  OLD FILE     
+          FILE DD=FASTU    OPENED BY MODE 3 AS  SCRATCH FILE 
+          FILE DD=THERMALU OPENED BY MODE 3 AS  SCRATCH FILE 
+          FILE DD=MACROWRK OPENED BY MODE 3 AS  SCRATCH FILE 
+          FILE DD=MACRO    OPENED BY MODE 3 AS  SCRATCH FILE 
+          FILE DD=FLUX     OPENED BY MODE 3 AS  SCRATCH FILE 
+          FILE DD=MICREF   OPENED BY MODE 3 AS  SCRATCH FILE 
+          FILE DD=MCROSS   OPENED BY MODE 1 AS  OLD FILE     
+          FILE DD=UMCROSS  OPENED BY MODE 3 AS  SCRATCH FILE 
+0*** ENTRANCE STEP  2**USER F L**         0 SEC ELAPSED AFTER STEP 1**
+  FILENM IRW IST ; FASTP        1 2
+          MEMBER FASTLIB  OF LENGTH        129 IS STORED IN FASTU    FILE
+          MEMBER FISSYILD OF LENGTH         62 IS STORED IN FASTU    FILE
+          MEMBER TEMPSET  OF LENGTH         71 IS STORED IN FASTU    FILE
+ FILE DD=FASTP    CLOSED AFTER SEARCH     0 READ      4 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  3**USER T L**         0 SEC ELAPSED AFTER STEP 2**
+  FILENM IRW IST ; THERMALP     1 2
+          MEMBER THERMAL1 OF LENGTH         92 IS STORED IN THERMALU FILE
+          MEMBER THERMAL2 OF LENGTH         92 IS STORED IN THERMALU FILE
+          MEMBER THERMAL3 OF LENGTH         92 IS STORED IN THERMALU FILE
+          MEMBER THERMAL4 OF LENGTH         92 IS STORED IN THERMALU FILE
+          MEMBER THERMAL5 OF LENGTH         92 IS STORED IN THERMALU FILE
+          MEMBER THERMAL6 OF LENGTH         92 IS STORED IN THERMALU FILE
+          MEMBER THERMAL7 OF LENGTH         92 IS STORED IN THERMALU FILE
+          MEMBER THERMAL8 OF LENGTH         92 IS STORED IN THERMALU FILE
+          MEMBER THERMAL9 OF LENGTH         92 IS STORED IN THERMALU FILE
+          MEMBER THERMALA OF LENGTH         92 IS STORED IN THERMALU FILE
+          MEMBER THERMALB OF LENGTH         92 IS STORED IN THERMALU FILE
+          MEMBER THERMALC OF LENGTH         92 IS STORED IN THERMALU FILE
+ FILE DD=THERMALP CLOSED AFTER SEARCH     0 READ     15 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  4**PIJ INPT**         0 SEC ELAPSED AFTER STEP 3**
+     *** TIME CONSUMING DUE TO TOO MANY NBR OF CELLS TRACED PER NEUTRON  5
+  STRAGE USED      69029 FROM    7000000
+
+
+          VOLUME(NUMERICAL)/VOLUME(ANALYTICAL) 
+            1) 1.00007     2)  .99974     3)  .99988     4)  .99993     5)  .99994     6)  .00029     7)  .00054
+            8)  .99812
+          ***   18 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F84 ***
+0 *** 1130 LINES DRAWN ON FT84 ***                                                  ****ELAPSED CPU TIME       0 SEC
+          ***   18 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F81 ***
+          ***   13 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F82 ***
+0 *** 1130 LINES REWRITTEN ON FT81 ***                                                  ****ELAPSED CPU TIME       0 SEC
+0*** ENTRANCE STEP  5**GEOMINPT**         0 SEC ELAPSED AFTER STEP 4**
+0*** ENTRANCE STEP  6**INPUT 2 **         0 SEC ELAPSED AFTER STEP 5**
+0*** ENTRANCE STEP  2**USER F L**         0 SEC ELAPSED AFTER STEP 6**
+          FILE DD=FASTP    OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; FASTP        1 2
+          MEMBER CU050000 OF LENGTH         42 IS STORED IN FASTU    FILE
+          MEMBER MU050000 OF LENGTH       1640 IS STORED IN FASTU    FILE
+          MEMBER FU050000 OF LENGTH      11904 IS STORED IN FASTU    FILE
+          MEMBER YU050000 OF LENGTH        449 IS STORED IN FASTU    FILE
+          MEMBER CU080000 OF LENGTH         42 IS STORED IN FASTU    FILE
+          MEMBER MU080000 OF LENGTH       1294 IS STORED IN FASTU    FILE
+          MEMBER FU080000 OF LENGTH      11904 IS STORED IN FASTU    FILE
+          MEMBER RU080000 OF LENGTH          8 IS STORED IN FASTU    FILE
+          MEMBER PU080000 OF LENGTH       1247 IS STORED IN FASTU    FILE
+          MEMBER PU080001 OF LENGTH       1937 IS STORED IN FASTU    FILE
+          MEMBER YU080000 OF LENGTH        449 IS STORED IN FASTU    FILE
+          MEMBER CO060000 OF LENGTH         42 IS STORED IN FASTU    FILE
+          MEMBER MO060000 OF LENGTH        920 IS STORED IN FASTU    FILE
+          MEMBER FO060000 OF LENGTH       2480 IS STORED IN FASTU    FILE
+          MEMBER CHE40000 OF LENGTH         42 IS STORED IN FASTU    FILE
+          MEMBER MHE40000 OF LENGTH       2046 IS STORED IN FASTU    FILE
+          MEMBER FHE40000 OF LENGTH       1984 IS STORED IN FASTU    FILE
+          MEMBER CZRN0000 OF LENGTH         42 IS STORED IN FASTU    FILE
+          MEMBER MZRN0000 OF LENGTH        802 IS STORED IN FASTU    FILE
+          MEMBER FZRN0000 OF LENGTH       9760 IS STORED IN FASTU    FILE
+          MEMBER CSNN0000 OF LENGTH         42 IS STORED IN FASTU    FILE
+          MEMBER MSNN0000 OF LENGTH       1748 IS STORED IN FASTU    FILE
+          MEMBER FSNN0000 OF LENGTH       9920 IS STORED IN FASTU    FILE
+          MEMBER CFEN0000 OF LENGTH         42 IS STORED IN FASTU    FILE
+          MEMBER MFEN0000 OF LENGTH       1441 IS STORED IN FASTU    FILE
+          MEMBER FFEN0000 OF LENGTH       9920 IS STORED IN FASTU    FILE
+          MEMBER CCRN0000 OF LENGTH         42 IS STORED IN FASTU    FILE
+          MEMBER MCRN0000 OF LENGTH        990 IS STORED IN FASTU    FILE
+          MEMBER FCRN0000 OF LENGTH       9920 IS STORED IN FASTU    FILE
+          MEMBER CHFN0000 OF LENGTH         42 IS STORED IN FASTU    FILE
+          MEMBER MHFN0000 OF LENGTH       1010 IS STORED IN FASTU    FILE
+          MEMBER FHFN0000 OF LENGTH       9760 IS STORED IN FASTU    FILE
+          MEMBER CH010000 OF LENGTH         42 IS STORED IN FASTU    FILE
+          MEMBER MH010000 OF LENGTH       6200 IS STORED IN FASTU    FILE
+   CAUTION --- XO060000 ALREADY EXISTS IN USER-FILE 
+ FILE DD=FASTP    CLOSED AFTER SEARCH     0 READ     39 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  3**USER T L**         0 SEC ELAPSED AFTER STEP 2**
+          FILE DD=THERMALP OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; THERMALP     1 2
+          MEMBER KU050000 OF LENGTH      22500 IS STORED IN THERMALU FILE
+          MEMBER PU050000 OF LENGTH      22500 IS STORED IN THERMALU FILE
+          MEMBER FU05000C OF LENGTH       3600 IS STORED IN THERMALU FILE
+          MEMBER FU05000F OF LENGTH       3600 IS STORED IN THERMALU FILE
+          MEMBER CU050000 OF LENGTH         30 IS STORED IN THERMALU FILE
+          MEMBER KU080000 OF LENGTH      22500 IS STORED IN THERMALU FILE
+          MEMBER PU080000 OF LENGTH      22500 IS STORED IN THERMALU FILE
+          MEMBER CU080000 OF LENGTH         30 IS STORED IN THERMALU FILE
+          MEMBER KO060000 OF LENGTH      22500 IS STORED IN THERMALU FILE
+          MEMBER PO060000 OF LENGTH      22500 IS STORED IN THERMALU FILE
+          MEMBER QO060000 OF LENGTH      22500 IS STORED IN THERMALU FILE
+          MEMBER SO060000 OF LENGTH      22500 IS STORED IN THERMALU FILE
+          MEMBER CO060000 OF LENGTH         30 IS STORED IN THERMALU FILE
+          MEMBER KHE40000 OF LENGTH      22500 IS STORED IN THERMALU FILE
+          MEMBER PHE40000 OF LENGTH      22500 IS STORED IN THERMALU FILE
+          MEMBER CHE40000 OF LENGTH         30 IS STORED IN THERMALU FILE
+          MEMBER KZRN0000 OF LENGTH      22500 IS STORED IN THERMALU FILE
+          MEMBER PZRN0000 OF LENGTH      22500 IS STORED IN THERMALU FILE
+          MEMBER CZRN0000 OF LENGTH         30 IS STORED IN THERMALU FILE
+          MEMBER KSNN0000 OF LENGTH      22500 IS STORED IN THERMALU FILE
+          MEMBER PSNN0000 OF LENGTH      22500 IS STORED IN THERMALU FILE
+          MEMBER CSNN0000 OF LENGTH         30 IS STORED IN THERMALU FILE
+          MEMBER KFEN0000 OF LENGTH      22500 IS STORED IN THERMALU FILE
+          MEMBER PFEN0000 OF LENGTH      22500 IS STORED IN THERMALU FILE
+          MEMBER CFEN0000 OF LENGTH         30 IS STORED IN THERMALU FILE
+          MEMBER KCRN0000 OF LENGTH      22500 IS STORED IN THERMALU FILE
+          MEMBER PCRN0000 OF LENGTH      22500 IS STORED IN THERMALU FILE
+          MEMBER CCRN0000 OF LENGTH         30 IS STORED IN THERMALU FILE
+          MEMBER KHFN0000 OF LENGTH      22500 IS STORED IN THERMALU FILE
+          MEMBER PHFN0000 OF LENGTH      22500 IS STORED IN THERMALU FILE
+          MEMBER CHFN0000 OF LENGTH         30 IS STORED IN THERMALU FILE
+          MEMBER KH01H000 OF LENGTH      20250 IS STORED IN THERMALU FILE
+          MEMBER PH01H000 OF LENGTH      20250 IS STORED IN THERMALU FILE
+          MEMBER QH01H000 OF LENGTH      20250 IS STORED IN THERMALU FILE
+          MEMBER SH01H000 OF LENGTH      20250 IS STORED IN THERMALU FILE
+          MEMBER TH01H000 OF LENGTH      20250 IS STORED IN THERMALU FILE
+          MEMBER UH01H000 OF LENGTH      20250 IS STORED IN THERMALU FILE
+          MEMBER CH01H000 OF LENGTH         30 IS STORED IN THERMALU FILE
+ FILE DD=THERMALP CLOSED AFTER SEARCH     0 READ     54 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  7**MACRO F **         0 SEC ELAPSED AFTER STEP 3**
+          MEMBER CONTF002 OF LENGTH        126 IS STORED IN MACROWRK FILE
+          MEMBER CONTF002 OF LENGTH        126 IS STORED IN MICREF   FILE
+          STRAGE USED     159402 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED     159402 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED     159402 WITHIN    7000000 IN PIJ2-STEP
+          MEMBER FUELBMIC OF LENGTH       1926 IS STORED IN MICREF   FILE
+          MEMBER FUELF014 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF01M OF LENGTH        774 IS STORED IN MACROWRK FILE
+          MEMBER FUELF01Y OF LENGTH       1116 IS STORED IN MACROWRK FILE
+          MEMBER FUELF013 OF LENGTH        807 IS STORED IN MACROWRK FILE
+          MEMBER HELIBMIC OF LENGTH        642 IS STORED IN MICREF   FILE
+          MEMBER HELIF024 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF023 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER CLADBMIC OF LENGTH       3210 IS STORED IN MICREF   FILE
+          MEMBER CLADF034 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF03M OF LENGTH        760 IS STORED IN MACROWRK FILE
+          MEMBER CLADF033 OF LENGTH        744 IS STORED IN MACROWRK FILE
+          MEMBER MODEBMIC OF LENGTH       1284 IS STORED IN MICREF   FILE
+          MEMBER MODEF044 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF043 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP  8**MACRO T **         0 SEC ELAPSED AFTER STEP 7**
+          MEMBER CONTT002 OF LENGTH         92 IS STORED IN MACROWRK FILE
+          MEMBER CONTT002 OF LENGTH         92 IS STORED IN MICREF   FILE
+          MEMBER FUELT014 OF LENGTH       2283 IS STORED IN MACROWRK FILE
+          MEMBER FUELT013 OF LENGTH       2283 IS STORED IN MACROWRK FILE
+          MEMBER FUELT01Y OF LENGTH        810 IS STORED IN MACROWRK FILE
+          MEMBER FUELBMIC OF LENGTH       1926 IS STORED IN MICREF   FILE
+          MEMBER HELIT024 OF LENGTH       2362 IS STORED IN MACROWRK FILE
+          MEMBER HELIT023 OF LENGTH       2362 IS STORED IN MACROWRK FILE
+          MEMBER HELIBMIC OF LENGTH        642 IS STORED IN MICREF   FILE
+          MEMBER CLADT034 OF LENGTH       1913 IS STORED IN MACROWRK FILE
+          MEMBER CLADT033 OF LENGTH       1913 IS STORED IN MACROWRK FILE
+          MEMBER CLADBMIC OF LENGTH       3210 IS STORED IN MICREF   FILE
+          MEMBER MODET044 OF LENGTH       2394 IS STORED IN MACROWRK FILE
+          MEMBER MODET043 OF LENGTH       2394 IS STORED IN MACROWRK FILE
+          MEMBER MODEBMIC OF LENGTH       1284 IS STORED IN MICREF   FILE
+0*** ENTRANCE STEP  9**GAM P1B1**         0 SEC ELAPSED AFTER STEP 8**
+          MEMBER CONTA002 OF LENGTH        216 IS STORED IN MACROWRK FILE
+          MEMBER CONTA002 OF LENGTH        216 IS STORED IN FLUX     FILE
+          MEMBER PIN1F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN1F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN1T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN1T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+           *** THERMAL SPECTRUM CONVERGED AT 19 ITERATIONS WITH RESIDUE   .83013E-05
+          RATIO OF THERMAL SOURCE TO REMOVAL   .10000E+01
+          MEMBER FUELF012 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELT012 OF LENGTH       2283 IS STORED IN MACROWRK FILE
+          MEMBER HELIF022 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIT022 OF LENGTH       2362 IS STORED IN MACROWRK FILE
+          MEMBER CLADF032 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADT032 OF LENGTH       1913 IS STORED IN MACROWRK FILE
+          MEMBER MODEF042 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODET042 OF LENGTH       2394 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 12**CELLFAST**         0 SEC ELAPSED AFTER STEP 9**
+          STRAGE USED     112214 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED       9323 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN1F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER PIN1FVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 13**PEACO   **         0 SEC ELAPSED AFTER STEP12**
+  PLOT OPTION READ IN FREE FORMAT (0/1/2:NO/YES/YES)
+
+           PLOT OPT
+                     0
+          MEMBER CONT0001 OF LENGTH          9 IS STORED IN UMCROSS  FILE
+          MEMBER CONT0002 OF LENGTH        336 IS STORED IN UMCROSS  FILE
+          MEMBER CONT0003 OF LENGTH        154 IS STORED IN UMCROSS  FILE
+          MEMBER CONT0004 OF LENGTH       1650 IS STORED IN UMCROSS  FILE
+          MEMBER CONT0005 OF LENGTH       1650 IS STORED IN UMCROSS  FILE
+          MEMBER CONTTEMP OF LENGTH         81 IS STORED IN UMCROSS  FILE
+          NOTE ---> NUCLIDE 0ZRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0SNN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0FEN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0CRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0HFN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          MEMBER EU051001 OF LENGTH       5000 IS STORED IN UMCROSS  FILE
+          MEMBER EU052001 OF LENGTH       5000 IS STORED IN UMCROSS  FILE
+          MEMBER EU053001 OF LENGTH       5000 IS STORED IN UMCROSS  FILE
+          MEMBER EU054001 OF LENGTH       1500 IS STORED IN UMCROSS  FILE
+          MEMBER FU051001 OF LENGTH       5000 IS STORED IN UMCROSS  FILE
+          MEMBER FU052001 OF LENGTH       5000 IS STORED IN UMCROSS  FILE
+          MEMBER FU053001 OF LENGTH       5000 IS STORED IN UMCROSS  FILE
+          MEMBER FU054001 OF LENGTH       1500 IS STORED IN UMCROSS  FILE
+          MEMBER CU051001 OF LENGTH       5000 IS STORED IN UMCROSS  FILE
+          MEMBER CU052001 OF LENGTH       5000 IS STORED IN UMCROSS  FILE
+          MEMBER CU053001 OF LENGTH       5000 IS STORED IN UMCROSS  FILE
+          MEMBER CU054001 OF LENGTH       1500 IS STORED IN UMCROSS  FILE
+          MEMBER CU050001 OF LENGTH          8 IS STORED IN UMCROSS  FILE
+          MEMBER CONTTEMP                      IS DELETED FROM DD=UMCROSS 
+          MEMBER CONTTEMP OF LENGTH         81 IS STORED IN UMCROSS  FILE
+          MEMBER EU081001 OF LENGTH       5000 IS STORED IN UMCROSS  FILE
+          MEMBER EU082001 OF LENGTH       5000 IS STORED IN UMCROSS  FILE
+          MEMBER EU083001 OF LENGTH       5000 IS STORED IN UMCROSS  FILE
+          MEMBER EU084001 OF LENGTH       1500 IS STORED IN UMCROSS  FILE
+          MEMBER FU081001 OF LENGTH       5000 IS STORED IN UMCROSS  FILE
+          MEMBER FU082001 OF LENGTH       5000 IS STORED IN UMCROSS  FILE
+          MEMBER FU083001 OF LENGTH       5000 IS STORED IN UMCROSS  FILE
+          MEMBER FU084001 OF LENGTH       1500 IS STORED IN UMCROSS  FILE
+          MEMBER CU081001 OF LENGTH       5000 IS STORED IN UMCROSS  FILE
+          MEMBER CU082001 OF LENGTH       5000 IS STORED IN UMCROSS  FILE
+          MEMBER CU083001 OF LENGTH       5000 IS STORED IN UMCROSS  FILE
+          MEMBER CU084001 OF LENGTH       1500 IS STORED IN UMCROSS  FILE
+          MEMBER CU080001 OF LENGTH          8 IS STORED IN UMCROSS  FILE
+          STRAGE USED     253461 WITHIN    7000000 IN PIJ2-STEP
+          MEMBER PIN1F002                      IS DELETED FROM DD=FLUX    
+          MEMBER PIN1F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER FUELF012                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF012 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF014                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF014 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF013                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF013 OF LENGTH        807 IS STORED IN MACROWRK FILE
+          MEMBER HELIF022                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF022 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF024                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF024 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF023                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF023 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER CLADF032                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF032 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF034                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF034 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF033                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF033 OF LENGTH        744 IS STORED IN MACROWRK FILE
+          MEMBER MODEF042                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF042 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF044                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF044 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF043                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF043 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER FUELBMIC OF LENGTH       1926 IS STORED IN MICREF   FILE
+0*** ENTRANCE STEP 14**MIXXFAST**         1 SEC ELAPSED AFTER STEP13**
+          MEMBER PIN1F012 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN1F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN1F01M OF LENGTH        795 IS STORED IN MACROWRK FILE
+          MEMBER PIN1F01Y OF LENGTH       1116 IS STORED IN MACROWRK FILE
+          MEMBER PIN1F012 OF LENGTH         62 IS STORED IN FLUX     FILE
+          MEMBER PIN1F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 15**CELLTHML**         1 SEC ELAPSED AFTER STEP14**
+          STRAGE USED     140270 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED      17032 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN1T002 OF LENGTH        180 IS STORED IN FLUX     FILE
+          MEMBER PIN1TVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+          MEMBER PIN1SVOL OF LENGTH          8 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 16**MIXXTHML**         1 SEC ELAPSED AFTER STEP15**
+          MEMBER PIN1T012 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN1T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN1T01Y OF LENGTH        810 IS STORED IN MACROWRK FILE
+          MEMBER PIN1T012 OF LENGTH         45 IS STORED IN FLUX     FILE
+          MEMBER PIN1T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 17**HOMOSP  **         1 SEC ELAPSED AFTER STEP16**
+          MEMBER PIN1A012 OF LENGTH        107 IS STORED IN FLUX     FILE
+          MEMBER PIN1A002 OF LENGTH        428 IS STORED IN FLUX     FILE
+          K-EFF=  .82769 K-INF=  .82769 UNDER GEOMTRICAL BUCKLING=  .10000E-19
+0*** ENTRANCE STEP 18**COND FIX**         1 SEC ELAPSED AFTER STEP17**
+          MEMBER CONTA000 OF LENGTH         14 IS STORED IN MACRO    FILE
+          MEMBER CONTA000 OF LENGTH         14 IS STORED IN FLUX     FILE
+ **PIN1A013** FOR CONDENSE BY P1 SPECTRUM NOT FOUND THEN USER P0 FLUX.
+          MEMBER PIN1A010 OF LENGTH         80 IS STORED IN MACRO    FILE
+          MEMBER PIN1A01N OF LENGTH         68 IS STORED IN MACRO    FILE
+          MEMBER PIN1A01Z OF LENGTH        108 IS STORED IN MACRO    FILE
+          MEMBER PIN1A010 OF LENGTH          6 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 20**MICRO EF**         1 SEC ELAPSED AFTER STEP18**
+0*** ENTRANCE STEP 28**END CASE**         1 SEC ELAPSED AFTER STEP20**
+0*** ENTRANCE STEP  1**INPUT 1 **         1 SEC ELAPSED AFTER STEP 0**
+0     **** CASE ID === PIN2 : C *** TITLE === Variasi rasio P/D 1.1                                                    ***
+
+
+ FILE DD=MICREF   CLOSED AFTER SEARCH     0 READ     14 WRITE      6 DELETE      0 OVRWRT      9 TIMES   MEMBER     6 LENGTH      7280
+          FILE DD=MICREF   OPENED BY MODE 3 AS  SCRATCH FILE 
+0*** ENTRANCE STEP  4**PIJ INPT**         1 SEC ELAPSED AFTER STEP 1**
+     *** TIME CONSUMING DUE TO TOO MANY NBR OF CELLS TRACED PER NEUTRON  5
+  STRAGE USED      69029 FROM    7000000
+
+
+          VOLUME(NUMERICAL)/VOLUME(ANALYTICAL) 
+            1) 1.00007     2)  .99974     3)  .99988     4)  .99993     5)  .99994     6)  .99998     7) 1.00006
+            8)  .99845
+          ***   25 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F84 ***
+0 *** 1130 LINES DRAWN ON FT84 ***                                                  ****ELAPSED CPU TIME       1 SEC
+          ***   25 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F81 ***
+          ***   12 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F82 ***
+0 *** 1130 LINES REWRITTEN ON FT81 ***                                                  ****ELAPSED CPU TIME       1 SEC
+0*** ENTRANCE STEP  5**GEOMINPT**         1 SEC ELAPSED AFTER STEP 4**
+0*** ENTRANCE STEP  6**INPUT 2 **         1 SEC ELAPSED AFTER STEP 5**
+0*** ENTRANCE STEP  2**USER F L**         1 SEC ELAPSED AFTER STEP 6**
+          FILE DD=FASTP    OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; FASTP        1 2
+   CAUTION --- XU050000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XU080000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XO060000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XHE40000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XZRN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XSNN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XFEN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XCRN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XHFN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XO060000 ALREADY EXISTS IN USER-FILE 
+ FILE DD=FASTP    CLOSED AFTER SEARCH     0 READ     25 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  3**USER T L**         1 SEC ELAPSED AFTER STEP 2**
+          FILE DD=THERMALP OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; THERMALP     1 2
+ FILE DD=THERMALP CLOSED AFTER SEARCH     0 READ     14 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  7**MACRO F **         1 SEC ELAPSED AFTER STEP 3**
+0*** ENTRANCE STEP  8**MACRO T **         1 SEC ELAPSED AFTER STEP 7**
+0          ** MEMBER FUELT012 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER HELIT022 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER CLADT032 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER MODET042 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0*** ENTRANCE STEP  9**GAM P1B1**         1 SEC ELAPSED AFTER STEP 8**
+          MEMBER PIN2F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN2F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN2T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN2T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+           *** THERMAL SPECTRUM CONVERGED AT 19 ITERATIONS WITH RESIDUE   .77053E-05
+          RATIO OF THERMAL SOURCE TO REMOVAL   .10000E+01
+0*** ENTRANCE STEP 12**CELLFAST**         1 SEC ELAPSED AFTER STEP 9**
+          STRAGE USED     112214 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED       9323 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN2F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER PIN2FVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 13**PEACO   **         1 SEC ELAPSED AFTER STEP12**
+  PLOT OPTION READ IN FREE FORMAT (0/1/2:NO/YES/YES)
+
+           PLOT OPT
+                     0
+          NOTE ---> NUCLIDE 0ZRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0SNN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0FEN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0CRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0HFN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NUCLIDE(CU050001) ALREADY EXISTS IN USER MCROSS.
+          NUCLIDE(CU080001) ALREADY EXISTS IN USER MCROSS.
+          STRAGE USED     253461 WITHIN    7000000 IN PIJ2-STEP
+          MEMBER PIN2F002                      IS DELETED FROM DD=FLUX    
+          MEMBER PIN2F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER FUELF012                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF012 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF014                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF014 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF013                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF013 OF LENGTH        807 IS STORED IN MACROWRK FILE
+          MEMBER HELIF022                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF022 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF024                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF024 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF023                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF023 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER CLADF032                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF032 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF034                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF034 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF033                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF033 OF LENGTH        744 IS STORED IN MACROWRK FILE
+          MEMBER MODEF042                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF042 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF044                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF044 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF043                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF043 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER FUELBMIC OF LENGTH       1926 IS STORED IN MICREF   FILE
+0*** ENTRANCE STEP 14**MIXXFAST**         2 SEC ELAPSED AFTER STEP13**
+          MEMBER PIN2F012 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN2F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN2F01M OF LENGTH        795 IS STORED IN MACROWRK FILE
+          MEMBER PIN2F01Y OF LENGTH       1116 IS STORED IN MACROWRK FILE
+          MEMBER PIN2F012 OF LENGTH         62 IS STORED IN FLUX     FILE
+          MEMBER PIN2F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 15**CELLTHML**         2 SEC ELAPSED AFTER STEP14**
+          STRAGE USED     204270 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED      17032 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN2T002 OF LENGTH        180 IS STORED IN FLUX     FILE
+          MEMBER PIN2TVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+          MEMBER PIN2SVOL OF LENGTH          8 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 16**MIXXTHML**         3 SEC ELAPSED AFTER STEP15**
+          MEMBER PIN2T012 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN2T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN2T01Y OF LENGTH        810 IS STORED IN MACROWRK FILE
+          MEMBER PIN2T012 OF LENGTH         45 IS STORED IN FLUX     FILE
+          MEMBER PIN2T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 17**HOMOSP  **         3 SEC ELAPSED AFTER STEP16**
+          MEMBER PIN2A012 OF LENGTH        107 IS STORED IN FLUX     FILE
+          MEMBER PIN2A002 OF LENGTH        428 IS STORED IN FLUX     FILE
+          K-EFF=  .92886 K-INF=  .92886 UNDER GEOMTRICAL BUCKLING=  .10000E-19
+0*** ENTRANCE STEP 18**COND FIX**         3 SEC ELAPSED AFTER STEP17**
+ **PIN2A013** FOR CONDENSE BY P1 SPECTRUM NOT FOUND THEN USER P0 FLUX.
+          MEMBER PIN2A010 OF LENGTH         80 IS STORED IN MACRO    FILE
+          MEMBER PIN2A01N OF LENGTH         68 IS STORED IN MACRO    FILE
+          MEMBER PIN2A01Z OF LENGTH        108 IS STORED IN MACRO    FILE
+          MEMBER PIN2A010 OF LENGTH          6 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 20**MICRO EF**         3 SEC ELAPSED AFTER STEP18**
+0*** ENTRANCE STEP 28**END CASE**         3 SEC ELAPSED AFTER STEP20**
+0*** ENTRANCE STEP  1**INPUT 1 **         3 SEC ELAPSED AFTER STEP 0**
+0     **** CASE ID === PIN3 : C *** TITLE === Variasi rasio P/D 1.2                                                    ***
+
+
+ FILE DD=MICREF   CLOSED AFTER SEARCH     0 READ     10 WRITE      0 DELETE      0 OVRWRT      1 TIMES   MEMBER     6 LENGTH      7280
+          FILE DD=MICREF   OPENED BY MODE 3 AS  SCRATCH FILE 
+0*** ENTRANCE STEP  4**PIJ INPT**         3 SEC ELAPSED AFTER STEP 1**
+     *** TIME CONSUMING DUE TO TOO MANY NBR OF CELLS TRACED PER NEUTRON  5
+  STRAGE USED      69029 FROM    7000000
+
+
+          VOLUME(NUMERICAL)/VOLUME(ANALYTICAL) 
+            1) 1.00007     2)  .99974     3)  .99988     4)  .99993     5)  .99994     6)  .99999     7) 1.00003
+            8)  .99839
+          ***   24 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F84 ***
+0 *** 1134 LINES DRAWN ON FT84 ***                                                  ****ELAPSED CPU TIME       3 SEC
+          ***   24 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F81 ***
+          ***   12 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F82 ***
+0 *** 1134 LINES REWRITTEN ON FT81 ***                                                  ****ELAPSED CPU TIME       3 SEC
+0*** ENTRANCE STEP  5**GEOMINPT**         3 SEC ELAPSED AFTER STEP 4**
+0*** ENTRANCE STEP  6**INPUT 2 **         3 SEC ELAPSED AFTER STEP 5**
+0*** ENTRANCE STEP  2**USER F L**         3 SEC ELAPSED AFTER STEP 6**
+          FILE DD=FASTP    OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; FASTP        1 2
+   CAUTION --- XU050000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XU080000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XO060000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XHE40000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XZRN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XSNN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XFEN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XCRN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XHFN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XO060000 ALREADY EXISTS IN USER-FILE 
+ FILE DD=FASTP    CLOSED AFTER SEARCH     0 READ     25 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  3**USER T L**         3 SEC ELAPSED AFTER STEP 2**
+          FILE DD=THERMALP OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; THERMALP     1 2
+ FILE DD=THERMALP CLOSED AFTER SEARCH     0 READ     14 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  7**MACRO F **         3 SEC ELAPSED AFTER STEP 3**
+0*** ENTRANCE STEP  8**MACRO T **         3 SEC ELAPSED AFTER STEP 7**
+0          ** MEMBER FUELT012 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER HELIT022 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER CLADT032 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER MODET042 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0*** ENTRANCE STEP  9**GAM P1B1**         3 SEC ELAPSED AFTER STEP 8**
+          MEMBER PIN3F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN3F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN3T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN3T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+           *** THERMAL SPECTRUM CONVERGED AT 19 ITERATIONS WITH RESIDUE   .66934E-05
+          RATIO OF THERMAL SOURCE TO REMOVAL   .10000E+01
+0*** ENTRANCE STEP 12**CELLFAST**         3 SEC ELAPSED AFTER STEP 9**
+          STRAGE USED     112214 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED       9323 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN3F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER PIN3FVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 13**PEACO   **         3 SEC ELAPSED AFTER STEP12**
+  PLOT OPTION READ IN FREE FORMAT (0/1/2:NO/YES/YES)
+
+           PLOT OPT
+                     0
+          NOTE ---> NUCLIDE 0ZRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0SNN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0FEN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0CRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0HFN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NUCLIDE(CU050001) ALREADY EXISTS IN USER MCROSS.
+          NUCLIDE(CU080001) ALREADY EXISTS IN USER MCROSS.
+          STRAGE USED     253461 WITHIN    7000000 IN PIJ2-STEP
+          MEMBER PIN3F002                      IS DELETED FROM DD=FLUX    
+          MEMBER PIN3F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER FUELF012                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF012 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF014                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF014 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF013                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF013 OF LENGTH        807 IS STORED IN MACROWRK FILE
+          MEMBER HELIF022                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF022 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF024                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF024 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF023                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF023 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER CLADF032                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF032 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF034                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF034 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF033                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF033 OF LENGTH        744 IS STORED IN MACROWRK FILE
+          MEMBER MODEF042                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF042 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF044                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF044 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF043                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF043 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER FUELBMIC OF LENGTH       1926 IS STORED IN MICREF   FILE
+0*** ENTRANCE STEP 14**MIXXFAST**         3 SEC ELAPSED AFTER STEP13**
+          MEMBER PIN3F012 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN3F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN3F01M OF LENGTH        795 IS STORED IN MACROWRK FILE
+          MEMBER PIN3F01Y OF LENGTH       1116 IS STORED IN MACROWRK FILE
+          MEMBER PIN3F012 OF LENGTH         62 IS STORED IN FLUX     FILE
+          MEMBER PIN3F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 15**CELLTHML**         3 SEC ELAPSED AFTER STEP14**
+          STRAGE USED     204270 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED      17032 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN3T002 OF LENGTH        180 IS STORED IN FLUX     FILE
+          MEMBER PIN3TVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+          MEMBER PIN3SVOL OF LENGTH          8 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 16**MIXXTHML**         4 SEC ELAPSED AFTER STEP15**
+          MEMBER PIN3T012 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN3T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN3T01Y OF LENGTH        810 IS STORED IN MACROWRK FILE
+          MEMBER PIN3T012 OF LENGTH         45 IS STORED IN FLUX     FILE
+          MEMBER PIN3T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 17**HOMOSP  **         4 SEC ELAPSED AFTER STEP16**
+          MEMBER PIN3A012 OF LENGTH        107 IS STORED IN FLUX     FILE
+          MEMBER PIN3A002 OF LENGTH        428 IS STORED IN FLUX     FILE
+          K-EFF= 1.00210 K-INF= 1.00210 UNDER GEOMTRICAL BUCKLING=  .10000E-19
+0*** ENTRANCE STEP 18**COND FIX**         4 SEC ELAPSED AFTER STEP17**
+ **PIN3A013** FOR CONDENSE BY P1 SPECTRUM NOT FOUND THEN USER P0 FLUX.
+          MEMBER PIN3A010 OF LENGTH         80 IS STORED IN MACRO    FILE
+          MEMBER PIN3A01N OF LENGTH         68 IS STORED IN MACRO    FILE
+          MEMBER PIN3A01Z OF LENGTH        108 IS STORED IN MACRO    FILE
+          MEMBER PIN3A010 OF LENGTH          6 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 20**MICRO EF**         4 SEC ELAPSED AFTER STEP18**
+0*** ENTRANCE STEP 28**END CASE**         4 SEC ELAPSED AFTER STEP20**
+0*** ENTRANCE STEP  1**INPUT 1 **         4 SEC ELAPSED AFTER STEP 0**
+0     **** CASE ID === PIN4 : C *** TITLE === Variasi rasio P/D 1.3                                                    ***
+
+
+ FILE DD=MICREF   CLOSED AFTER SEARCH     0 READ     10 WRITE      0 DELETE      0 OVRWRT      1 TIMES   MEMBER     6 LENGTH      7280
+          FILE DD=MICREF   OPENED BY MODE 3 AS  SCRATCH FILE 
+0*** ENTRANCE STEP  4**PIJ INPT**         4 SEC ELAPSED AFTER STEP 1**
+     *** TIME CONSUMING DUE TO TOO MANY NBR OF CELLS TRACED PER NEUTRON  5
+  STRAGE USED      69029 FROM    7000000
+
+
+          VOLUME(NUMERICAL)/VOLUME(ANALYTICAL) 
+            1) 1.00007     2)  .99974     3)  .99988     4)  .99993     5)  .99994     6)  .99999     7) 1.00001
+            8)  .99780
+          ***   23 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F84 ***
+0 *** 1134 LINES DRAWN ON FT84 ***                                                  ****ELAPSED CPU TIME       4 SEC
+          ***   23 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F81 ***
+          ***   12 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F82 ***
+0 *** 1134 LINES REWRITTEN ON FT81 ***                                                  ****ELAPSED CPU TIME       4 SEC
+0*** ENTRANCE STEP  5**GEOMINPT**         4 SEC ELAPSED AFTER STEP 4**
+0*** ENTRANCE STEP  6**INPUT 2 **         4 SEC ELAPSED AFTER STEP 5**
+0*** ENTRANCE STEP  2**USER F L**         4 SEC ELAPSED AFTER STEP 6**
+          FILE DD=FASTP    OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; FASTP        1 2
+   CAUTION --- XU050000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XU080000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XO060000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XHE40000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XZRN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XSNN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XFEN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XCRN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XHFN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XO060000 ALREADY EXISTS IN USER-FILE 
+ FILE DD=FASTP    CLOSED AFTER SEARCH     0 READ     25 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  3**USER T L**         4 SEC ELAPSED AFTER STEP 2**
+          FILE DD=THERMALP OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; THERMALP     1 2
+ FILE DD=THERMALP CLOSED AFTER SEARCH     0 READ     14 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  7**MACRO F **         4 SEC ELAPSED AFTER STEP 3**
+0*** ENTRANCE STEP  8**MACRO T **         4 SEC ELAPSED AFTER STEP 7**
+0          ** MEMBER FUELT012 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER HELIT022 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER CLADT032 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER MODET042 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0*** ENTRANCE STEP  9**GAM P1B1**         4 SEC ELAPSED AFTER STEP 8**
+          MEMBER PIN4F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN4F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN4T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN4T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+           *** THERMAL SPECTRUM CONVERGED AT 19 ITERATIONS WITH RESIDUE   .66194E-05
+          RATIO OF THERMAL SOURCE TO REMOVAL   .10000E+01
+0*** ENTRANCE STEP 12**CELLFAST**         4 SEC ELAPSED AFTER STEP 9**
+          STRAGE USED     112214 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED       9323 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN4F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER PIN4FVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 13**PEACO   **         4 SEC ELAPSED AFTER STEP12**
+  PLOT OPTION READ IN FREE FORMAT (0/1/2:NO/YES/YES)
+
+           PLOT OPT
+                     0
+          NOTE ---> NUCLIDE 0ZRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0SNN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0FEN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0CRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0HFN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NUCLIDE(CU050001) ALREADY EXISTS IN USER MCROSS.
+          NUCLIDE(CU080001) ALREADY EXISTS IN USER MCROSS.
+          STRAGE USED     253461 WITHIN    7000000 IN PIJ2-STEP
+          MEMBER PIN4F002                      IS DELETED FROM DD=FLUX    
+          MEMBER PIN4F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER FUELF012                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF012 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF014                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF014 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF013                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF013 OF LENGTH        807 IS STORED IN MACROWRK FILE
+          MEMBER HELIF022                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF022 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF024                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF024 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF023                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF023 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER CLADF032                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF032 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF034                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF034 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF033                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF033 OF LENGTH        744 IS STORED IN MACROWRK FILE
+          MEMBER MODEF042                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF042 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF044                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF044 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF043                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF043 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER FUELBMIC OF LENGTH       1926 IS STORED IN MICREF   FILE
+0*** ENTRANCE STEP 14**MIXXFAST**         4 SEC ELAPSED AFTER STEP13**
+          MEMBER PIN4F012 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN4F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN4F01M OF LENGTH        795 IS STORED IN MACROWRK FILE
+          MEMBER PIN4F01Y OF LENGTH       1116 IS STORED IN MACROWRK FILE
+          MEMBER PIN4F012 OF LENGTH         62 IS STORED IN FLUX     FILE
+          MEMBER PIN4F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 15**CELLTHML**         4 SEC ELAPSED AFTER STEP14**
+          STRAGE USED     204270 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED      17032 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN4T002 OF LENGTH        180 IS STORED IN FLUX     FILE
+          MEMBER PIN4TVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+          MEMBER PIN4SVOL OF LENGTH          8 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 16**MIXXTHML**         5 SEC ELAPSED AFTER STEP15**
+          MEMBER PIN4T012 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN4T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN4T01Y OF LENGTH        810 IS STORED IN MACROWRK FILE
+          MEMBER PIN4T012 OF LENGTH         45 IS STORED IN FLUX     FILE
+          MEMBER PIN4T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 17**HOMOSP  **         5 SEC ELAPSED AFTER STEP16**
+          MEMBER PIN4A012 OF LENGTH        107 IS STORED IN FLUX     FILE
+          MEMBER PIN4A002 OF LENGTH        428 IS STORED IN FLUX     FILE
+          K-EFF= 1.05620 K-INF= 1.05620 UNDER GEOMTRICAL BUCKLING=  .10000E-19
+0*** ENTRANCE STEP 18**COND FIX**         5 SEC ELAPSED AFTER STEP17**
+ **PIN4A013** FOR CONDENSE BY P1 SPECTRUM NOT FOUND THEN USER P0 FLUX.
+          MEMBER PIN4A010 OF LENGTH         80 IS STORED IN MACRO    FILE
+          MEMBER PIN4A01N OF LENGTH         68 IS STORED IN MACRO    FILE
+          MEMBER PIN4A01Z OF LENGTH        108 IS STORED IN MACRO    FILE
+          MEMBER PIN4A010 OF LENGTH          6 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 20**MICRO EF**         5 SEC ELAPSED AFTER STEP18**
+0*** ENTRANCE STEP 28**END CASE**         5 SEC ELAPSED AFTER STEP20**
+0*** ENTRANCE STEP  1**INPUT 1 **         5 SEC ELAPSED AFTER STEP 0**
+0     **** CASE ID === PIN5 : C *** TITLE === Variasi rasio P/D 1.4                                                    ***
+
+
+ FILE DD=MICREF   CLOSED AFTER SEARCH     0 READ     10 WRITE      0 DELETE      0 OVRWRT      1 TIMES   MEMBER     6 LENGTH      7280
+          FILE DD=MICREF   OPENED BY MODE 3 AS  SCRATCH FILE 
+0*** ENTRANCE STEP  4**PIJ INPT**         5 SEC ELAPSED AFTER STEP 1**
+     *** TIME CONSUMING DUE TO TOO MANY NBR OF CELLS TRACED PER NEUTRON  5
+  STRAGE USED      69029 FROM    7000000
+
+
+          VOLUME(NUMERICAL)/VOLUME(ANALYTICAL) 
+            1) 1.00007     2)  .99974     3)  .99988     4)  .99993     5)  .99994     6)  .99997     7)  .99999
+            8)  .99690
+          ***   23 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F84 ***
+0 *** 1134 LINES DRAWN ON FT84 ***                                                  ****ELAPSED CPU TIME       5 SEC
+          ***   23 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F81 ***
+          ***   11 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F82 ***
+0 *** 1134 LINES REWRITTEN ON FT81 ***                                                  ****ELAPSED CPU TIME       5 SEC
+0*** ENTRANCE STEP  5**GEOMINPT**         5 SEC ELAPSED AFTER STEP 4**
+0*** ENTRANCE STEP  6**INPUT 2 **         5 SEC ELAPSED AFTER STEP 5**
+0*** ENTRANCE STEP  2**USER F L**         5 SEC ELAPSED AFTER STEP 6**
+          FILE DD=FASTP    OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; FASTP        1 2
+   CAUTION --- XU050000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XU080000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XO060000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XHE40000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XZRN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XSNN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XFEN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XCRN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XHFN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XO060000 ALREADY EXISTS IN USER-FILE 
+ FILE DD=FASTP    CLOSED AFTER SEARCH     0 READ     25 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  3**USER T L**         5 SEC ELAPSED AFTER STEP 2**
+          FILE DD=THERMALP OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; THERMALP     1 2
+ FILE DD=THERMALP CLOSED AFTER SEARCH     0 READ     14 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  7**MACRO F **         5 SEC ELAPSED AFTER STEP 3**
+0*** ENTRANCE STEP  8**MACRO T **         5 SEC ELAPSED AFTER STEP 7**
+0          ** MEMBER FUELT012 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER HELIT022 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER CLADT032 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER MODET042 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0*** ENTRANCE STEP  9**GAM P1B1**         5 SEC ELAPSED AFTER STEP 8**
+          MEMBER PIN5F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN5F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN5T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN5T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+           *** THERMAL SPECTRUM CONVERGED AT 18 ITERATIONS WITH RESIDUE   .99198E-05
+          RATIO OF THERMAL SOURCE TO REMOVAL   .10000E+01
+0*** ENTRANCE STEP 12**CELLFAST**         5 SEC ELAPSED AFTER STEP 9**
+          STRAGE USED     112214 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED       9323 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN5F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER PIN5FVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 13**PEACO   **         6 SEC ELAPSED AFTER STEP12**
+  PLOT OPTION READ IN FREE FORMAT (0/1/2:NO/YES/YES)
+
+           PLOT OPT
+                     0
+          NOTE ---> NUCLIDE 0ZRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0SNN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0FEN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0CRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0HFN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NUCLIDE(CU050001) ALREADY EXISTS IN USER MCROSS.
+          NUCLIDE(CU080001) ALREADY EXISTS IN USER MCROSS.
+          STRAGE USED     253461 WITHIN    7000000 IN PIJ2-STEP
+          MEMBER PIN5F002                      IS DELETED FROM DD=FLUX    
+          MEMBER PIN5F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER FUELF012                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF012 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF014                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF014 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF013                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF013 OF LENGTH        807 IS STORED IN MACROWRK FILE
+          MEMBER HELIF022                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF022 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF024                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF024 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF023                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF023 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER CLADF032                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF032 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF034                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF034 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF033                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF033 OF LENGTH        744 IS STORED IN MACROWRK FILE
+          MEMBER MODEF042                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF042 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF044                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF044 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF043                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF043 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER FUELBMIC OF LENGTH       1926 IS STORED IN MICREF   FILE
+0*** ENTRANCE STEP 14**MIXXFAST**         6 SEC ELAPSED AFTER STEP13**
+          MEMBER PIN5F012 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN5F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN5F01M OF LENGTH        795 IS STORED IN MACROWRK FILE
+          MEMBER PIN5F01Y OF LENGTH       1116 IS STORED IN MACROWRK FILE
+          MEMBER PIN5F012 OF LENGTH         62 IS STORED IN FLUX     FILE
+          MEMBER PIN5F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 15**CELLTHML**         6 SEC ELAPSED AFTER STEP14**
+          STRAGE USED     204270 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED      17032 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN5T002 OF LENGTH        180 IS STORED IN FLUX     FILE
+          MEMBER PIN5TVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+          MEMBER PIN5SVOL OF LENGTH          8 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 16**MIXXTHML**         6 SEC ELAPSED AFTER STEP15**
+          MEMBER PIN5T012 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN5T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN5T01Y OF LENGTH        810 IS STORED IN MACROWRK FILE
+          MEMBER PIN5T012 OF LENGTH         45 IS STORED IN FLUX     FILE
+          MEMBER PIN5T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 17**HOMOSP  **         6 SEC ELAPSED AFTER STEP16**
+          MEMBER PIN5A012 OF LENGTH        107 IS STORED IN FLUX     FILE
+          MEMBER PIN5A002 OF LENGTH        428 IS STORED IN FLUX     FILE
+          K-EFF= 1.09653 K-INF= 1.09653 UNDER GEOMTRICAL BUCKLING=  .10000E-19
+0*** ENTRANCE STEP 18**COND FIX**         6 SEC ELAPSED AFTER STEP17**
+ **PIN5A013** FOR CONDENSE BY P1 SPECTRUM NOT FOUND THEN USER P0 FLUX.
+          MEMBER PIN5A010 OF LENGTH         80 IS STORED IN MACRO    FILE
+          MEMBER PIN5A01N OF LENGTH         68 IS STORED IN MACRO    FILE
+          MEMBER PIN5A01Z OF LENGTH        108 IS STORED IN MACRO    FILE
+          MEMBER PIN5A010 OF LENGTH          6 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 20**MICRO EF**         6 SEC ELAPSED AFTER STEP18**
+0*** ENTRANCE STEP 28**END CASE**         6 SEC ELAPSED AFTER STEP20**
+0*** ENTRANCE STEP  1**INPUT 1 **         6 SEC ELAPSED AFTER STEP 0**
+0     **** CASE ID === PIN6 : C *** TITLE === Variasi rasio P/D 1.5                                                    ***
+
+
+ FILE DD=MICREF   CLOSED AFTER SEARCH     0 READ     10 WRITE      0 DELETE      0 OVRWRT      1 TIMES   MEMBER     6 LENGTH      7280
+          FILE DD=MICREF   OPENED BY MODE 3 AS  SCRATCH FILE 
+0*** ENTRANCE STEP  4**PIJ INPT**         6 SEC ELAPSED AFTER STEP 1**
+     *** TIME CONSUMING DUE TO TOO MANY NBR OF CELLS TRACED PER NEUTRON  5
+  STRAGE USED      69029 FROM    7000000
+
+
+          VOLUME(NUMERICAL)/VOLUME(ANALYTICAL) 
+            1) 1.00007     2)  .99974     3)  .99988     4)  .99993     5)  .99994     6)  .99996     7)  .99997
+            8)  .99760
+          ***   22 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F84 ***
+0 *** 1136 LINES DRAWN ON FT84 ***                                                  ****ELAPSED CPU TIME       7 SEC
+          ***   22 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F81 ***
+          ***   11 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F82 ***
+0 *** 1136 LINES REWRITTEN ON FT81 ***                                                  ****ELAPSED CPU TIME       7 SEC
+0*** ENTRANCE STEP  5**GEOMINPT**         7 SEC ELAPSED AFTER STEP 4**
+0*** ENTRANCE STEP  6**INPUT 2 **         7 SEC ELAPSED AFTER STEP 5**
+0*** ENTRANCE STEP  2**USER F L**         7 SEC ELAPSED AFTER STEP 6**
+          FILE DD=FASTP    OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; FASTP        1 2
+   CAUTION --- XU050000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XU080000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XO060000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XHE40000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XZRN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XSNN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XFEN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XCRN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XHFN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XO060000 ALREADY EXISTS IN USER-FILE 
+ FILE DD=FASTP    CLOSED AFTER SEARCH     0 READ     25 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  3**USER T L**         7 SEC ELAPSED AFTER STEP 2**
+          FILE DD=THERMALP OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; THERMALP     1 2
+ FILE DD=THERMALP CLOSED AFTER SEARCH     0 READ     14 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  7**MACRO F **         7 SEC ELAPSED AFTER STEP 3**
+0*** ENTRANCE STEP  8**MACRO T **         7 SEC ELAPSED AFTER STEP 7**
+0          ** MEMBER FUELT012 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER HELIT022 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER CLADT032 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER MODET042 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0*** ENTRANCE STEP  9**GAM P1B1**         7 SEC ELAPSED AFTER STEP 8**
+          MEMBER PIN6F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN6F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN6T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN6T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+           *** THERMAL SPECTRUM CONVERGED AT 18 ITERATIONS WITH RESIDUE   .90612E-05
+          RATIO OF THERMAL SOURCE TO REMOVAL   .10000E+01
+0*** ENTRANCE STEP 12**CELLFAST**         7 SEC ELAPSED AFTER STEP 9**
+          STRAGE USED     112214 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED       9323 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN6F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER PIN6FVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 13**PEACO   **         7 SEC ELAPSED AFTER STEP12**
+  PLOT OPTION READ IN FREE FORMAT (0/1/2:NO/YES/YES)
+
+           PLOT OPT
+                     0
+          NOTE ---> NUCLIDE 0ZRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0SNN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0FEN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0CRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0HFN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NUCLIDE(CU050001) ALREADY EXISTS IN USER MCROSS.
+          NUCLIDE(CU080001) ALREADY EXISTS IN USER MCROSS.
+          STRAGE USED     253461 WITHIN    7000000 IN PIJ2-STEP
+          MEMBER PIN6F002                      IS DELETED FROM DD=FLUX    
+          MEMBER PIN6F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER FUELF012                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF012 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF014                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF014 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF013                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF013 OF LENGTH        807 IS STORED IN MACROWRK FILE
+          MEMBER HELIF022                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF022 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF024                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF024 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF023                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF023 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER CLADF032                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF032 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF034                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF034 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF033                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF033 OF LENGTH        744 IS STORED IN MACROWRK FILE
+          MEMBER MODEF042                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF042 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF044                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF044 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF043                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF043 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER FUELBMIC OF LENGTH       1926 IS STORED IN MICREF   FILE
+0*** ENTRANCE STEP 14**MIXXFAST**         7 SEC ELAPSED AFTER STEP13**
+          MEMBER PIN6F012 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN6F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN6F01M OF LENGTH        795 IS STORED IN MACROWRK FILE
+          MEMBER PIN6F01Y OF LENGTH       1116 IS STORED IN MACROWRK FILE
+          MEMBER PIN6F012 OF LENGTH         62 IS STORED IN FLUX     FILE
+          MEMBER PIN6F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 15**CELLTHML**         7 SEC ELAPSED AFTER STEP14**
+          STRAGE USED     204270 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED      17032 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN6T002 OF LENGTH        180 IS STORED IN FLUX     FILE
+          MEMBER PIN6TVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+          MEMBER PIN6SVOL OF LENGTH          8 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 16**MIXXTHML**         8 SEC ELAPSED AFTER STEP15**
+          MEMBER PIN6T012 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN6T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN6T01Y OF LENGTH        810 IS STORED IN MACROWRK FILE
+          MEMBER PIN6T012 OF LENGTH         45 IS STORED IN FLUX     FILE
+          MEMBER PIN6T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 17**HOMOSP  **         8 SEC ELAPSED AFTER STEP16**
+          MEMBER PIN6A012 OF LENGTH        107 IS STORED IN FLUX     FILE
+          MEMBER PIN6A002 OF LENGTH        428 IS STORED IN FLUX     FILE
+          K-EFF= 1.12702 K-INF= 1.12702 UNDER GEOMTRICAL BUCKLING=  .10000E-19
+0*** ENTRANCE STEP 18**COND FIX**         8 SEC ELAPSED AFTER STEP17**
+ **PIN6A013** FOR CONDENSE BY P1 SPECTRUM NOT FOUND THEN USER P0 FLUX.
+          MEMBER PIN6A010 OF LENGTH         80 IS STORED IN MACRO    FILE
+          MEMBER PIN6A01N OF LENGTH         68 IS STORED IN MACRO    FILE
+          MEMBER PIN6A01Z OF LENGTH        108 IS STORED IN MACRO    FILE
+          MEMBER PIN6A010 OF LENGTH          6 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 20**MICRO EF**         8 SEC ELAPSED AFTER STEP18**
+0*** ENTRANCE STEP 28**END CASE**         8 SEC ELAPSED AFTER STEP20**
+0*** ENTRANCE STEP  1**INPUT 1 **         8 SEC ELAPSED AFTER STEP 0**
+0     **** CASE ID === PIN7 : C *** TITLE === Variasi rasio P/D 1.6                                                    ***
+
+
+ FILE DD=MICREF   CLOSED AFTER SEARCH     0 READ     10 WRITE      0 DELETE      0 OVRWRT      1 TIMES   MEMBER     6 LENGTH      7280
+          FILE DD=MICREF   OPENED BY MODE 3 AS  SCRATCH FILE 
+0*** ENTRANCE STEP  4**PIJ INPT**         8 SEC ELAPSED AFTER STEP 1**
+     *** TIME CONSUMING DUE TO TOO MANY NBR OF CELLS TRACED PER NEUTRON  5
+  STRAGE USED      69029 FROM    7000000
+
+
+          VOLUME(NUMERICAL)/VOLUME(ANALYTICAL) 
+            1) 1.00007     2)  .99974     3)  .99988     4)  .99993     5)  .99994     6)  .99995     7)  .99996
+            8)  .99849
+          ***   22 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F84 ***
+0 *** 1138 LINES DRAWN ON FT84 ***                                                  ****ELAPSED CPU TIME       8 SEC
+          ***   22 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F81 ***
+          ***   11 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F82 ***
+0 *** 1138 LINES REWRITTEN ON FT81 ***                                                  ****ELAPSED CPU TIME       8 SEC
+0*** ENTRANCE STEP  5**GEOMINPT**         8 SEC ELAPSED AFTER STEP 4**
+0*** ENTRANCE STEP  6**INPUT 2 **         8 SEC ELAPSED AFTER STEP 5**
+0*** ENTRANCE STEP  2**USER F L**         8 SEC ELAPSED AFTER STEP 6**
+          FILE DD=FASTP    OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; FASTP        1 2
+   CAUTION --- XU050000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XU080000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XO060000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XHE40000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XZRN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XSNN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XFEN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XCRN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XHFN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XO060000 ALREADY EXISTS IN USER-FILE 
+ FILE DD=FASTP    CLOSED AFTER SEARCH     0 READ     25 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  3**USER T L**         8 SEC ELAPSED AFTER STEP 2**
+          FILE DD=THERMALP OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; THERMALP     1 2
+ FILE DD=THERMALP CLOSED AFTER SEARCH     0 READ     14 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  7**MACRO F **         8 SEC ELAPSED AFTER STEP 3**
+0*** ENTRANCE STEP  8**MACRO T **         8 SEC ELAPSED AFTER STEP 7**
+0          ** MEMBER FUELT012 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER HELIT022 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER CLADT032 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER MODET042 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0*** ENTRANCE STEP  9**GAM P1B1**         8 SEC ELAPSED AFTER STEP 8**
+          MEMBER PIN7F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN7F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN7T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN7T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+           *** THERMAL SPECTRUM CONVERGED AT 18 ITERATIONS WITH RESIDUE   .83317E-05
+          RATIO OF THERMAL SOURCE TO REMOVAL   .10000E+01
+0*** ENTRANCE STEP 12**CELLFAST**         8 SEC ELAPSED AFTER STEP 9**
+          STRAGE USED     112214 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED       9323 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN7F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER PIN7FVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 13**PEACO   **         8 SEC ELAPSED AFTER STEP12**
+  PLOT OPTION READ IN FREE FORMAT (0/1/2:NO/YES/YES)
+
+           PLOT OPT
+                     0
+          NOTE ---> NUCLIDE 0ZRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0SNN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0FEN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0CRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0HFN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NUCLIDE(CU050001) ALREADY EXISTS IN USER MCROSS.
+          NUCLIDE(CU080001) ALREADY EXISTS IN USER MCROSS.
+          STRAGE USED     253461 WITHIN    7000000 IN PIJ2-STEP
+          MEMBER PIN7F002                      IS DELETED FROM DD=FLUX    
+          MEMBER PIN7F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER FUELF012                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF012 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF014                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF014 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF013                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF013 OF LENGTH        807 IS STORED IN MACROWRK FILE
+          MEMBER HELIF022                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF022 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF024                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF024 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF023                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF023 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER CLADF032                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF032 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF034                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF034 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF033                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF033 OF LENGTH        744 IS STORED IN MACROWRK FILE
+          MEMBER MODEF042                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF042 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF044                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF044 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF043                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF043 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER FUELBMIC OF LENGTH       1926 IS STORED IN MICREF   FILE
+0*** ENTRANCE STEP 14**MIXXFAST**         8 SEC ELAPSED AFTER STEP13**
+          MEMBER PIN7F012 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN7F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN7F01M OF LENGTH        795 IS STORED IN MACROWRK FILE
+          MEMBER PIN7F01Y OF LENGTH       1116 IS STORED IN MACROWRK FILE
+          MEMBER PIN7F012 OF LENGTH         62 IS STORED IN FLUX     FILE
+          MEMBER PIN7F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 15**CELLTHML**         8 SEC ELAPSED AFTER STEP14**
+          STRAGE USED     204270 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED      17032 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN7T002 OF LENGTH        180 IS STORED IN FLUX     FILE
+          MEMBER PIN7TVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+          MEMBER PIN7SVOL OF LENGTH          8 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 16**MIXXTHML**         9 SEC ELAPSED AFTER STEP15**
+          MEMBER PIN7T012 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN7T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN7T01Y OF LENGTH        810 IS STORED IN MACROWRK FILE
+          MEMBER PIN7T012 OF LENGTH         45 IS STORED IN FLUX     FILE
+          MEMBER PIN7T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 17**HOMOSP  **         9 SEC ELAPSED AFTER STEP16**
+          MEMBER PIN7A012 OF LENGTH        107 IS STORED IN FLUX     FILE
+          MEMBER PIN7A002 OF LENGTH        428 IS STORED IN FLUX     FILE
+          K-EFF= 1.14872 K-INF= 1.14872 UNDER GEOMTRICAL BUCKLING=  .10000E-19
+0*** ENTRANCE STEP 18**COND FIX**         9 SEC ELAPSED AFTER STEP17**
+ **PIN7A013** FOR CONDENSE BY P1 SPECTRUM NOT FOUND THEN USER P0 FLUX.
+          MEMBER PIN7A010 OF LENGTH         80 IS STORED IN MACRO    FILE
+          MEMBER PIN7A01N OF LENGTH         68 IS STORED IN MACRO    FILE
+          MEMBER PIN7A01Z OF LENGTH        108 IS STORED IN MACRO    FILE
+          MEMBER PIN7A010 OF LENGTH          6 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 20**MICRO EF**         9 SEC ELAPSED AFTER STEP18**
+0*** ENTRANCE STEP 28**END CASE**         9 SEC ELAPSED AFTER STEP20**
+0*** ENTRANCE STEP  1**INPUT 1 **         9 SEC ELAPSED AFTER STEP 0**
+0     **** CASE ID === PIN8 : C *** TITLE === Variasi rasio P/D 1.7                                                    ***
+
+
+ FILE DD=MICREF   CLOSED AFTER SEARCH     0 READ     10 WRITE      0 DELETE      0 OVRWRT      1 TIMES   MEMBER     6 LENGTH      7280
+          FILE DD=MICREF   OPENED BY MODE 3 AS  SCRATCH FILE 
+0*** ENTRANCE STEP  4**PIJ INPT**         9 SEC ELAPSED AFTER STEP 1**
+     *** TIME CONSUMING DUE TO TOO MANY NBR OF CELLS TRACED PER NEUTRON  5
+  STRAGE USED      69029 FROM    7000000
+
+
+          VOLUME(NUMERICAL)/VOLUME(ANALYTICAL) 
+            1) 1.00007     2)  .99974     3)  .99988     4)  .99993     5)  .99994     6)  .99994     7)  .99995
+            8)  .99942
+          ***   21 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F84 ***
+0 *** 1138 LINES DRAWN ON FT84 ***                                                  ****ELAPSED CPU TIME       9 SEC
+          ***   21 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F81 ***
+          ***   10 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F82 ***
+0 *** 1138 LINES REWRITTEN ON FT81 ***                                                  ****ELAPSED CPU TIME       9 SEC
+0*** ENTRANCE STEP  5**GEOMINPT**         9 SEC ELAPSED AFTER STEP 4**
+0*** ENTRANCE STEP  6**INPUT 2 **         9 SEC ELAPSED AFTER STEP 5**
+0*** ENTRANCE STEP  2**USER F L**         9 SEC ELAPSED AFTER STEP 6**
+          FILE DD=FASTP    OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; FASTP        1 2
+   CAUTION --- XU050000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XU080000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XO060000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XHE40000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XZRN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XSNN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XFEN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XCRN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XHFN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XO060000 ALREADY EXISTS IN USER-FILE 
+ FILE DD=FASTP    CLOSED AFTER SEARCH     0 READ     25 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  3**USER T L**         9 SEC ELAPSED AFTER STEP 2**
+          FILE DD=THERMALP OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; THERMALP     1 2
+ FILE DD=THERMALP CLOSED AFTER SEARCH     0 READ     14 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  7**MACRO F **         9 SEC ELAPSED AFTER STEP 3**
+0*** ENTRANCE STEP  8**MACRO T **         9 SEC ELAPSED AFTER STEP 7**
+0          ** MEMBER FUELT012 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER HELIT022 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER CLADT032 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER MODET042 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0*** ENTRANCE STEP  9**GAM P1B1**         9 SEC ELAPSED AFTER STEP 8**
+          MEMBER PIN8F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN8F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN8T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN8T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+           *** THERMAL SPECTRUM CONVERGED AT 18 ITERATIONS WITH RESIDUE   .84314E-05
+          RATIO OF THERMAL SOURCE TO REMOVAL   .10000E+01
+0*** ENTRANCE STEP 12**CELLFAST**         9 SEC ELAPSED AFTER STEP 9**
+          STRAGE USED     112214 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED       9323 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN8F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER PIN8FVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 13**PEACO   **         9 SEC ELAPSED AFTER STEP12**
+  PLOT OPTION READ IN FREE FORMAT (0/1/2:NO/YES/YES)
+
+           PLOT OPT
+                     0
+          NOTE ---> NUCLIDE 0ZRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0SNN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0FEN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0CRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0HFN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NUCLIDE(CU050001) ALREADY EXISTS IN USER MCROSS.
+          NUCLIDE(CU080001) ALREADY EXISTS IN USER MCROSS.
+          STRAGE USED     253461 WITHIN    7000000 IN PIJ2-STEP
+          MEMBER PIN8F002                      IS DELETED FROM DD=FLUX    
+          MEMBER PIN8F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER FUELF012                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF012 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF014                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF014 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF013                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF013 OF LENGTH        807 IS STORED IN MACROWRK FILE
+          MEMBER HELIF022                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF022 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF024                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF024 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF023                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF023 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER CLADF032                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF032 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF034                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF034 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF033                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF033 OF LENGTH        744 IS STORED IN MACROWRK FILE
+          MEMBER MODEF042                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF042 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF044                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF044 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF043                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF043 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER FUELBMIC OF LENGTH       1926 IS STORED IN MICREF   FILE
+0*** ENTRANCE STEP 14**MIXXFAST**         9 SEC ELAPSED AFTER STEP13**
+          MEMBER PIN8F012 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN8F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN8F01M OF LENGTH        795 IS STORED IN MACROWRK FILE
+          MEMBER PIN8F01Y OF LENGTH       1116 IS STORED IN MACROWRK FILE
+          MEMBER PIN8F012 OF LENGTH         62 IS STORED IN FLUX     FILE
+          MEMBER PIN8F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 15**CELLTHML**         9 SEC ELAPSED AFTER STEP14**
+          STRAGE USED     204270 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED      17032 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN8T002 OF LENGTH        180 IS STORED IN FLUX     FILE
+          MEMBER PIN8TVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+          MEMBER PIN8SVOL OF LENGTH          8 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 16**MIXXTHML**        10 SEC ELAPSED AFTER STEP15**
+          MEMBER PIN8T012 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN8T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN8T01Y OF LENGTH        810 IS STORED IN MACROWRK FILE
+          MEMBER PIN8T012 OF LENGTH         45 IS STORED IN FLUX     FILE
+          MEMBER PIN8T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 17**HOMOSP  **        10 SEC ELAPSED AFTER STEP16**
+          MEMBER PIN8A012 OF LENGTH        107 IS STORED IN FLUX     FILE
+          MEMBER PIN8A002 OF LENGTH        428 IS STORED IN FLUX     FILE
+          K-EFF= 1.16552 K-INF= 1.16552 UNDER GEOMTRICAL BUCKLING=  .10000E-19
+0*** ENTRANCE STEP 18**COND FIX**        10 SEC ELAPSED AFTER STEP17**
+ **PIN8A013** FOR CONDENSE BY P1 SPECTRUM NOT FOUND THEN USER P0 FLUX.
+          MEMBER PIN8A010 OF LENGTH         80 IS STORED IN MACRO    FILE
+          MEMBER PIN8A01N OF LENGTH         68 IS STORED IN MACRO    FILE
+          MEMBER PIN8A01Z OF LENGTH        108 IS STORED IN MACRO    FILE
+          MEMBER PIN8A010 OF LENGTH          6 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 20**MICRO EF**        10 SEC ELAPSED AFTER STEP18**
+0*** ENTRANCE STEP 28**END CASE**        10 SEC ELAPSED AFTER STEP20**
+0*** ENTRANCE STEP  1**INPUT 1 **        10 SEC ELAPSED AFTER STEP 0**
+0     **** CASE ID === PIN9 : C *** TITLE === Variasi rasio P/D 1.8                                                    ***
+
+
+ FILE DD=MICREF   CLOSED AFTER SEARCH     0 READ     10 WRITE      0 DELETE      0 OVRWRT      1 TIMES   MEMBER     6 LENGTH      7280
+          FILE DD=MICREF   OPENED BY MODE 3 AS  SCRATCH FILE 
+0*** ENTRANCE STEP  4**PIJ INPT**        10 SEC ELAPSED AFTER STEP 1**
+     *** TIME CONSUMING DUE TO TOO MANY NBR OF CELLS TRACED PER NEUTRON  5
+  STRAGE USED      69029 FROM    7000000
+
+
+          VOLUME(NUMERICAL)/VOLUME(ANALYTICAL) 
+            1) 1.00007     2)  .99974     3)  .99988     4)  .99993     5)  .99994     6)  .99993     7)  .99995
+            8) 1.00034
+          ***   21 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F84 ***
+0 *** 1138 LINES DRAWN ON FT84 ***                                                  ****ELAPSED CPU TIME      10 SEC
+          ***   21 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F81 ***
+          ***   10 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F82 ***
+0 *** 1138 LINES REWRITTEN ON FT81 ***                                                  ****ELAPSED CPU TIME      10 SEC
+0*** ENTRANCE STEP  5**GEOMINPT**        10 SEC ELAPSED AFTER STEP 4**
+0*** ENTRANCE STEP  6**INPUT 2 **        10 SEC ELAPSED AFTER STEP 5**
+0*** ENTRANCE STEP  2**USER F L**        10 SEC ELAPSED AFTER STEP 6**
+          FILE DD=FASTP    OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; FASTP        1 2
+   CAUTION --- XU050000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XU080000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XO060000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XHE40000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XZRN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XSNN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XFEN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XCRN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XHFN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XO060000 ALREADY EXISTS IN USER-FILE 
+ FILE DD=FASTP    CLOSED AFTER SEARCH     0 READ     25 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  3**USER T L**        10 SEC ELAPSED AFTER STEP 2**
+          FILE DD=THERMALP OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; THERMALP     1 2
+ FILE DD=THERMALP CLOSED AFTER SEARCH     0 READ     14 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  7**MACRO F **        10 SEC ELAPSED AFTER STEP 3**
+0*** ENTRANCE STEP  8**MACRO T **        10 SEC ELAPSED AFTER STEP 7**
+0          ** MEMBER FUELT012 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER HELIT022 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER CLADT032 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER MODET042 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0*** ENTRANCE STEP  9**GAM P1B1**        10 SEC ELAPSED AFTER STEP 8**
+          MEMBER PIN9F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN9F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN9T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN9T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+           *** THERMAL SPECTRUM CONVERGED AT 18 ITERATIONS WITH RESIDUE   .83996E-05
+          RATIO OF THERMAL SOURCE TO REMOVAL   .10000E+01
+0*** ENTRANCE STEP 12**CELLFAST**        10 SEC ELAPSED AFTER STEP 9**
+          STRAGE USED     112214 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED       9323 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN9F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER PIN9FVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 13**PEACO   **        10 SEC ELAPSED AFTER STEP12**
+  PLOT OPTION READ IN FREE FORMAT (0/1/2:NO/YES/YES)
+
+           PLOT OPT
+                     0
+          NOTE ---> NUCLIDE 0ZRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0SNN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0FEN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0CRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0HFN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NUCLIDE(CU050001) ALREADY EXISTS IN USER MCROSS.
+          NUCLIDE(CU080001) ALREADY EXISTS IN USER MCROSS.
+          STRAGE USED     253461 WITHIN    7000000 IN PIJ2-STEP
+          MEMBER PIN9F002                      IS DELETED FROM DD=FLUX    
+          MEMBER PIN9F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER FUELF012                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF012 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF014                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF014 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF013                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF013 OF LENGTH        807 IS STORED IN MACROWRK FILE
+          MEMBER HELIF022                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF022 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF024                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF024 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF023                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF023 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER CLADF032                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF032 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF034                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF034 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF033                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF033 OF LENGTH        744 IS STORED IN MACROWRK FILE
+          MEMBER MODEF042                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF042 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF044                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF044 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF043                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF043 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER FUELBMIC OF LENGTH       1926 IS STORED IN MICREF   FILE
+0*** ENTRANCE STEP 14**MIXXFAST**        10 SEC ELAPSED AFTER STEP13**
+          MEMBER PIN9F012 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN9F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN9F01M OF LENGTH        795 IS STORED IN MACROWRK FILE
+          MEMBER PIN9F01Y OF LENGTH       1116 IS STORED IN MACROWRK FILE
+          MEMBER PIN9F012 OF LENGTH         62 IS STORED IN FLUX     FILE
+          MEMBER PIN9F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 15**CELLTHML**        10 SEC ELAPSED AFTER STEP14**
+          STRAGE USED     204270 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED      17032 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN9T002 OF LENGTH        180 IS STORED IN FLUX     FILE
+          MEMBER PIN9TVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+          MEMBER PIN9SVOL OF LENGTH          8 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 16**MIXXTHML**        11 SEC ELAPSED AFTER STEP15**
+          MEMBER PIN9T012 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN9T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN9T01Y OF LENGTH        810 IS STORED IN MACROWRK FILE
+          MEMBER PIN9T012 OF LENGTH         45 IS STORED IN FLUX     FILE
+          MEMBER PIN9T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 17**HOMOSP  **        11 SEC ELAPSED AFTER STEP16**
+          MEMBER PIN9A012 OF LENGTH        107 IS STORED IN FLUX     FILE
+          MEMBER PIN9A002 OF LENGTH        428 IS STORED IN FLUX     FILE
+          K-EFF= 1.17713 K-INF= 1.17713 UNDER GEOMTRICAL BUCKLING=  .10000E-19
+0*** ENTRANCE STEP 18**COND FIX**        11 SEC ELAPSED AFTER STEP17**
+ **PIN9A013** FOR CONDENSE BY P1 SPECTRUM NOT FOUND THEN USER P0 FLUX.
+          MEMBER PIN9A010 OF LENGTH         80 IS STORED IN MACRO    FILE
+          MEMBER PIN9A01N OF LENGTH         68 IS STORED IN MACRO    FILE
+          MEMBER PIN9A01Z OF LENGTH        108 IS STORED IN MACRO    FILE
+          MEMBER PIN9A010 OF LENGTH          6 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 20**MICRO EF**        11 SEC ELAPSED AFTER STEP18**
+0*** ENTRANCE STEP 28**END CASE**        11 SEC ELAPSED AFTER STEP20**
+0*** ENTRANCE STEP  1**INPUT 1 **        11 SEC ELAPSED AFTER STEP 0**
+0     **** CASE ID === PIN10 :  *** TITLE === Variasi rasio P/D 1.9                                                    ***
+
+
+ FILE DD=MICREF   CLOSED AFTER SEARCH     0 READ     10 WRITE      0 DELETE      0 OVRWRT      1 TIMES   MEMBER     6 LENGTH      7280
+          FILE DD=MICREF   OPENED BY MODE 3 AS  SCRATCH FILE 
+0*** ENTRANCE STEP  4**PIJ INPT**        11 SEC ELAPSED AFTER STEP 1**
+     *** TIME CONSUMING DUE TO TOO MANY NBR OF CELLS TRACED PER NEUTRON  5
+  STRAGE USED      69029 FROM    7000000
+
+
+          VOLUME(NUMERICAL)/VOLUME(ANALYTICAL) 
+            1) 1.00007     2)  .99974     3)  .99988     4)  .99993     5)  .99994     6)  .99992     7)  .99994
+            8) 1.00141
+          ***   20 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F84 ***
+0 *** 1138 LINES DRAWN ON FT84 ***                                                  ****ELAPSED CPU TIME      11 SEC
+          ***   20 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F81 ***
+          ***   10 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F82 ***
+0 *** 1138 LINES REWRITTEN ON FT81 ***                                                  ****ELAPSED CPU TIME      11 SEC
+0*** ENTRANCE STEP  5**GEOMINPT**        11 SEC ELAPSED AFTER STEP 4**
+0*** ENTRANCE STEP  6**INPUT 2 **        11 SEC ELAPSED AFTER STEP 5**
+0*** ENTRANCE STEP  2**USER F L**        11 SEC ELAPSED AFTER STEP 6**
+          FILE DD=FASTP    OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; FASTP        1 2
+   CAUTION --- XU050000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XU080000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XO060000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XHE40000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XZRN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XSNN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XFEN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XCRN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XHFN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XO060000 ALREADY EXISTS IN USER-FILE 
+ FILE DD=FASTP    CLOSED AFTER SEARCH     0 READ     25 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  3**USER T L**        11 SEC ELAPSED AFTER STEP 2**
+          FILE DD=THERMALP OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; THERMALP     1 2
+ FILE DD=THERMALP CLOSED AFTER SEARCH     0 READ     14 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  7**MACRO F **        11 SEC ELAPSED AFTER STEP 3**
+0*** ENTRANCE STEP  8**MACRO T **        11 SEC ELAPSED AFTER STEP 7**
+0          ** MEMBER FUELT012 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER HELIT022 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER CLADT032 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER MODET042 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0*** ENTRANCE STEP  9**GAM P1B1**        11 SEC ELAPSED AFTER STEP 8**
+          MEMBER PIN1F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN1F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN1T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN1T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+           *** THERMAL SPECTRUM CONVERGED AT 18 ITERATIONS WITH RESIDUE   .79247E-05
+          RATIO OF THERMAL SOURCE TO REMOVAL   .10000E+01
+0*** ENTRANCE STEP 12**CELLFAST**        11 SEC ELAPSED AFTER STEP 9**
+          STRAGE USED     112214 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED       9323 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN1F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER PIN1FVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 13**PEACO   **        11 SEC ELAPSED AFTER STEP12**
+  PLOT OPTION READ IN FREE FORMAT (0/1/2:NO/YES/YES)
+
+           PLOT OPT
+                     0
+          NOTE ---> NUCLIDE 0ZRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0SNN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0FEN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0CRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0HFN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NUCLIDE(CU050001) ALREADY EXISTS IN USER MCROSS.
+          NUCLIDE(CU080001) ALREADY EXISTS IN USER MCROSS.
+          STRAGE USED     253461 WITHIN    7000000 IN PIJ2-STEP
+          MEMBER PIN1F002                      IS DELETED FROM DD=FLUX    
+          MEMBER PIN1F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER FUELF012                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF012 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF014                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF014 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF013                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF013 OF LENGTH        807 IS STORED IN MACROWRK FILE
+          MEMBER HELIF022                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF022 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF024                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF024 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF023                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF023 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER CLADF032                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF032 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF034                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF034 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF033                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF033 OF LENGTH        744 IS STORED IN MACROWRK FILE
+          MEMBER MODEF042                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF042 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF044                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF044 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF043                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF043 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER FUELBMIC OF LENGTH       1926 IS STORED IN MICREF   FILE
+0*** ENTRANCE STEP 14**MIXXFAST**        11 SEC ELAPSED AFTER STEP13**
+          MEMBER PIN1F012 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN1F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN1F01M OF LENGTH        795 IS STORED IN MACROWRK FILE
+          MEMBER PIN1F01Y OF LENGTH       1116 IS STORED IN MACROWRK FILE
+          MEMBER PIN1F012 OF LENGTH         62 IS STORED IN FLUX     FILE
+          MEMBER PIN1F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 15**CELLTHML**        11 SEC ELAPSED AFTER STEP14**
+          STRAGE USED     204270 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED      17032 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN1T002 OF LENGTH        180 IS STORED IN FLUX     FILE
+          MEMBER PIN1TVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 16**MIXXTHML**        12 SEC ELAPSED AFTER STEP15**
+          MEMBER PIN1T012 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN1T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN1T01Y OF LENGTH        810 IS STORED IN MACROWRK FILE
+          MEMBER PIN1T012 OF LENGTH         45 IS STORED IN FLUX     FILE
+          MEMBER PIN1T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 17**HOMOSP  **        12 SEC ELAPSED AFTER STEP16**
+          MEMBER PIN1A012 OF LENGTH        107 IS STORED IN FLUX     FILE
+          MEMBER PIN1A002 OF LENGTH        428 IS STORED IN FLUX     FILE
+          K-EFF= 1.18470 K-INF= 1.18470 UNDER GEOMTRICAL BUCKLING=  .10000E-19
+0*** ENTRANCE STEP 18**COND FIX**        12 SEC ELAPSED AFTER STEP17**
+ **PIN1A013** FOR CONDENSE BY P1 SPECTRUM NOT FOUND THEN USER P0 FLUX.
+  WARNING **** PIN1A010 ALREADY EXISTS IN MACRO FILE ]] 
+  WARNING **** PIN1A01N ALREADY EXISTS IN MACRO FILE ]] 
+  WARNING **** PIN1A01Z ALREADY EXISTS IN MACRO FILE ]] 
+  WARNING **** PIN1A010 ALREADY EXISTS IN FLUX FILE ]] 
+0*** ENTRANCE STEP 20**MICRO EF**        12 SEC ELAPSED AFTER STEP18**
+0*** ENTRANCE STEP 28**END CASE**        12 SEC ELAPSED AFTER STEP20**
+0*** ENTRANCE STEP  1**INPUT 1 **        12 SEC ELAPSED AFTER STEP 0**
+0     **** CASE ID === PIN11 :  *** TITLE === Variasi rasio P/D 2.0                                                    ***
+
+
+ FILE DD=MICREF   CLOSED AFTER SEARCH     0 READ     10 WRITE      0 DELETE      0 OVRWRT      1 TIMES   MEMBER     6 LENGTH      7280
+          FILE DD=MICREF   OPENED BY MODE 3 AS  SCRATCH FILE 
+0*** ENTRANCE STEP  4**PIJ INPT**        12 SEC ELAPSED AFTER STEP 1**
+     *** TIME CONSUMING DUE TO TOO MANY NBR OF CELLS TRACED PER NEUTRON  5
+  STRAGE USED      69029 FROM    7000000
+
+
+          VOLUME(NUMERICAL)/VOLUME(ANALYTICAL) 
+            1) 1.00007     2)  .99974     3)  .99988     4)  .99993     5)  .99994     6)  .99991     7)  .99993
+            8) 1.00089
+          ***   20 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F84 ***
+0 *** 1138 LINES DRAWN ON FT84 ***                                                  ****ELAPSED CPU TIME      12 SEC
+          ***   20 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F81 ***
+          ***   10 LOGICAL RECORDS OF THE SIZE  6080 WRITTEN ON THE FILE UNIT F82 ***
+0 *** 1138 LINES REWRITTEN ON FT81 ***                                                  ****ELAPSED CPU TIME      12 SEC
+0*** ENTRANCE STEP  5**GEOMINPT**        12 SEC ELAPSED AFTER STEP 4**
+0*** ENTRANCE STEP  6**INPUT 2 **        12 SEC ELAPSED AFTER STEP 5**
+0*** ENTRANCE STEP  2**USER F L**        12 SEC ELAPSED AFTER STEP 6**
+          FILE DD=FASTP    OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; FASTP        1 2
+   CAUTION --- XU050000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XU080000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XO060000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XHE40000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XZRN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XSNN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XFEN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XCRN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XHFN0000 ALREADY EXISTS IN USER-FILE 
+   CAUTION --- XO060000 ALREADY EXISTS IN USER-FILE 
+ FILE DD=FASTP    CLOSED AFTER SEARCH     0 READ     25 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  3**USER T L**        12 SEC ELAPSED AFTER STEP 2**
+          FILE DD=THERMALP OPENED BY MODE 1 AS  OLD FILE     
+  FILENM IRW IST ; THERMALP     1 2
+ FILE DD=THERMALP CLOSED AFTER SEARCH     0 READ     14 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+0*** ENTRANCE STEP  7**MACRO F **        12 SEC ELAPSED AFTER STEP 3**
+0*** ENTRANCE STEP  8**MACRO T **        12 SEC ELAPSED AFTER STEP 7**
+0          ** MEMBER FUELT012 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER HELIT022 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER CLADT032 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0          ** MEMBER MODET042 ALREADY EXISTS IN MACRO FILE FORMATION SKIPPED **
+0*** ENTRANCE STEP  9**GAM P1B1**        12 SEC ELAPSED AFTER STEP 8**
+          MEMBER PIN1F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN1F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN1T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN1T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+           *** THERMAL SPECTRUM CONVERGED AT 18 ITERATIONS WITH RESIDUE   .79573E-05
+          RATIO OF THERMAL SOURCE TO REMOVAL   .10000E+01
+0*** ENTRANCE STEP 12**CELLFAST**        12 SEC ELAPSED AFTER STEP 9**
+          STRAGE USED     112214 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED       9323 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN1F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER PIN1FVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 13**PEACO   **        12 SEC ELAPSED AFTER STEP12**
+  PLOT OPTION READ IN FREE FORMAT (0/1/2:NO/YES/YES)
+
+           PLOT OPT
+                     0
+          NOTE ---> NUCLIDE 0ZRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0SNN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0FEN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0CRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0HFN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NUCLIDE(CU050001) ALREADY EXISTS IN USER MCROSS.
+          NUCLIDE(CU080001) ALREADY EXISTS IN USER MCROSS.
+          STRAGE USED     253461 WITHIN    7000000 IN PIJ2-STEP
+          MEMBER PIN1F002                      IS DELETED FROM DD=FLUX    
+          MEMBER PIN1F002 OF LENGTH        248 IS STORED IN FLUX     FILE
+          MEMBER FUELF012                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF012 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF014                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF014 OF LENGTH       1218 IS STORED IN MACROWRK FILE
+          MEMBER FUELF013                      IS DELETED FROM DD=MACROWRK
+          MEMBER FUELF013 OF LENGTH        807 IS STORED IN MACROWRK FILE
+          MEMBER HELIF022                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF022 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF024                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF024 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER HELIF023                      IS DELETED FROM DD=MACROWRK
+          MEMBER HELIF023 OF LENGTH       1002 IS STORED IN MACROWRK FILE
+          MEMBER CLADF032                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF032 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF034                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF034 OF LENGTH       1319 IS STORED IN MACROWRK FILE
+          MEMBER CLADF033                      IS DELETED FROM DD=MACROWRK
+          MEMBER CLADF033 OF LENGTH        744 IS STORED IN MACROWRK FILE
+          MEMBER MODEF042                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF042 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF044                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF044 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER MODEF043                      IS DELETED FROM DD=MACROWRK
+          MEMBER MODEF043 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER FUELBMIC OF LENGTH       1926 IS STORED IN MICREF   FILE
+0*** ENTRANCE STEP 14**MIXXFAST**        13 SEC ELAPSED AFTER STEP13**
+          MEMBER PIN1F012 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+          MEMBER PIN1F013 OF LENGTH       2789 IS STORED IN MACROWRK FILE
+          MEMBER PIN1F01M OF LENGTH        795 IS STORED IN MACROWRK FILE
+          MEMBER PIN1F01Y OF LENGTH       1116 IS STORED IN MACROWRK FILE
+          MEMBER PIN1F012 OF LENGTH         62 IS STORED IN FLUX     FILE
+          MEMBER PIN1F014 OF LENGTH       2884 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 15**CELLTHML**        13 SEC ELAPSED AFTER STEP14**
+          STRAGE USED     204270 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED      17032 WITHIN   7000000 IN PIJ3 STEP
+
+           FLUX WRITTEN IN FT 33
+           D1   WRITTEN IN FT 33
+          MEMBER PIN1T002 OF LENGTH        180 IS STORED IN FLUX     FILE
+          MEMBER PIN1TVOL OF LENGTH          4 IS STORED IN FLUX     FILE
+0*** ENTRANCE STEP 16**MIXXTHML**        13 SEC ELAPSED AFTER STEP15**
+          MEMBER PIN1T012 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN1T013 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+          MEMBER PIN1T01Y OF LENGTH        810 IS STORED IN MACROWRK FILE
+          MEMBER PIN1T012 OF LENGTH         45 IS STORED IN FLUX     FILE
+          MEMBER PIN1T014 OF LENGTH       2411 IS STORED IN MACROWRK FILE
+0*** ENTRANCE STEP 17**HOMOSP  **        13 SEC ELAPSED AFTER STEP16**
+          MEMBER PIN1A012 OF LENGTH        107 IS STORED IN FLUX     FILE
+          MEMBER PIN1A002 OF LENGTH        428 IS STORED IN FLUX     FILE
+          K-EFF= 1.18882 K-INF= 1.18882 UNDER GEOMTRICAL BUCKLING=  .10000E-19
+0*** ENTRANCE STEP 18**COND FIX**        13 SEC ELAPSED AFTER STEP17**
+ **PIN1A013** FOR CONDENSE BY P1 SPECTRUM NOT FOUND THEN USER P0 FLUX.
+  WARNING **** PIN1A010 ALREADY EXISTS IN MACRO FILE ]] 
+  WARNING **** PIN1A01N ALREADY EXISTS IN MACRO FILE ]] 
+  WARNING **** PIN1A01Z ALREADY EXISTS IN MACRO FILE ]] 
+  WARNING **** PIN1A010 ALREADY EXISTS IN FLUX FILE ]] 
+0*** ENTRANCE STEP 20**MICRO EF**        13 SEC ELAPSED AFTER STEP18**
+0*** ENTRANCE STEP 28**END CASE**        13 SEC ELAPSED AFTER STEP20**
+0*** ENTRANCE STEP  1**INPUT 1 **        13 SEC ELAPSED AFTER STEP 0**
+ FILE DD=MCROSS   CLOSED AFTER SEARCH     0 READ     19 WRITE      0 DELETE      0 OVRWRT      0 TIMES
+ FILE DD=FASTU    CLOSED AFTER SEARCH     0 READ    596 WRITE     37 DELETE      0 OVRWRT      0 TIMES   MEMBER    37 LENGTH    100415
+ FILE DD=THERMALU CLOSED AFTER SEARCH     0 READ     75 WRITE     50 DELETE      0 OVRWRT      0 TIMES   MEMBER    50 LENGTH    580104
+ FILE DD=UMCROSS  CLOSED AFTER SEARCH     0 READ    346 WRITE     33 DELETE      1 OVRWRT      0 TIMES   MEMBER    32 LENGTH    102896
+ FILE DD=MACROWRK CLOSED AFTER SEARCH    44 READ   1288 WRITE    252 DELETE    132 OVRWRT     99 TIMES   MEMBER   120 LENGTH    236337
+ FILE DD=MACRO    CLOSED AFTER SEARCH     0 READ      0 WRITE     28 DELETE      0 OVRWRT      0 TIMES   MEMBER    28 LENGTH      2318
+ FILE DD=FLUX     CLOSED AFTER SEARCH     0 READ    132 WRITE    103 DELETE     11 OVRWRT     88 TIMES   MEMBER    92 LENGTH     10058
+  ** IZWCNT IZDWTL :        509   1240195
+  ** IZWRIT IZMXDT :      50000  10000000
+  ** ICNTMX USED M :        509   1240194
+ FILE DD=MICREF   CLOSED AFTER SEARCH     0 READ     10 WRITE      0 DELETE      0 OVRWRT      1 TIMES   MEMBER     6 LENGTH      7280
+
+ =========================== END OF SRAC CALCULATION ==========================

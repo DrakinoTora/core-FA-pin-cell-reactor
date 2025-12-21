@@ -1,0 +1,2000 @@
+0     *** === SRAC CODE SYSTEM RUN    DATE : 92-28-09 START TIME= 0: 0: 0:
+              (SRAC:Ver.2005.00, LAST MODIFIED 2005.01.28)
+0     **** CASE ID === PINB1 :  *** TITLE === Variasi Boron 1                                                          ***
+
+
+     USE OF COLLISION PROB. ROUTINE (NO,CALL:0,1)             1
+     SELECT OF ROUTINE FOR FIX S CALC(NO,PIJ,1D SN ,2D SN , 
+      1D DIFF,2D DIFF:0,1,2,3,4,5)                            1
+     DANCOFF FACTOR BY(INPUT,PIJ,TONE:0,1,2)                  1
+     CALC OF THERMAL RANGE (EXCLUDED,INCLUDED:0,1)            1
+     PROCESS OF RESONANCE 2 RANGE(TABLELOOK,IR,PEACO:0,1,2)   2
+     FLUX CALCULATION BY RANGES(SKIP,CALC:0,1)                1
+     FAST RANGES FOR TRANSPORT CALC(0,1,2,3,4)                4
+     INDICATOR FOR ENRGY STRUCTURE OF UMCROSS (0,1,2,3)       3
+     CALC OF BARE REACTOR SPECTRUM(SKIP,P1,B1:0,1,2)         -2
+     COLLAPSE MACRO X-SECTION BY RANGE(SKIP,CALL:0,1)         1
+     INPUT OF GEOMETRY (NEW,SAME AS PREVIOUS CASE:0,1)        0
+     SELECT ROUTINE FOR EIGENVALUE CALC(NO,PIJ,1D SN,2D SN, 
+      1D DIFF,2D DIFF:0,1,2,3,4,5)                            0
+     COLLAPSE MACRO AFTER EIGENVALUE CALC(SKIP,CALL:0,1)      0
+     PREPARE MACRO FOR CITATION (SKIP,CALL:0,1)               0
+     TOTAL MICRO X-SECTION BY (HARMONIC,ARITHMETIC AV:1,2)    1
+     TRANSPORT MACRO X-SECTION BY (P0,P1,B1,SN:0,1,2,3)       2
+     DIFF COEF (INVERSE TR,BENOIST ISO,BENOIST ANISO:1,2,3)   1
+     REACTION RATE CALCULATION (0,1)                          0
+     PRINT OF MACRO-X (0,1,2)                                 0
+     BURN-UP CALCULATION (0,1:SKIP,EXECUTE)                   0
+0                     << INFORMATION OF PDS-FILES >> 
+
+      PDS FILE NAME             DATA SET NAME                                                       IWR DISP    I/O METHOD        
+   --------------------------------------------------------------------------------------------------------------------------------
+    PUBLIC FAST LIBRARY       C:/SRACW/SRACLIB-EDF70/pds/pfast                                       1  OLD       FILE    
+    PUBLIC THERMAL  LIBRARY   C:/SRACW/SRACLIB-EDF70/pds/pthml                                       1  OLD       FILE    
+    PUBLIC MCROSS LIBRARY     C:/SRACW/SRACLIB-EDF70/pds/pmcrs                                       1  OLD       FILE    
+    USERS  FAST LIBRARY       C:\SRACW\SRAC\tmp\pin_boron/UFAST                                      3  NEW       CORE    
+    USERS  THERMAL  LIBRARY   C:\SRACW\SRAC\tmp\pin_boron/UTHERMAL                                   3  SCRATCH   CORE    
+    USERS  MCROSS LIBRARY     C:\SRACW\SRAC\tmp\pin_boron/UMCROSS                                    3  SCRATCH   CORE    
+    USERS  MACROSCOPIC FINE   C:\SRACW\SRAC\tmp\pin_boron/MACROWRK                                   3  SCRATCH   CORE    
+    USERS  MACROSCOPIC BROAD  C:\SRACW\SRAC\tmp\pin_boron/MACRO                                      3  SCRATCH   CORE    
+    USERS  FLUX               C:\SRACW\SRAC\tmp\pin_boron/FLUX                                       3  SCRATCH   CORE    
+    USERS  MICROSCOPIC        C:\SRACW\SRAC\tmp\pin_boron/MICREF                                     3  SCRATCH   CORE    
+   --------------------------------------------------------------------------------------------------------------------------------
+     NUMBER OF USER'S FAST GROUPS                          62
+     NUMBER OF USER'S THERMAL GROUPS                       45
+     NUMBER OF USER'S CONDENSED FAST GROUPS                 3
+     NUMBER OF USER'S CONDENSED THERMAL GROUPS              3
+
+     NUMBER OF LIBRARY GROUPS IN THE USER'S FAST GROUP
+                1           1           1           1           1           1           1           1           1           1
+
+                1           1           1           1           1           1           1           1           1           1
+
+                1           1           1           1           1           1           1           1           1           1
+
+                1           1           1           1           1           1           1           1           1           1
+
+                1           1           1           1           1           1           1           1           1           1
+
+                1           1           1           1           1           1           1           1           1           1
+
+                1           1
+     NUMBER OF LIBRARY GROUPS IN THE USER'S THERMAL GROUPS
+                1           1           1           1           1           1           1           1           1           1
+
+                1           1           1           1           1           1           1           1           1           1
+
+                1           1           1           1           1           1           1           1           1           1
+
+                1           1           1           1           1           1           1           1           1           1
+
+                1           1           1           1           1
+     NUMBER OF USER'S GROUPS IN THE CONDENSED FAST GROUP
+               20          21          21
+     NUMBER OF USER'S GROUPS IN THE CONDENSED THERMAL GROUP
+               15          15          15
+1
+
+                     ### USERFL START ###
+
+
+                                ENERGY GROUP STRUCTURE 
+
+           NEFL: TOTAL NBR OF PUBLIC FAST GROUPS -----  74
+           NETL: TOTAL NBR OF PUBLIC THERMAL GROUPS --  48
+           NEF : TOTAL NBR OF USERS  FAST GROUPS -----  62
+           NET : TOTAL NBR OF USERS  THERMAL GROUPS --  45
+0                FINE   FAST    ENERGY GROUP STRUCTURE (M=1.67482E-24 GRAM,  EV=1.60210E-12 ERG)
+0   GROUP          ENERGY RANGE (EV)               VELOCITY RANGE (CM/SEC)           LETHARGY RANGE
+       1         .10000E+08     .77880E+07         .43740E+10     .38600E+10          .0000      .2500
+       2         .77880E+07     .60653E+07         .38600E+10     .34065E+10          .2500      .5000
+       3         .60653E+07     .47237E+07         .34065E+10     .30062E+10          .5000      .7500
+       4         .47237E+07     .36788E+07         .30062E+10     .26529E+10          .7500     1.0000
+       5         .36788E+07     .28651E+07         .26529E+10     .23412E+10         1.0000     1.2500
+       6         .28651E+07     .22313E+07         .23412E+10     .20661E+10         1.2500     1.5000
+       7         .22313E+07     .17377E+07         .20661E+10     .18233E+10         1.5000     1.7500
+       8         .17377E+07     .13534E+07         .18233E+10     .16091E+10         1.7500     2.0000
+       9         .13534E+07     .10540E+07         .16091E+10     .14200E+10         2.0000     2.2500
+      10         .10540E+07     .82085E+06         .14200E+10     .12532E+10         2.2500     2.5000
+      11         .82085E+06     .63928E+06         .12532E+10     .11059E+10         2.5000     2.7500
+      12         .63928E+06     .49787E+06         .11059E+10     .97596E+09         2.7500     3.0000
+      13         .49787E+06     .38774E+06         .97596E+09     .86129E+09         3.0000     3.2500
+      14         .38774E+06     .30197E+06         .86129E+09     .76008E+09         3.2500     3.5000
+      15         .30197E+06     .23518E+06         .76008E+09     .67077E+09         3.5000     3.7500
+      16         .23518E+06     .18316E+06         .67077E+09     .59195E+09         3.7500     4.0000
+      17         .18316E+06     .14264E+06         .59195E+09     .52240E+09         4.0000     4.2500
+      18         .14264E+06     .11109E+06         .52240E+09     .46101E+09         4.2500     4.5000
+      19         .11109E+06     .86517E+05         .46101E+09     .40684E+09         4.5000     4.7500
+      20         .86517E+05     .67380E+05         .40684E+09     .35904E+09         4.7500     5.0000
+      21         .67380E+05     .52475E+05         .35904E+09     .31685E+09         5.0000     5.2500
+      22         .52475E+05     .40868E+05         .31685E+09     .27962E+09         5.2500     5.5000
+      23         .40868E+05     .31828E+05         .27962E+09     .24676E+09         5.5000     5.7500
+      24         .31828E+05     .24788E+05         .24676E+09     .21777E+09         5.7500     6.0000
+      25         .24788E+05     .19305E+05         .21777E+09     .19218E+09         6.0000     6.2500
+      26         .19305E+05     .15034E+05         .19218E+09     .16960E+09         6.2500     6.5000
+      27         .15034E+05     .11709E+05         .16960E+09     .14967E+09         6.5000     6.7500
+      28         .11709E+05     .91188E+04         .14967E+09     .13208E+09         6.7500     7.0000
+      29         .91188E+04     .71017E+04         .13208E+09     .11656E+09         7.0000     7.2500
+      30         .71017E+04     .55308E+04         .11656E+09     .10287E+09         7.2500     7.5000
+      31         .55308E+04     .43074E+04         .10287E+09     .90779E+08         7.5000     7.7500
+      32         .43074E+04     .33546E+04         .90779E+08     .80112E+08         7.7500     8.0000
+      33         .33546E+04     .26126E+04         .80112E+08     .70699E+08         8.0000     8.2500
+      34         .26126E+04     .20347E+04         .70699E+08     .62391E+08         8.2500     8.5000
+      35         .20347E+04     .15846E+04         .62391E+08     .55060E+08         8.5000     8.7500
+      36         .15846E+04     .12341E+04         .55060E+08     .48590E+08         8.7500     9.0000
+      37         .12341E+04     .96112E+03         .48590E+08     .42881E+08         9.0000     9.2500
+      38         .96112E+03     .74852E+03         .42881E+08     .37842E+08         9.2500     9.5000
+      39         .74852E+03     .58295E+03         .37842E+08     .33396E+08         9.5000     9.7500
+      40         .58295E+03     .45400E+03         .33396E+08     .29472E+08         9.7500    10.0000
+      41         .45400E+03     .35358E+03         .29472E+08     .26009E+08        10.0000    10.2500
+      42         .35358E+03     .27536E+03         .26009E+08     .22953E+08        10.2500    10.5000
+      43         .27536E+03     .21445E+03         .22953E+08     .20255E+08        10.5000    10.7500
+      44         .21445E+03     .16702E+03         .20255E+08     .17875E+08        10.7500    11.0000
+      45         .16702E+03     .13007E+03         .17875E+08     .15775E+08        11.0000    11.2500
+      46         .13007E+03     .10130E+03         .15775E+08     .13921E+08        11.2500    11.5000
+      47         .10130E+03     .78893E+02         .13921E+08     .12286E+08        11.5000    11.7500
+      48         .78893E+02     .61442E+02         .12286E+08     .10842E+08        11.7500    12.0000
+      49         .61442E+02     .47851E+02         .10842E+08     .95680E+07        12.0000    12.2500
+      50         .47851E+02     .37266E+02         .95680E+07     .84437E+07        12.2500    12.5000
+      51         .37266E+02     .29023E+02         .84437E+07     .74516E+07        12.5000    12.7500
+      52         .29023E+02     .22603E+02         .74516E+07     .65760E+07        12.7500    13.0000
+      53         .22603E+02     .17604E+02         .65760E+07     .58033E+07        13.0000    13.2500
+      54         .17604E+02     .13710E+02         .58033E+07     .51214E+07        13.2500    13.5000
+0                FINE   FAST    ENERGY GROUP STRUCTURE (M=1.67482E-24 GRAM,  EV=1.60210E-12 ERG)
+0   GROUP          ENERGY RANGE (EV)               VELOCITY RANGE (CM/SEC)           LETHARGY RANGE
+      55         .13710E+02     .10677E+02         .51214E+07     .45196E+07        13.5000    13.7500
+      56         .10677E+02     .83153E+01         .45196E+07     .39885E+07        13.7500    14.0000
+      57         .83153E+01     .64759E+01         .39885E+07     .35199E+07        14.0000    14.2500
+      58         .64759E+01     .50435E+01         .35199E+07     .31063E+07        14.2500    14.5000
+      59         .50435E+01     .39279E+01         .31063E+07     .27413E+07        14.5000    14.7500
+      60         .39279E+01     .30590E+01         .27413E+07     .24192E+07        14.7500    15.0000
+      61         .30590E+01     .23824E+01         .24192E+07     .21349E+07        15.0000    15.2500
+      62         .23824E+01     .18554E+01         .21349E+07     .18841E+07        15.2500    15.5000
+
+                     ### USERFL END ###
+
+
+0                FINE   THERMAL ENERGY GROUP STRUCTURE (M=1.67482E-24 GRAM,  EV=1.60210E-12 ERG)
+0   GROUP          ENERGY RANGE (EV)               VELOCITY RANGE (CM/SEC)           LETHARGY RANGE
+       1         .18554E+01     .16374E+01         .18841E+07     .17699E+07        15.5000    15.6250
+       2         .16374E+01     .14450E+01         .17699E+07     .16627E+07        15.6250    15.7500
+       3         .14450E+01     .12752E+01         .16627E+07     .15619E+07        15.7500    15.8750
+       4         .12752E+01     .11253E+01         .15619E+07     .14673E+07        15.8750    16.0000
+       5         .11253E+01     .99312E+00         .14673E+07     .13784E+07        16.0000    16.1250
+       6         .99312E+00     .87643E+00         .13784E+07     .12949E+07        16.1250    16.2500
+       7         .87643E+00     .77344E+00         .12949E+07     .12164E+07        16.2500    16.3750
+       8         .77344E+00     .68256E+00         .12164E+07     .11427E+07        16.3750    16.5000
+       9         .68256E+00     .60236E+00         .11427E+07     .10735E+07        16.5000    16.6250
+      10         .60236E+00     .53158E+00         .10735E+07     .10085E+07        16.6250    16.7500
+      11         .53158E+00     .46912E+00         .10085E+07     .94736E+06        16.7500    16.8750
+      12         .46912E+00     .41399E+00         .94736E+06     .88996E+06        16.8750    17.0000
+      13         .41399E+00     .38925E+00         .88996E+06     .86296E+06        17.0000    17.0616
+      14         .38925E+00     .36528E+00         .86296E+06     .83596E+06        17.0616    17.1252
+      15         .36528E+00     .34206E+00         .83596E+06     .80896E+06        17.1252    17.1909
+      16         .34206E+00     .31961E+00         .80896E+06     .78196E+06        17.1909    17.2587
+      17         .31961E+00     .29792E+00         .78196E+06     .75496E+06        17.2587    17.3290
+      18         .29792E+00     .27699E+00         .75496E+06     .72796E+06        17.3290    17.4019
+      19         .27699E+00     .25683E+00         .72796E+06     .70096E+06        17.4019    17.4774
+      20         .25683E+00     .23742E+00         .70096E+06     .67396E+06        17.4774    17.5560
+      21         .23742E+00     .21878E+00         .67396E+06     .64696E+06        17.5560    17.6378
+      22         .21878E+00     .20090E+00         .64696E+06     .61996E+06        17.6378    17.7230
+      23         .20090E+00     .18378E+00         .61996E+06     .59296E+06        17.7230    17.8121
+      24         .18378E+00     .16743E+00         .59296E+06     .56596E+06        17.8121    17.9053
+      25         .16743E+00     .15183E+00         .56596E+06     .53896E+06        17.9053    18.0031
+      26         .15183E+00     .13700E+00         .53896E+06     .51196E+06        18.0031    18.1059
+      27         .13700E+00     .12293E+00         .51196E+06     .48496E+06        18.1059    18.2142
+      28         .12293E+00     .10963E+00         .48496E+06     .45797E+06        18.2142    18.3288
+      29         .10963E+00     .97080E-01         .45797E+06     .43096E+06        18.3288    18.4503
+      30         .97080E-01     .85297E-01         .43096E+06     .40396E+06        18.4503    18.5797
+      31         .85297E-01     .74276E-01         .40396E+06     .37696E+06        18.5797    18.7181
+      32         .74276E-01     .64017E-01         .37696E+06     .34996E+06        18.7181    18.8667
+      33         .64017E-01     .54520E-01         .34996E+06     .32296E+06        18.8667    19.0273
+      34         .54520E-01     .45785E-01         .32296E+06     .29596E+06        19.0273    19.2019
+      35         .45785E-01     .37813E-01         .29596E+06     .26896E+06        19.2019    19.3932
+      36         .37813E-01     .30602E-01         .26896E+06     .24196E+06        19.3932    19.6048
+      37         .30602E-01     .24154E-01         .24196E+06     .21496E+06        19.6048    19.8414
+      38         .24154E-01     .18467E-01         .21496E+06     .18796E+06        19.8414    20.1099
+      39         .18467E-01     .13543E-01         .18796E+06     .16096E+06        20.1099    20.4200
+      40         .13543E-01     .93805E-02         .16096E+06     .13396E+06        20.4200    20.7872
+      41         .93805E-02     .59804E-02         .13396E+06     .10696E+06        20.7872    21.2374
+      42         .59804E-02     .33423E-02         .10696E+06     .79964E+05        21.2374    21.8192
+      43         .33423E-02     .14663E-02         .79964E+05     .52964E+05        21.8192    22.6431
+      44         .14663E-02     .35238E-03         .52964E+05     .25964E+05        22.6431    24.0689
+      45         .35238E-03     .10000E-04         .25964E+05     .43740E+04        24.0689    27.6310
+1PINB1 : Variasi Boron 1                                                         *** STEP *** INPUT FOR PIJ *** 
+                     GEOMETRY TYPE                             4     ( SQUARE CYLINDER )                                             
+                     NUMBER OF SUB - REGIONS                   8
+                     NUMBER OF  T  - REGIONS                   8
+                     NUMBER OF  R  - REGIONS                   4
+                     NUMBER OF  X  - REGIONS                   1
+                     OUTER BOUNDARY CONDITION (-1,0,1,2)       1
+                     DIRECTIONAL PIJ (1,2)                     1  INDICATED BY IC17
+                     NUMBER OF R OR X MESH                     8
+                     NUMBER OF THETA OR Y MESH                 0
+                     TOTAL NUMBER OF PIN RODS                  0
+                     NUMBER OF RINGS OF PIN ROD ARRAY          0
+                     NUMBER OF LATTICE CELLS TRACED            5
+                     PRINT CONTROL OF PIJ (0,1)                0
+                     ORDER OF GAUSS RADIAL INTEGRATION        10
+                     NO. OF DIVISION FOR ANGULAR INTEGRATION  15
+                     NUMBER OF ANNULAR DIVISION IN A PIN ROD   0
+                     DIVISION BY RPP  (0,1,2)                  0
+                     ANGLE RANGE BY DEGREE                    45
+                     PLOTER OPTION  (0,1)                      0
+0         ===R-REGION NO./T  ===
+                     1           1           1           2           3           4           4           4
+0         ===X-REGION NO./R  ===
+                     1           1           1           1
+0         ===MATERIAL NO./R  ===
+                     1           2           3           4
+0         ===R-X DIVISION    ===
+            .00000E+00  .22600E+00  .32000E+00  .39200E+00  .40000E+00  .45700E+00  .51500E+00  .57200E+00  .63000E+00
+  STRAGE USED      69029 FROM    7000000
+
+          VOLUME OF (S)-REGION
+        1) 1.6046E-01   2) 1.6124E-01   3) 1.6105E-01   4) 1.9905E-02   5) 1.5346E-01   6) 1.7711E-01   7) 1.9465E-01   8) 5.5972E-01
+          VOLUME OF (T)-REGION
+        1) 1.6046E-01   2) 1.6124E-01   3) 1.6105E-01   4) 1.9905E-02   5) 1.5346E-01   6) 1.7711E-01   7) 1.9465E-01   8) 5.5972E-01
+          VOLUME OF (R)-REGION
+        1) 4.8275E-01   2) 1.9905E-02   3) 1.5346E-01   4) 9.3148E-01
+          VOLUME OF (X)-REGION
+        1) 1.5876E+00
+          TOTAL VOLUME                    1.5876E+00
+
+          VOLUME(NUMERICAL)/VOLUME(ANALYTICAL) 
+            1) 1.00007     2)  .99974     3)  .99988     4)  .99993     5)  .99994     6)  .99994     7)  .99994
+            8) 1.00142
+0 *** 1138 LINES DRAWN ON FT84 ***                                                  ****ELAPSED CPU TIME       0 SEC
+
+     NO. OF MATERIALS USED IN THE CASE =  4
+
+1
+
+                     MACROF
+
+           CASE I.D. : PINB1 : 
+           TITLE     : Variasi Boron 1                                                         
+
+
+
+                     COMPOSITION DATA LIST
+
+
+                               ## MATERIAL NAME -----  1   FUELX01X ##
+
+           NUMBER OF NUCLIDE -----------        3
+           TEMPERATURE (K) -------------    1073.15
+           MEAN CHORD LENGTH -----------     .78436
+           DANCOFF FACTOR --------------     .00000
+           WEIGHTING FLUX NAME FOR CHI - ASYMPTO.
+           IDENTIFICATION OF NUCLIDE ---    U05000A     U08000A     O06000A
+           NUMBER DENSITY --------------  3.75030E-04 2.26250E-02 4.58970E-02
+           RESONANT INDICATOR ----------      2           2           0
+           LXMICR ----------------------      0           0           0
+           NUCLIDE-WISE DANCOFF FACTOR WILL BE CALCULATED AT SUBROUTINE(MAFSIG) ]] 
+
+                               ## MATERIAL NAME -----  2   HELIX02X ##
+
+           NUMBER OF NUCLIDE -----------        1
+           TEMPERATURE (K) -------------     773.15
+           MEAN CHORD LENGTH -----------     .03117
+           DANCOFF FACTOR --------------     .00000
+           WEIGHTING FLUX NAME FOR CHI - ASYMPTO.
+           IDENTIFICATION OF NUCLIDE ---    HE40009
+           NUMBER DENSITY --------------  1.87370E-04
+           RESONANT INDICATOR ----------      0
+           LXMICR ----------------------      0
+
+                               ## MATERIAL NAME -----  3   CLADX03X ##
+
+           NUMBER OF NUCLIDE -----------        5
+           TEMPERATURE (K) -------------     598.15
+           MEAN CHORD LENGTH -----------     .21431
+           DANCOFF FACTOR --------------     .00000
+           WEIGHTING FLUX NAME FOR CHI - ASYMPTO.
+           IDENTIFICATION OF NUCLIDE ---    ZRN0008     SNN0008     FEN0008     CRN0008     HFN0008
+ 
+           NUMBER DENSITY --------------  4.25400E-02 4.82530E-04 1.48540E-04 7.59860E-05 2.21330E-06
+ 
+           RESONANT INDICATOR ----------      2           2           2           2           2
+ 
+           LXMICR ----------------------      0           0           0           0           0
+ 
+           NUCLIDE-WISE DANCOFF FACTOR WILL BE CALCULATED AT SUBROUTINE(MAFSIG) ]] 
+
+                               ## MATERIAL NAME -----  4   MODEX04X ##
+
+           NUMBER OF NUCLIDE -----------        4
+           TEMPERATURE (K) -------------     573.15
+           MEAN CHORD LENGTH -----------     .56916
+           DANCOFF FACTOR --------------     .00000
+           WEIGHTING FLUX NAME FOR CHI - ASYMPTO.
+           IDENTIFICATION OF NUCLIDE ---    H01H007     O060007     B000007     B010007
+           NUMBER DENSITY --------------  4.85485E-02 2.42742E-02 0.00000E+00 0.00000E+00
+           RESONANT INDICATOR ----------      0           0           0           0
+           LXMICR ----------------------      0           0           0           0
+
+                               ## RESONANT NUCLIDE NAME LIST ##
+
+           NUMBER OF RESONANT NUCLIDE --      7
+           RESONANT NUCLIDE NAME -------  U05   U08   ZRN   SNN   FEN   CRN   HFN
+
+                               ## STANDARD TEMPERATUE ARRAY LIST (STND) ##
+
+  TAG         :    1        2        3        4        5        6        7        8        9        A
+  TAG         :    B        C
+  TEMPERATURE :    300.00   325.00   350.00   400.00   450.00   500.00   550.00   600.00   900.00  1200.00
+  TEMPERATURE :   1600.00  2100.00
+          STRAGE USED     111794 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED     111794 WITHIN    7000000 IN PIJ2-STEP
+          STRAGE USED     111794 WITHIN    7000000 IN PIJ2-STEP
+
+
+
+                                    ******************************************
+                                    * CALCULATED NUCLIDE-WISE DANCOFF FACTOR *
+                                    ******************************************
+
+
+                               ## MATERIAL NAME -----  1   FUELX01X ##
+
+           IDENTIFICATION OF NUCLIDE ----    U05000A     U08000A     O06000A
+           NUCLIDE-WISE DANCOFF FACTOR---     .318388     .318388    1.000000
+
+                               ## MATERIAL NAME -----  3   CLADX03X ##
+
+           IDENTIFICATION OF NUCLIDE ----    ZRN0008     SNN0008     FEN0008     CRN0008     HFN0008
+ 
+           NUCLIDE-WISE DANCOFF FACTOR---     .132265     .132265     .132265     .132265     .132276
+ 
+          STRAGE USED      64214 WITHIN    7000000 IN PIJ2-STEP
+1
+
+          ===PIJ3 STEP===
+          ***PINB1 : ***Variasi Boron 1                                                         *** IN FAST     RANGE ***
+
+          ITERATION PARAMETERS 
+          PRINT (1+2+4+8)(FLUX,XEC,PIJ,S)              0
+          MAX OF INNER ITERATIONS PER OUTER           50
+          MAX OF OUTER ITERATIONS                     50
+          EARLIST EXTRAPOLATION                        5
+          NUMBER OF ITERATIONS TESTED                  5
+          MINIMUM DELAY                                5
+          MONITOR PRINT(0,1)(SKIP,PRINT)              -1
+          CONVERGENCE CRITERION OF INNER      .10000E-03
+          CONVERGENCE CRITERION OF OUTER      .10000E-04
+          EXTRAPOLATION CRITERION             .10000E-02
+          OVER-RELAXATION (INITIAL)           .10000E+01
+          MAX EXTRAPOLATION                   .10000E+02
+          BASE FACTOR OF OVER-RELAXATION      .50000E+00
+
+          PROBLEM TYPE  
+          ITYPE (0/1  =EIGENVALUE/FIXED S)             1
+          IRANG (0/1/2=FAST/THERMAL/ALL)               0
+          IFIXS (0/1/2)                                0
+
+0            ITERATION POWER-SCALING   RESIDUE CRITERON
+
+              1          .13490E+00  .68903E-01  .10000E-04
+              2          .12718E+00  .77213E-02  .10000E-04
+              3          .12631E+00  .86527E-03  .10000E-04
+              4          .12626E+00  .48110E-03  .10000E-04
+              5          .12624E+00  .26751E-03  .10000E-04
+              6          .12622E+00  .14873E-03  .10000E-04
+              7          .12621E+00  .82672E-04  .10000E-04
+              8          .12621E+00  .45985E-04  .10000E-04
+              9          .12621E+00  .25570E-04  .10000E-04
+             10          .12620E+00  .14231E-04  .10000E-04
+             11          .12620E+00  .78976E-05  .10000E-04
+
+
+
+          === ITERATION END IN PIJF STEP ===
+          === FIXED SOURCE TYPE PROBLEM ===
+          TOTAL THERMAL INNER ITERATION COUNT             0
+          INITIAL SOURCE NORMALIZATION FACTOR    .12919E+01
+          THERMAL SOURCE NORMALIZATION FACTOR    .10000E+01
+          RENORMALIZATION FACTOR (INNER)         .00000E+00
+          RESIDUE IN FINAL INNER ITERATION       .00000E+00
+          FINAL FISSION SOURCE NORMALIZATION     .12620E+00
+          RESIDUE IN FINAL FISSION RATE          .78976E-05
+          NOTE ---> NUCLIDE 0ZRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0SNN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0FEN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0CRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0HFN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          STRAGE USED     205731 WITHIN    7000000 IN PIJ2-STEP
+
+
+
+         *** MIX-X-SECTION STEP IN *** FAST ENERGY RANGE
+          *** PINB1 : ***Variasi Boron 1                                                         ***
+0         X-REGION  1***
+          SIGNED MAT ID BY R-REG =   1   2   3   4
+          ONE GROUP CONSTANTS
+          * ACTIVATION CROSS SECTION      .47930E-01
+          * FISSION    CROSS SECTION      .16785E-02
+          * NU*FISSION CROSS SECTION      .43981E-02
+          * TOTAL      CROSS SECTION      .23428E+00
+          * DIFFUSION  COEFFICIENT 1      .14228E+01
+          * DIFFUSION  COEFFICIENT 2      .14228E+01
+          * ABSORPTION CROSS SECTION      .84004E-02
+          * SCATTEROUT CROSS SECTION      .18683E-01
+          * INTEGRATED FLUX-X-REGION      .40700E+02
+          STRAGE USED     144270 WITHIN    7000000 IN PIJ2-STEP
+1
+
+          ===PIJ3 STEP===
+          ***PINB1 : ***Variasi Boron 1                                                         *** IN THERMAL  RANGE ***
+
+          ITERATION PARAMETERS 
+          PRINT (1+2+4+8)(FLUX,XEC,PIJ,S)              0
+          MAX OF INNER ITERATIONS PER OUTER          200
+          MAX OF OUTER ITERATIONS                      1
+          EARLIST EXTRAPOLATION                        5
+          NUMBER OF ITERATIONS TESTED                  5
+          MINIMUM DELAY                                5
+          MONITOR PRINT(0,1)(SKIP,PRINT)              -1
+          CONVERGENCE CRITERION OF INNER      .10000E-03
+          CONVERGENCE CRITERION OF OUTER      .10000E-04
+          EXTRAPOLATION CRITERION             .10000E-02
+          OVER-RELAXATION (INITIAL)           .10000E+01
+          MAX EXTRAPOLATION                   .10000E+02
+          BASE FACTOR OF OVER-RELAXATION      .50000E+00
+
+          PROBLEM TYPE  
+          ITYPE (0/1  =EIGENVALUE/FIXED S)             1
+          IRANG (0/1/2=FAST/THERMAL/ALL)               1
+          IFIXS (0/1/2)                                0
+
+
+
+
+          === ITERATION END IN PIJF STEP ===
+          === FIXED SOURCE TYPE PROBLEM ===
+          TOTAL THERMAL INNER ITERATION COUNT            22
+          INITIAL SOURCE NORMALIZATION FACTOR    .76038E+00
+          THERMAL SOURCE NORMALIZATION FACTOR    .10000E+01
+          RENORMALIZATION FACTOR (INNER)         .10000E+01
+          RESIDUE IN FINAL INNER ITERATION       .27571E-05
+          FINAL FISSION SOURCE NORMALIZATION     .00000E+00
+          RESIDUE IN FINAL FISSION RATE          .76019E-11
+
+
+
+         *** MIX-X-SECTION STEP IN *** THER ENERGY RANGE
+          *** PINB1 : ***Variasi Boron 1                                                         ***
+0         X-REGION  1***
+          SIGNED MAT ID BY R-REG =   1   2   3   4
+          ONE GROUP CONSTANTS
+          * ACTIVATION CROSS SECTION      .32942E+01
+          * FISSION    CROSS SECTION      .29768E-01
+          * NU*FISSION CROSS SECTION      .72536E-01
+          * TOTAL      CROSS SECTION      .81323E+00
+          * DIFFUSION  COEFFICIENT 1      .40989E+00
+          * DIFFUSION  COEFFICIENT 2      .40989E+00
+          * ABSORPTION CROSS SECTION      .49843E-01
+          * SCATTEROUT CROSS SECTION      .15797E-03
+          * INTEGRATED FLUX-X-REGION      .15207E+02
+1            ***  BARE REACTOR SPECTRUM CALCULATION *** OF STEP 15 ***
+          ***PINB1 : ***Variasi Boron 1                                                         ***
+          *** BY B1 APPROXIMATION *** BUCKLING SERACH OPTION IS         0 (0/1:NO/YES) 
+          RATIO OF THERMAL SOURCE TO REMOVAL   .10000E+01
+          NEUTRON SPECTRUM PER LETHARGY
+            .36543E+00  .10388E+01  .22408E+01  .34382E+01  .49196E+01  .69304E+01  .62957E+01  .66181E+01  .61548E+01  .58618E+01
+            .69766E+01  .59291E+01  .40757E+01  .46915E+01  .41692E+01  .36020E+01  .31741E+01  .28273E+01  .25661E+01  .23513E+01
+            .21921E+01  .20331E+01  .19604E+01  .18606E+01  .17830E+01  .17456E+01  .16977E+01  .16583E+01  .16252E+01  .16119E+01
+            .15882E+01  .15717E+01  .15303E+01  .15580E+01  .15274E+01  .15208E+01  .15041E+01  .14903E+01  .14702E+01  .14649E+01
+            .14572E+01  .14317E+01  .14208E+01  .13986E+01  .14052E+01  .13171E+01  .13794E+01  .13146E+01  .13545E+01  .13144E+01
+            .11877E+01  .12984E+01  .10663E+01  .12434E+01  .12392E+01  .12178E+01  .97512E+00  .10163E+01  .11370E+01  .11422E+01
+            .11456E+01  .11404E+01  .12300E+01  .12069E+01  .12029E+01  .12072E+01  .12208E+01  .12451E+01  .12717E+01  .12975E+01
+            .13343E+01  .13783E+01  .14477E+01  .15561E+01  .16826E+01  .17872E+01  .19252E+01  .20988E+01  .23171E+01  .25783E+01
+            .28958E+01  .32707E+01  .36864E+01  .41339E+01  .45942E+01  .50386E+01  .54468E+01  .57863E+01  .60231E+01  .61355E+01
+            .60958E+01  .58996E+01  .55416E+01  .50422E+01  .44246E+01  .37319E+01  .30086E+01  .23046E+01  .16638E+01  .11186E+01
+            .68909E+00  .37961E+00  .17942E+00  .68119E-01  .17931E-01  .22828E-02  .53776E-04
+          NEUTRON CURRENT PER LETHARGY
+            .13469E-19  .38257E-19  .73826E-19  .97323E-19  .12694E-18  .18507E-18  .15477E-18  .14356E-18  .11695E-18  .89988E-19
+            .10887E-18  .94146E-19  .53756E-19  .55011E-19  .48941E-19  .42082E-19  .36042E-19  .30987E-19  .27197E-19  .23998E-19
+            .21695E-19  .19375E-19  .18279E-19  .17008E-19  .15871E-19  .14973E-19  .14551E-19  .14219E-19  .13593E-19  .13092E-19
+            .13037E-19  .12537E-19  .12104E-19  .12397E-19  .12352E-19  .12271E-19  .12055E-19  .11819E-19  .11487E-19  .11660E-19
+            .11582E-19  .10953E-19  .10943E-19  .10285E-19  .11145E-19  .94608E-20  .11004E-19  .98823E-20  .10809E-19  .96348E-20
+            .87519E-20  .10258E-19  .77493E-20  .10165E-19  .99810E-20  .97371E-20  .69644E-20  .82502E-20  .92865E-20  .93203E-20
+            .94139E-20  .93960E-20  .10244E-19  .99861E-20  .10045E-19  .99070E-20  .99006E-20  .10040E-19  .10138E-19  .10211E-19
+            .10312E-19  .10419E-19  .10605E-19  .10943E-19  .11382E-19  .11756E-19  .12266E-19  .12921E-19  .13759E-19  .14779E-19
+            .16027E-19  .17499E-19  .19093E-19  .20716E-19  .22262E-19  .23597E-19  .24625E-19  .25217E-19  .25265E-19  .24720E-19
+            .23533E-19  .21756E-19  .19448E-19  .16757E-19  .13829E-19  .10868E-19  .80632E-20  .56002E-20  .36066E-20  .21256E-20
+            .11275E-20  .52432E-21  .20377E-21  .61052E-22  .11702E-22  .91661E-24  .95485E-26
+          FAST FISSION              .16028E+00
+          FAST ABSORPTION           .30687E+00
+          FAST LEAKAGE              .51513E-18
+          TOTAL FISSION             .11690E+01
+          TOTAL ABSORPTION          .10000E+01
+          TOTAL LEAKAGE             .57612E-18
+          K-EFF= 1.16896 K-INF= 1.16896 UNDER GEOMTRICAL BUCKLING=  .10000E-19
+0                COARSE WHOLE   ENERGY GROUP STRUCTURE (M=1.67482E-24 GRAM,  EV=1.60210E-12 ERG)
+0   GROUP          ENERGY RANGE (EV)               VELOCITY RANGE (CM/SEC)           LETHARGY RANGE
+       1         .10000E+08     .67380E+05         .43740E+10     .35904E+09          .0000     5.0000
+       2         .67380E+05     .35358E+03         .35904E+09     .26009E+08         5.0000    10.2500
+       3         .35358E+03     .18554E+01         .26009E+08     .18841E+07        10.2500    15.5000
+       4         .18554E+01     .34206E+00         .18841E+07     .80896E+06        15.5000    17.1909
+       5         .34206E+00     .85297E-01         .80896E+06     .40396E+06        17.1909    18.5797
+       6         .85297E-01     .10000E-04         .40396E+06     .43740E+04        18.5797    27.6310
+
+
+1
+ *** STEP 20 FOR EFFECTIVE X-SECTION IN
+ ===CASEID=PINB1 : =TITLE=Variasi Boron 1                                                         ===
+
+                MATERIAL-WISE POWER DISTRIBUTION 
+
+          MTNAME     VOLUME      RELATIVE    FISSILE     FERTILE     CONVERSION
+          NAME        (CC)       POWER       ABSORPTION  CAPTURE     RATIO
+
+          FUELX01X   4.82749E-01 4.75161E-01 5.34177E-01 3.47662E-01 6.50837E-01
+           TOTAL     4.82749E-01 4.75161E-01 5.34177E-01 3.47662E-01 6.50837E-01
+
+1     **** CASE ID === PINB2 :  *** TITLE === Variasi Boron 2                                                          ***
+
+
+     USE OF COLLISION PROB. ROUTINE (NO,CALL:0,1)             1
+     SELECT OF ROUTINE FOR FIX S CALC(NO,PIJ,1D SN ,2D SN , 
+      1D DIFF,2D DIFF:0,1,2,3,4,5)                            1
+     DANCOFF FACTOR BY(INPUT,PIJ,TONE:0,1,2)                  1
+     CALC OF THERMAL RANGE (EXCLUDED,INCLUDED:0,1)            1
+     PROCESS OF RESONANCE 2 RANGE(TABLELOOK,IR,PEACO:0,1,2)   2
+     FLUX CALCULATION BY RANGES(SKIP,CALC:0,1)                1
+     FAST RANGES FOR TRANSPORT CALC(0,1,2,3,4)                4
+     INDICATOR FOR ENRGY STRUCTURE OF UMCROSS (0,1,2,3)       3
+     CALC OF BARE REACTOR SPECTRUM(SKIP,P1,B1:0,1,2)         -2
+     COLLAPSE MACRO X-SECTION BY RANGE(SKIP,CALL:0,1)         1
+     INPUT OF GEOMETRY (NEW,SAME AS PREVIOUS CASE:0,1)        0
+     SELECT ROUTINE FOR EIGENVALUE CALC(NO,PIJ,1D SN,2D SN, 
+      1D DIFF,2D DIFF:0,1,2,3,4,5)                            0
+     COLLAPSE MACRO AFTER EIGENVALUE CALC(SKIP,CALL:0,1)      0
+     PREPARE MACRO FOR CITATION (SKIP,CALL:0,1)               0
+     TOTAL MICRO X-SECTION BY (HARMONIC,ARITHMETIC AV:1,2)    1
+     TRANSPORT MACRO X-SECTION BY (P0,P1,B1,SN:0,1,2,3)       2
+     DIFF COEF (INVERSE TR,BENOIST ISO,BENOIST ANISO:1,2,3)   1
+     REACTION RATE CALCULATION (0,1)                          0
+     PRINT OF MACRO-X (0,1,2)                                 0
+     BURN-UP CALCULATION (0,1:SKIP,EXECUTE)                   0
+1PINB2 : Variasi Boron 2                                                         *** STEP *** INPUT FOR PIJ *** 
+                     GEOMETRY TYPE                             4     ( SQUARE CYLINDER )                                             
+                     NUMBER OF SUB - REGIONS                   8
+                     NUMBER OF  T  - REGIONS                   8
+                     NUMBER OF  R  - REGIONS                   4
+                     NUMBER OF  X  - REGIONS                   1
+                     OUTER BOUNDARY CONDITION (-1,0,1,2)       1
+                     DIRECTIONAL PIJ (1,2)                     1  INDICATED BY IC17
+                     NUMBER OF R OR X MESH                     8
+                     NUMBER OF THETA OR Y MESH                 0
+                     TOTAL NUMBER OF PIN RODS                  0
+                     NUMBER OF RINGS OF PIN ROD ARRAY          0
+                     NUMBER OF LATTICE CELLS TRACED            5
+                     PRINT CONTROL OF PIJ (0,1)                0
+                     ORDER OF GAUSS RADIAL INTEGRATION        10
+                     NO. OF DIVISION FOR ANGULAR INTEGRATION  15
+                     NUMBER OF ANNULAR DIVISION IN A PIN ROD   0
+                     DIVISION BY RPP  (0,1,2)                  0
+                     ANGLE RANGE BY DEGREE                    45
+                     PLOTER OPTION  (0,1)                      0
+0         ===R-REGION NO./T  ===
+                     1           1           1           2           3           4           4           4
+0         ===X-REGION NO./R  ===
+                     1           1           1           1
+0         ===MATERIAL NO./R  ===
+                     1           2           3           4
+0         ===R-X DIVISION    ===
+            .00000E+00  .22600E+00  .32000E+00  .39200E+00  .40000E+00  .45700E+00  .51500E+00  .57200E+00  .63000E+00
+  STRAGE USED      69029 FROM    7000000
+
+          VOLUME OF (S)-REGION
+        1) 1.6046E-01   2) 1.6124E-01   3) 1.6105E-01   4) 1.9905E-02   5) 1.5346E-01   6) 1.7711E-01   7) 1.9465E-01   8) 5.5972E-01
+          VOLUME OF (T)-REGION
+        1) 1.6046E-01   2) 1.6124E-01   3) 1.6105E-01   4) 1.9905E-02   5) 1.5346E-01   6) 1.7711E-01   7) 1.9465E-01   8) 5.5972E-01
+          VOLUME OF (R)-REGION
+        1) 4.8275E-01   2) 1.9905E-02   3) 1.5346E-01   4) 9.3148E-01
+          VOLUME OF (X)-REGION
+        1) 1.5876E+00
+          TOTAL VOLUME                    1.5876E+00
+
+          VOLUME(NUMERICAL)/VOLUME(ANALYTICAL) 
+            1) 1.00007     2)  .99974     3)  .99988     4)  .99993     5)  .99994     6)  .99994     7)  .99994
+            8) 1.00142
+0 *** 1138 LINES DRAWN ON FT84 ***                                                  ****ELAPSED CPU TIME       1 SEC
+
+     NO. OF MATERIALS USED IN THE CASE =  4
+
+1
+
+                     MACROF
+
+           CASE I.D. : PINB2 : 
+           TITLE     : Variasi Boron 2                                                         
+
+
+
+                     COMPOSITION DATA LIST
+
+
+                               ## MATERIAL NAME -----  1   FUELX01X ##
+
+           NUMBER OF NUCLIDE -----------        3
+           TEMPERATURE (K) -------------    1073.15
+           MEAN CHORD LENGTH -----------     .78436
+           DANCOFF FACTOR --------------     .00000
+           WEIGHTING FLUX NAME FOR CHI - ASYMPTO.
+           IDENTIFICATION OF NUCLIDE ---    U05000A     U08000A     O06000A
+           NUMBER DENSITY --------------  3.75030E-04 2.26250E-02 4.58970E-02
+           RESONANT INDICATOR ----------      2           2           0
+           LXMICR ----------------------      0           0           0
+           NUCLIDE-WISE DANCOFF FACTOR WILL BE CALCULATED AT SUBROUTINE(MAFSIG) ]] 
+
+                               ## MATERIAL NAME -----  2   HELIX02X ##
+
+           NUMBER OF NUCLIDE -----------        1
+           TEMPERATURE (K) -------------     773.15
+           MEAN CHORD LENGTH -----------     .03117
+           DANCOFF FACTOR --------------     .00000
+           WEIGHTING FLUX NAME FOR CHI - ASYMPTO.
+           IDENTIFICATION OF NUCLIDE ---    HE40009
+           NUMBER DENSITY --------------  1.87370E-04
+           RESONANT INDICATOR ----------      0
+           LXMICR ----------------------      0
+
+                               ## MATERIAL NAME -----  3   CLADX03X ##
+
+           NUMBER OF NUCLIDE -----------        5
+           TEMPERATURE (K) -------------     598.15
+           MEAN CHORD LENGTH -----------     .21431
+           DANCOFF FACTOR --------------     .00000
+           WEIGHTING FLUX NAME FOR CHI - ASYMPTO.
+           IDENTIFICATION OF NUCLIDE ---    ZRN0008     SNN0008     FEN0008     CRN0008     HFN0008
+ 
+           NUMBER DENSITY --------------  4.25400E-02 4.82530E-04 1.48540E-04 7.59860E-05 2.21330E-06
+ 
+           RESONANT INDICATOR ----------      2           2           2           2           2
+ 
+           LXMICR ----------------------      0           0           0           0           0
+ 
+           NUCLIDE-WISE DANCOFF FACTOR WILL BE CALCULATED AT SUBROUTINE(MAFSIG) ]] 
+
+                               ## MATERIAL NAME -----  4   MODEX04X ##
+
+           NUMBER OF NUCLIDE -----------        4
+           TEMPERATURE (K) -------------     573.15
+           MEAN CHORD LENGTH -----------     .56916
+           DANCOFF FACTOR --------------     .00000
+           WEIGHTING FLUX NAME FOR CHI - ASYMPTO.
+           IDENTIFICATION OF NUCLIDE ---    H01H007     O060007     B000007     B010007
+           NUMBER DENSITY --------------  4.85485E-02 2.42742E-02 3.33922E-06 1.34408E-05
+           RESONANT INDICATOR ----------      0           0           0           0
+           LXMICR ----------------------      0           0           0           0
+
+                               ## RESONANT NUCLIDE NAME LIST ##
+
+           NUMBER OF RESONANT NUCLIDE --      7
+           RESONANT NUCLIDE NAME -------  U05   U08   ZRN   SNN   FEN   CRN   HFN
+
+                               ## STANDARD TEMPERATUE ARRAY LIST (STND) ##
+
+  TAG         :    1        2        3        4        5        6        7        8        9        A
+  TAG         :    B        C
+  TEMPERATURE :    300.00   325.00   350.00   400.00   450.00   500.00   550.00   600.00   900.00  1200.00
+  TEMPERATURE :   1600.00  2100.00
+  ## MEMBER(FUELF012) ALREADY EXISTS IN MACRO LIB. ##
+  ## MEMBER(HELIF022) ALREADY EXISTS IN MACRO LIB. ##
+  ## MEMBER(CLADF032) ALREADY EXISTS IN MACRO LIB. ##
+  ## MEMBER(MODEF042) ALREADY EXISTS IN MACRO LIB. ##
+          STRAGE USED      64214 WITHIN    7000000 IN PIJ2-STEP
+1
+
+          ===PIJ3 STEP===
+          ***PINB2 : ***Variasi Boron 2                                                         *** IN FAST     RANGE ***
+
+          ITERATION PARAMETERS 
+          PRINT (1+2+4+8)(FLUX,XEC,PIJ,S)              0
+          MAX OF INNER ITERATIONS PER OUTER           50
+          MAX OF OUTER ITERATIONS                     50
+          EARLIST EXTRAPOLATION                        5
+          NUMBER OF ITERATIONS TESTED                  5
+          MINIMUM DELAY                                5
+          MONITOR PRINT(0,1)(SKIP,PRINT)              -1
+          CONVERGENCE CRITERION OF INNER      .10000E-03
+          CONVERGENCE CRITERION OF OUTER      .10000E-04
+          EXTRAPOLATION CRITERION             .10000E-02
+          OVER-RELAXATION (INITIAL)           .10000E+01
+          MAX EXTRAPOLATION                   .10000E+02
+          BASE FACTOR OF OVER-RELAXATION      .50000E+00
+
+          PROBLEM TYPE  
+          ITYPE (0/1  =EIGENVALUE/FIXED S)             1
+          IRANG (0/1/2=FAST/THERMAL/ALL)               0
+          IFIXS (0/1/2)                                0
+
+0            ITERATION POWER-SCALING   RESIDUE CRITERON
+
+              1          .13493E+00  .69084E-01  .10000E-04
+              2          .12719E+00  .77420E-02  .10000E-04
+              3          .12632E+00  .86764E-03  .10000E-04
+              4          .12627E+00  .48244E-03  .10000E-04
+              5          .12625E+00  .26825E-03  .10000E-04
+              6          .12623E+00  .14915E-03  .10000E-04
+              7          .12622E+00  .82940E-04  .10000E-04
+              8          .12622E+00  .46149E-04  .10000E-04
+              9          .12621E+00  .25615E-04  .10000E-04
+             10          .12621E+00  .14216E-04  .10000E-04
+             11          .12621E+00  .79274E-05  .10000E-04
+
+
+
+          === ITERATION END IN PIJF STEP ===
+          === FIXED SOURCE TYPE PROBLEM ===
+          TOTAL THERMAL INNER ITERATION COUNT             0
+          INITIAL SOURCE NORMALIZATION FACTOR    .12919E+01
+          THERMAL SOURCE NORMALIZATION FACTOR    .10000E+01
+          RENORMALIZATION FACTOR (INNER)         .00000E+00
+          RESIDUE IN FINAL INNER ITERATION       .00000E+00
+          FINAL FISSION SOURCE NORMALIZATION     .12621E+00
+          RESIDUE IN FINAL FISSION RATE          .79274E-05
+
+
+                                    ENERGY GROUP STRUCTURE FOR USER'S MCROSS
+0                              ENERGY (EV)           LETHAGY         NUMBER OF   START     LENGTH OF
+                       NO.  UPPER   -    LOWER       WIDTH           I.M. GROUP  POSITION  SUBSECTION 
+                        1 961.1165  -  748.5183       .25000         100   100     1         500
+                        2 748.5183  -  582.9467       .25000         100   200   101
+                        3 582.9467  -  453.9993       .25000         100   300   201
+                        4 453.9993  -  353.5750       .25000         100   400   301
+                        5 353.5750  -  275.3645       .25000         100   500   401
+                        6 275.3645  -  214.4541       .25000         100   600     1         500
+                        7 214.4541  -  167.0170       .25000         100   700   101
+                        8 167.0170  -  130.0730       .25000         100   800   201
+                        9 130.0730  -  101.3009       .25000          50   850   301
+                       10 101.3009  -   78.8932       .25000          50   900   351
+                       11  78.8932  -   61.4421       .25000          50   950   401
+                       12  61.4421  -   47.8512       .25000          50  1000   451
+                       13  47.8512  -   37.2665       .25000          50  1050     1         500
+                       14  37.2665  -   29.0232       .25000          50  1100    51
+                       15  29.0232  -   22.6033       .25000          50  1150   101
+                       16  22.6033  -   17.6035       .25000          50  1200   151
+                       17  17.6035  -   13.7096       .25000          50  1250   201
+                       18  13.7096  -   10.6770       .25000          50  1300   251
+                       19  10.6770  -    8.3153       .25000          50  1350   301
+                       20   8.3153  -    6.4760       .25000          50  1400   351
+                       21   6.4760  -    5.0435       .25000          50  1450   401
+                       22   5.0435  -    3.9279       .25000          50  1500   451
+                       23   3.9279  -    3.0590       .25000          50  1550     1         150
+                       24   3.0590  -    2.3824       .25000          50  1600    51
+                       25   2.3824  -    1.8554       .25000          50  1650   101
+          NOTE ---> NUCLIDE 0ZRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0SNN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0FEN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0CRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0HFN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          STRAGE USED     205731 WITHIN    7000000 IN PIJ2-STEP
+
+
+
+         *** MIX-X-SECTION STEP IN *** FAST ENERGY RANGE
+          *** PINB2 : ***Variasi Boron 2                                                         ***
+0         X-REGION  1***
+          SIGNED MAT ID BY R-REG =   1   2   3   4
+          ONE GROUP CONSTANTS
+          * ACTIVATION CROSS SECTION      .47857E-01
+          * FISSION    CROSS SECTION      .16781E-02
+          * NU*FISSION CROSS SECTION      .43972E-02
+          * TOTAL      CROSS SECTION      .23428E+00
+          * DIFFUSION  COEFFICIENT 1      .14228E+01
+          * DIFFUSION  COEFFICIENT 2      .14228E+01
+          * ABSORPTION CROSS SECTION      .84498E-02
+          * SCATTEROUT CROSS SECTION      .18640E-01
+          * INTEGRATED FLUX-X-REGION      .40692E+02
+          STRAGE USED     144270 WITHIN    7000000 IN PIJ2-STEP
+1
+
+          ===PIJ3 STEP===
+          ***PINB2 : ***Variasi Boron 2                                                         *** IN THERMAL  RANGE ***
+
+          ITERATION PARAMETERS 
+          PRINT (1+2+4+8)(FLUX,XEC,PIJ,S)              0
+          MAX OF INNER ITERATIONS PER OUTER          200
+          MAX OF OUTER ITERATIONS                      1
+          EARLIST EXTRAPOLATION                        5
+          NUMBER OF ITERATIONS TESTED                  5
+          MINIMUM DELAY                                5
+          MONITOR PRINT(0,1)(SKIP,PRINT)              -1
+          CONVERGENCE CRITERION OF INNER      .10000E-03
+          CONVERGENCE CRITERION OF OUTER      .10000E-04
+          EXTRAPOLATION CRITERION             .10000E-02
+          OVER-RELAXATION (INITIAL)           .10000E+01
+          MAX EXTRAPOLATION                   .10000E+02
+          BASE FACTOR OF OVER-RELAXATION      .50000E+00
+
+          PROBLEM TYPE  
+          ITYPE (0/1  =EIGENVALUE/FIXED S)             1
+          IRANG (0/1/2=FAST/THERMAL/ALL)               1
+          IFIXS (0/1/2)                                0
+
+
+
+
+          === ITERATION END IN PIJF STEP ===
+          === FIXED SOURCE TYPE PROBLEM ===
+          TOTAL THERMAL INNER ITERATION COUNT            22
+          INITIAL SOURCE NORMALIZATION FACTOR    .75851E+00
+          THERMAL SOURCE NORMALIZATION FACTOR    .10000E+01
+          RENORMALIZATION FACTOR (INNER)         .10000E+01
+          RESIDUE IN FINAL INNER ITERATION       .27626E-05
+          FINAL FISSION SOURCE NORMALIZATION     .00000E+00
+          RESIDUE IN FINAL FISSION RATE          .76318E-11
+
+
+
+         *** MIX-X-SECTION STEP IN *** THER ENERGY RANGE
+          *** PINB2 : ***Variasi Boron 2                                                         ***
+0         X-REGION  1***
+          SIGNED MAT ID BY R-REG =   1   2   3   4
+          ONE GROUP CONSTANTS
+          * ACTIVATION CROSS SECTION      .32942E+01
+          * FISSION    CROSS SECTION      .29768E-01
+          * NU*FISSION CROSS SECTION      .72536E-01
+          * TOTAL      CROSS SECTION      .81323E+00
+          * DIFFUSION  COEFFICIENT 1      .40989E+00
+          * DIFFUSION  COEFFICIENT 2      .40989E+00
+          * ABSORPTION CROSS SECTION      .49843E-01
+          * SCATTEROUT CROSS SECTION      .15795E-03
+          * INTEGRATED FLUX-X-REGION      .15170E+02
+1            ***  BARE REACTOR SPECTRUM CALCULATION *** OF STEP 15 ***
+          ***PINB2 : ***Variasi Boron 2                                                         ***
+          *** BY B1 APPROXIMATION *** BUCKLING SERACH OPTION IS         0 (0/1:NO/YES) 
+          RATIO OF THERMAL SOURCE TO REMOVAL   .10000E+01
+          NEUTRON SPECTRUM PER LETHARGY
+            .36543E+00  .10388E+01  .22408E+01  .34382E+01  .49196E+01  .69304E+01  .62957E+01  .66181E+01  .61548E+01  .58618E+01
+            .69766E+01  .59291E+01  .40757E+01  .46915E+01  .41692E+01  .36020E+01  .31741E+01  .28273E+01  .25661E+01  .23513E+01
+            .21921E+01  .20331E+01  .19604E+01  .18606E+01  .17830E+01  .17456E+01  .16977E+01  .16583E+01  .16252E+01  .16119E+01
+            .15882E+01  .15717E+01  .15303E+01  .15580E+01  .15274E+01  .15208E+01  .15041E+01  .14902E+01  .14700E+01  .14647E+01
+            .14569E+01  .14313E+01  .14204E+01  .13982E+01  .14047E+01  .13165E+01  .13787E+01  .13138E+01  .13535E+01  .13133E+01
+            .11867E+01  .12971E+01  .10652E+01  .12418E+01  .12373E+01  .12157E+01  .97332E+00  .10142E+01  .11342E+01  .11390E+01
+            .11419E+01  .11362E+01  .12267E+01  .12038E+01  .11999E+01  .12041E+01  .12177E+01  .12420E+01  .12685E+01  .12942E+01
+            .13309E+01  .13748E+01  .14440E+01  .15522E+01  .16784E+01  .17827E+01  .19203E+01  .20934E+01  .23113E+01  .25718E+01
+            .28885E+01  .32625E+01  .36771E+01  .41234E+01  .45826E+01  .50258E+01  .54331E+01  .57716E+01  .60079E+01  .61200E+01
+            .60803E+01  .58847E+01  .55276E+01  .50295E+01  .44134E+01  .37225E+01  .30010E+01  .22988E+01  .16596E+01  .11158E+01
+            .68734E+00  .37865E+00  .17897E+00  .67947E-01  .17886E-01  .22770E-02  .53640E-04
+          NEUTRON CURRENT PER LETHARGY
+            .13469E-19  .38257E-19  .73826E-19  .97323E-19  .12694E-18  .18507E-18  .15477E-18  .14356E-18  .11695E-18  .89988E-19
+            .10887E-18  .94146E-19  .53756E-19  .55011E-19  .48941E-19  .42082E-19  .36042E-19  .30987E-19  .27197E-19  .23998E-19
+            .21695E-19  .19375E-19  .18279E-19  .17008E-19  .15871E-19  .14973E-19  .14551E-19  .14219E-19  .13593E-19  .13092E-19
+            .13037E-19  .12537E-19  .12104E-19  .12397E-19  .12352E-19  .12271E-19  .12055E-19  .11817E-19  .11485E-19  .11657E-19
+            .11579E-19  .10950E-19  .10939E-19  .10280E-19  .11140E-19  .94556E-20  .10997E-19  .98750E-20  .10799E-19  .96254E-20
+            .87425E-20  .10245E-19  .77387E-20  .10148E-19  .99621E-20  .97161E-20  .69484E-20  .82280E-20  .92575E-20  .92870E-20
+            .93754E-20  .93522E-20  .10212E-19  .99563E-20  .10015E-19  .98783E-20  .98723E-20  .10012E-19  .10110E-19  .10183E-19
+            .10284E-19  .10391E-19  .10576E-19  .10914E-19  .11352E-19  .11725E-19  .12234E-19  .12888E-19  .13724E-19  .14741E-19
+            .15986E-19  .17454E-19  .19044E-19  .20664E-19  .22206E-19  .23537E-19  .24562E-19  .25153E-19  .25201E-19  .24658E-19
+            .23474E-19  .21701E-19  .19399E-19  .16714E-19  .13794E-19  .10841E-19  .80428E-20  .55861E-20  .35975E-20  .21202E-20
+            .11247E-20  .52300E-21  .20325E-21  .60897E-22  .11672E-22  .91429E-24  .95243E-26
+          FAST FISSION              .16021E+00
+          FAST ABSORPTION           .30862E+00
+          FAST LEAKAGE              .51505E-18
+          TOTAL FISSION             .11663E+01
+          TOTAL ABSORPTION          .10000E+01
+          TOTAL LEAKAGE             .57588E-18
+          K-EFF= 1.16634 K-INF= 1.16634 UNDER GEOMTRICAL BUCKLING=  .10000E-19
+  WARNING **** PINBA010 ALREADY EXISTS IN MACRO FILE ]] 
+  WARNING **** PINBA01N ALREADY EXISTS IN MACRO FILE ]] 
+  WARNING **** PINBA01Z ALREADY EXISTS IN MACRO FILE ]] 
+  WARNING **** PINBA010 ALREADY EXISTS IN FLUX FILE ]] 
+
+
+1
+ *** STEP 20 FOR EFFECTIVE X-SECTION IN
+ ===CASEID=PINB2 : =TITLE=Variasi Boron 2                                                         ===
+
+                MATERIAL-WISE POWER DISTRIBUTION 
+
+          MTNAME     VOLUME      RELATIVE    FISSILE     FERTILE     CONVERSION
+          NAME        (CC)       POWER       ABSORPTION  CAPTURE     RATIO
+
+          FUELX01X   4.82749E-01 4.74086E-01 5.32900E-01 3.47128E-01 6.51394E-01
+           TOTAL     4.82749E-01 4.74086E-01 5.32900E-01 3.47128E-01 6.51394E-01
+
+1     **** CASE ID === PINB3 :  *** TITLE === Variasi Boron 3                                                          ***
+
+
+     USE OF COLLISION PROB. ROUTINE (NO,CALL:0,1)             1
+     SELECT OF ROUTINE FOR FIX S CALC(NO,PIJ,1D SN ,2D SN , 
+      1D DIFF,2D DIFF:0,1,2,3,4,5)                            1
+     DANCOFF FACTOR BY(INPUT,PIJ,TONE:0,1,2)                  1
+     CALC OF THERMAL RANGE (EXCLUDED,INCLUDED:0,1)            1
+     PROCESS OF RESONANCE 2 RANGE(TABLELOOK,IR,PEACO:0,1,2)   2
+     FLUX CALCULATION BY RANGES(SKIP,CALC:0,1)                1
+     FAST RANGES FOR TRANSPORT CALC(0,1,2,3,4)                4
+     INDICATOR FOR ENRGY STRUCTURE OF UMCROSS (0,1,2,3)       3
+     CALC OF BARE REACTOR SPECTRUM(SKIP,P1,B1:0,1,2)         -2
+     COLLAPSE MACRO X-SECTION BY RANGE(SKIP,CALL:0,1)         1
+     INPUT OF GEOMETRY (NEW,SAME AS PREVIOUS CASE:0,1)        0
+     SELECT ROUTINE FOR EIGENVALUE CALC(NO,PIJ,1D SN,2D SN, 
+      1D DIFF,2D DIFF:0,1,2,3,4,5)                            0
+     COLLAPSE MACRO AFTER EIGENVALUE CALC(SKIP,CALL:0,1)      0
+     PREPARE MACRO FOR CITATION (SKIP,CALL:0,1)               0
+     TOTAL MICRO X-SECTION BY (HARMONIC,ARITHMETIC AV:1,2)    1
+     TRANSPORT MACRO X-SECTION BY (P0,P1,B1,SN:0,1,2,3)       2
+     DIFF COEF (INVERSE TR,BENOIST ISO,BENOIST ANISO:1,2,3)   1
+     REACTION RATE CALCULATION (0,1)                          0
+     PRINT OF MACRO-X (0,1,2)                                 0
+     BURN-UP CALCULATION (0,1:SKIP,EXECUTE)                   0
+1PINB3 : Variasi Boron 3                                                         *** STEP *** INPUT FOR PIJ *** 
+                     GEOMETRY TYPE                             4     ( SQUARE CYLINDER )                                             
+                     NUMBER OF SUB - REGIONS                   8
+                     NUMBER OF  T  - REGIONS                   8
+                     NUMBER OF  R  - REGIONS                   4
+                     NUMBER OF  X  - REGIONS                   1
+                     OUTER BOUNDARY CONDITION (-1,0,1,2)       1
+                     DIRECTIONAL PIJ (1,2)                     1  INDICATED BY IC17
+                     NUMBER OF R OR X MESH                     8
+                     NUMBER OF THETA OR Y MESH                 0
+                     TOTAL NUMBER OF PIN RODS                  0
+                     NUMBER OF RINGS OF PIN ROD ARRAY          0
+                     NUMBER OF LATTICE CELLS TRACED            5
+                     PRINT CONTROL OF PIJ (0,1)                0
+                     ORDER OF GAUSS RADIAL INTEGRATION        10
+                     NO. OF DIVISION FOR ANGULAR INTEGRATION  15
+                     NUMBER OF ANNULAR DIVISION IN A PIN ROD   0
+                     DIVISION BY RPP  (0,1,2)                  0
+                     ANGLE RANGE BY DEGREE                    45
+                     PLOTER OPTION  (0,1)                      0
+0         ===R-REGION NO./T  ===
+                     1           1           1           2           3           4           4           4
+0         ===X-REGION NO./R  ===
+                     1           1           1           1
+0         ===MATERIAL NO./R  ===
+                     1           2           3           4
+0         ===R-X DIVISION    ===
+            .00000E+00  .22600E+00  .32000E+00  .39200E+00  .40000E+00  .45700E+00  .51500E+00  .57200E+00  .63000E+00
+  STRAGE USED      69029 FROM    7000000
+
+          VOLUME OF (S)-REGION
+        1) 1.6046E-01   2) 1.6124E-01   3) 1.6105E-01   4) 1.9905E-02   5) 1.5346E-01   6) 1.7711E-01   7) 1.9465E-01   8) 5.5972E-01
+          VOLUME OF (T)-REGION
+        1) 1.6046E-01   2) 1.6124E-01   3) 1.6105E-01   4) 1.9905E-02   5) 1.5346E-01   6) 1.7711E-01   7) 1.9465E-01   8) 5.5972E-01
+          VOLUME OF (R)-REGION
+        1) 4.8275E-01   2) 1.9905E-02   3) 1.5346E-01   4) 9.3148E-01
+          VOLUME OF (X)-REGION
+        1) 1.5876E+00
+          TOTAL VOLUME                    1.5876E+00
+
+          VOLUME(NUMERICAL)/VOLUME(ANALYTICAL) 
+            1) 1.00007     2)  .99974     3)  .99988     4)  .99993     5)  .99994     6)  .99994     7)  .99994
+            8) 1.00142
+0 *** 1138 LINES DRAWN ON FT84 ***                                                  ****ELAPSED CPU TIME       2 SEC
+
+     NO. OF MATERIALS USED IN THE CASE =  4
+
+1
+
+                     MACROF
+
+           CASE I.D. : PINB3 : 
+           TITLE     : Variasi Boron 3                                                         
+
+
+
+                     COMPOSITION DATA LIST
+
+
+                               ## MATERIAL NAME -----  1   FUELX01X ##
+
+           NUMBER OF NUCLIDE -----------        3
+           TEMPERATURE (K) -------------    1073.15
+           MEAN CHORD LENGTH -----------     .78436
+           DANCOFF FACTOR --------------     .00000
+           WEIGHTING FLUX NAME FOR CHI - ASYMPTO.
+           IDENTIFICATION OF NUCLIDE ---    U05000A     U08000A     O06000A
+           NUMBER DENSITY --------------  3.75030E-04 2.26250E-02 4.58970E-02
+           RESONANT INDICATOR ----------      2           2           0
+           LXMICR ----------------------      0           0           0
+           NUCLIDE-WISE DANCOFF FACTOR WILL BE CALCULATED AT SUBROUTINE(MAFSIG) ]] 
+
+                               ## MATERIAL NAME -----  2   HELIX02X ##
+
+           NUMBER OF NUCLIDE -----------        1
+           TEMPERATURE (K) -------------     773.15
+           MEAN CHORD LENGTH -----------     .03117
+           DANCOFF FACTOR --------------     .00000
+           WEIGHTING FLUX NAME FOR CHI - ASYMPTO.
+           IDENTIFICATION OF NUCLIDE ---    HE40009
+           NUMBER DENSITY --------------  1.87370E-04
+           RESONANT INDICATOR ----------      0
+           LXMICR ----------------------      0
+
+                               ## MATERIAL NAME -----  3   CLADX03X ##
+
+           NUMBER OF NUCLIDE -----------        5
+           TEMPERATURE (K) -------------     598.15
+           MEAN CHORD LENGTH -----------     .21431
+           DANCOFF FACTOR --------------     .00000
+           WEIGHTING FLUX NAME FOR CHI - ASYMPTO.
+           IDENTIFICATION OF NUCLIDE ---    ZRN0008     SNN0008     FEN0008     CRN0008     HFN0008
+ 
+           NUMBER DENSITY --------------  4.25400E-02 4.82530E-04 1.48540E-04 7.59860E-05 2.21330E-06
+ 
+           RESONANT INDICATOR ----------      2           2           2           2           2
+ 
+           LXMICR ----------------------      0           0           0           0           0
+ 
+           NUCLIDE-WISE DANCOFF FACTOR WILL BE CALCULATED AT SUBROUTINE(MAFSIG) ]] 
+
+                               ## MATERIAL NAME -----  4   MODEX04X ##
+
+           NUMBER OF NUCLIDE -----------        4
+           TEMPERATURE (K) -------------     573.15
+           MEAN CHORD LENGTH -----------     .56916
+           DANCOFF FACTOR --------------     .00000
+           WEIGHTING FLUX NAME FOR CHI - ASYMPTO.
+           IDENTIFICATION OF NUCLIDE ---    H01H007     O060007     B000007     B010007
+           NUMBER DENSITY --------------  4.85485E-02 2.42742E-02 6.67845E-06 2.68816E-05
+           RESONANT INDICATOR ----------      0           0           0           0
+           LXMICR ----------------------      0           0           0           0
+
+                               ## RESONANT NUCLIDE NAME LIST ##
+
+           NUMBER OF RESONANT NUCLIDE --      7
+           RESONANT NUCLIDE NAME -------  U05   U08   ZRN   SNN   FEN   CRN   HFN
+
+                               ## STANDARD TEMPERATUE ARRAY LIST (STND) ##
+
+  TAG         :    1        2        3        4        5        6        7        8        9        A
+  TAG         :    B        C
+  TEMPERATURE :    300.00   325.00   350.00   400.00   450.00   500.00   550.00   600.00   900.00  1200.00
+  TEMPERATURE :   1600.00  2100.00
+  ## MEMBER(FUELF012) ALREADY EXISTS IN MACRO LIB. ##
+  ## MEMBER(HELIF022) ALREADY EXISTS IN MACRO LIB. ##
+  ## MEMBER(CLADF032) ALREADY EXISTS IN MACRO LIB. ##
+  ## MEMBER(MODEF042) ALREADY EXISTS IN MACRO LIB. ##
+          STRAGE USED      64214 WITHIN    7000000 IN PIJ2-STEP
+1
+
+          ===PIJ3 STEP===
+          ***PINB3 : ***Variasi Boron 3                                                         *** IN FAST     RANGE ***
+
+          ITERATION PARAMETERS 
+          PRINT (1+2+4+8)(FLUX,XEC,PIJ,S)              0
+          MAX OF INNER ITERATIONS PER OUTER           50
+          MAX OF OUTER ITERATIONS                     50
+          EARLIST EXTRAPOLATION                        5
+          NUMBER OF ITERATIONS TESTED                  5
+          MINIMUM DELAY                                5
+          MONITOR PRINT(0,1)(SKIP,PRINT)              -1
+          CONVERGENCE CRITERION OF INNER      .10000E-03
+          CONVERGENCE CRITERION OF OUTER      .10000E-04
+          EXTRAPOLATION CRITERION             .10000E-02
+          OVER-RELAXATION (INITIAL)           .10000E+01
+          MAX EXTRAPOLATION                   .10000E+02
+          BASE FACTOR OF OVER-RELAXATION      .50000E+00
+
+          PROBLEM TYPE  
+          ITYPE (0/1  =EIGENVALUE/FIXED S)             1
+          IRANG (0/1/2=FAST/THERMAL/ALL)               0
+          IFIXS (0/1/2)                                0
+
+0            ITERATION POWER-SCALING   RESIDUE CRITERON
+
+              1          .13493E+00  .69088E-01  .10000E-04
+              2          .12718E+00  .77423E-02  .10000E-04
+              3          .12632E+00  .86759E-03  .10000E-04
+              4          .12627E+00  .48244E-03  .10000E-04
+              5          .12624E+00  .26825E-03  .10000E-04
+              6          .12623E+00  .14915E-03  .10000E-04
+              7          .12622E+00  .82925E-04  .10000E-04
+              8          .12621E+00  .46119E-04  .10000E-04
+              9          .12621E+00  .25630E-04  .10000E-04
+             10          .12621E+00  .14246E-04  .10000E-04
+             11          .12621E+00  .79125E-05  .10000E-04
+
+
+
+          === ITERATION END IN PIJF STEP ===
+          === FIXED SOURCE TYPE PROBLEM ===
+          TOTAL THERMAL INNER ITERATION COUNT             0
+          INITIAL SOURCE NORMALIZATION FACTOR    .12919E+01
+          THERMAL SOURCE NORMALIZATION FACTOR    .10000E+01
+          RENORMALIZATION FACTOR (INNER)         .00000E+00
+          RESIDUE IN FINAL INNER ITERATION       .00000E+00
+          FINAL FISSION SOURCE NORMALIZATION     .12621E+00
+          RESIDUE IN FINAL FISSION RATE          .79125E-05
+
+
+                                    ENERGY GROUP STRUCTURE FOR USER'S MCROSS
+0                              ENERGY (EV)           LETHAGY         NUMBER OF   START     LENGTH OF
+                       NO.  UPPER   -    LOWER       WIDTH           I.M. GROUP  POSITION  SUBSECTION 
+                        1 961.1165  -  748.5183       .25000         100   100     1         500
+                        2 748.5183  -  582.9467       .25000         100   200   101
+                        3 582.9467  -  453.9993       .25000         100   300   201
+                        4 453.9993  -  353.5750       .25000         100   400   301
+                        5 353.5750  -  275.3645       .25000         100   500   401
+                        6 275.3645  -  214.4541       .25000         100   600     1         500
+                        7 214.4541  -  167.0170       .25000         100   700   101
+                        8 167.0170  -  130.0730       .25000         100   800   201
+                        9 130.0730  -  101.3009       .25000          50   850   301
+                       10 101.3009  -   78.8932       .25000          50   900   351
+                       11  78.8932  -   61.4421       .25000          50   950   401
+                       12  61.4421  -   47.8512       .25000          50  1000   451
+                       13  47.8512  -   37.2665       .25000          50  1050     1         500
+                       14  37.2665  -   29.0232       .25000          50  1100    51
+                       15  29.0232  -   22.6033       .25000          50  1150   101
+                       16  22.6033  -   17.6035       .25000          50  1200   151
+                       17  17.6035  -   13.7096       .25000          50  1250   201
+                       18  13.7096  -   10.6770       .25000          50  1300   251
+                       19  10.6770  -    8.3153       .25000          50  1350   301
+                       20   8.3153  -    6.4760       .25000          50  1400   351
+                       21   6.4760  -    5.0435       .25000          50  1450   401
+                       22   5.0435  -    3.9279       .25000          50  1500   451
+                       23   3.9279  -    3.0590       .25000          50  1550     1         150
+                       24   3.0590  -    2.3824       .25000          50  1600    51
+                       25   2.3824  -    1.8554       .25000          50  1650   101
+          NOTE ---> NUCLIDE 0ZRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0SNN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0FEN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0CRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0HFN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          STRAGE USED     205731 WITHIN    7000000 IN PIJ2-STEP
+
+
+
+         *** MIX-X-SECTION STEP IN *** FAST ENERGY RANGE
+          *** PINB3 : ***Variasi Boron 3                                                         ***
+0         X-REGION  1***
+          SIGNED MAT ID BY R-REG =   1   2   3   4
+          ONE GROUP CONSTANTS
+          * ACTIVATION CROSS SECTION      .47783E-01
+          * FISSION    CROSS SECTION      .16777E-02
+          * NU*FISSION CROSS SECTION      .43964E-02
+          * TOTAL      CROSS SECTION      .23428E+00
+          * DIFFUSION  COEFFICIENT 1      .14228E+01
+          * DIFFUSION  COEFFICIENT 2      .14228E+01
+          * ABSORPTION CROSS SECTION      .84990E-02
+          * SCATTEROUT CROSS SECTION      .18598E-01
+          * INTEGRATED FLUX-X-REGION      .40683E+02
+          STRAGE USED     144270 WITHIN    7000000 IN PIJ2-STEP
+1
+
+          ===PIJ3 STEP===
+          ***PINB3 : ***Variasi Boron 3                                                         *** IN THERMAL  RANGE ***
+
+          ITERATION PARAMETERS 
+          PRINT (1+2+4+8)(FLUX,XEC,PIJ,S)              0
+          MAX OF INNER ITERATIONS PER OUTER          200
+          MAX OF OUTER ITERATIONS                      1
+          EARLIST EXTRAPOLATION                        5
+          NUMBER OF ITERATIONS TESTED                  5
+          MINIMUM DELAY                                5
+          MONITOR PRINT(0,1)(SKIP,PRINT)              -1
+          CONVERGENCE CRITERION OF INNER      .10000E-03
+          CONVERGENCE CRITERION OF OUTER      .10000E-04
+          EXTRAPOLATION CRITERION             .10000E-02
+          OVER-RELAXATION (INITIAL)           .10000E+01
+          MAX EXTRAPOLATION                   .10000E+02
+          BASE FACTOR OF OVER-RELAXATION      .50000E+00
+
+          PROBLEM TYPE  
+          ITYPE (0/1  =EIGENVALUE/FIXED S)             1
+          IRANG (0/1/2=FAST/THERMAL/ALL)               1
+          IFIXS (0/1/2)                                0
+
+
+
+
+          === ITERATION END IN PIJF STEP ===
+          === FIXED SOURCE TYPE PROBLEM ===
+          TOTAL THERMAL INNER ITERATION COUNT            22
+          INITIAL SOURCE NORMALIZATION FACTOR    .75662E+00
+          THERMAL SOURCE NORMALIZATION FACTOR    .10000E+01
+          RENORMALIZATION FACTOR (INNER)         .10000E+01
+          RESIDUE IN FINAL INNER ITERATION       .27577E-05
+          FINAL FISSION SOURCE NORMALIZATION     .00000E+00
+          RESIDUE IN FINAL FISSION RATE          .76052E-11
+
+
+
+         *** MIX-X-SECTION STEP IN *** THER ENERGY RANGE
+          *** PINB3 : ***Variasi Boron 3                                                         ***
+0         X-REGION  1***
+          SIGNED MAT ID BY R-REG =   1   2   3   4
+          ONE GROUP CONSTANTS
+          * ACTIVATION CROSS SECTION      .32942E+01
+          * FISSION    CROSS SECTION      .29768E-01
+          * NU*FISSION CROSS SECTION      .72536E-01
+          * TOTAL      CROSS SECTION      .81323E+00
+          * DIFFUSION  COEFFICIENT 1      .40989E+00
+          * DIFFUSION  COEFFICIENT 2      .40989E+00
+          * ABSORPTION CROSS SECTION      .49843E-01
+          * SCATTEROUT CROSS SECTION      .15792E-03
+          * INTEGRATED FLUX-X-REGION      .15132E+02
+1            ***  BARE REACTOR SPECTRUM CALCULATION *** OF STEP 15 ***
+          ***PINB3 : ***Variasi Boron 3                                                         ***
+          *** BY B1 APPROXIMATION *** BUCKLING SERACH OPTION IS         0 (0/1:NO/YES) 
+          RATIO OF THERMAL SOURCE TO REMOVAL   .10000E+01
+          NEUTRON SPECTRUM PER LETHARGY
+            .36543E+00  .10388E+01  .22408E+01  .34382E+01  .49196E+01  .69304E+01  .62957E+01  .66181E+01  .61548E+01  .58618E+01
+            .69766E+01  .59291E+01  .40757E+01  .46915E+01  .41692E+01  .36020E+01  .31741E+01  .28273E+01  .25661E+01  .23513E+01
+            .21921E+01  .20331E+01  .19604E+01  .18606E+01  .17830E+01  .17456E+01  .16977E+01  .16583E+01  .16252E+01  .16119E+01
+            .15882E+01  .15717E+01  .15303E+01  .15580E+01  .15274E+01  .15208E+01  .15041E+01  .14900E+01  .14698E+01  .14644E+01
+            .14566E+01  .14310E+01  .14199E+01  .13977E+01  .14041E+01  .13159E+01  .13779E+01  .13131E+01  .13526E+01  .13123E+01
+            .11857E+01  .12957E+01  .10640E+01  .12402E+01  .12355E+01  .12136E+01  .97152E+00  .10120E+01  .11315E+01  .11357E+01
+            .11382E+01  .11320E+01  .12234E+01  .12006E+01  .11968E+01  .12011E+01  .12146E+01  .12388E+01  .12653E+01  .12910E+01
+            .13275E+01  .13713E+01  .14404E+01  .15483E+01  .16742E+01  .17782E+01  .19154E+01  .20882E+01  .23055E+01  .25653E+01
+            .28812E+01  .32542E+01  .36678E+01  .41130E+01  .45710E+01  .50131E+01  .54194E+01  .57571E+01  .59927E+01  .61046E+01
+            .60650E+01  .58698E+01  .55137E+01  .50168E+01  .44022E+01  .37131E+01  .29934E+01  .22930E+01  .16554E+01  .11130E+01
+            .68561E+00  .37769E+00  .17852E+00  .67775E-01  .17840E-01  .22713E-02  .53504E-04
+          NEUTRON CURRENT PER LETHARGY
+            .13469E-19  .38257E-19  .73826E-19  .97323E-19  .12694E-18  .18507E-18  .15477E-18  .14356E-18  .11695E-18  .89988E-19
+            .10887E-18  .94146E-19  .53756E-19  .55011E-19  .48941E-19  .42082E-19  .36042E-19  .30987E-19  .27197E-19  .23998E-19
+            .21695E-19  .19375E-19  .18279E-19  .17008E-19  .15871E-19  .14973E-19  .14551E-19  .14219E-19  .13593E-19  .13092E-19
+            .13037E-19  .12537E-19  .12104E-19  .12397E-19  .12352E-19  .12271E-19  .12055E-19  .11815E-19  .11482E-19  .11655E-19
+            .11575E-19  .10946E-19  .10934E-19  .10276E-19  .11134E-19  .94505E-20  .10989E-19  .98677E-20  .10790E-19  .96160E-20
+            .87331E-20  .10232E-19  .77281E-20  .10132E-19  .99432E-20  .96952E-20  .69325E-20  .82059E-20  .92286E-20  .92539E-20
+            .93372E-20  .93087E-20  .10181E-19  .99267E-20  .99857E-20  .98498E-20  .98442E-20  .99835E-20  .10082E-19  .10155E-19
+            .10256E-19  .10363E-19  .10548E-19  .10885E-19  .11322E-19  .11695E-19  .12202E-19  .12854E-19  .13688E-19  .14703E-19
+            .15945E-19  .17410E-19  .18996E-19  .20611E-19  .22149E-19  .23477E-19  .24500E-19  .25089E-19  .25138E-19  .24595E-19
+            .23414E-19  .21646E-19  .19350E-19  .16672E-19  .13759E-19  .10813E-19  .80225E-20  .55720E-20  .35884E-20  .21149E-20
+            .11218E-20  .52168E-21  .20274E-21  .60743E-22  .11643E-22  .91198E-24  .95003E-26
+          FAST FISSION              .16014E+00
+          FAST ABSORPTION           .31037E+00
+          FAST LEAKAGE              .51497E-18
+          TOTAL FISSION             .11637E+01
+          TOTAL ABSORPTION          .10000E+01
+          TOTAL LEAKAGE             .57564E-18
+          K-EFF= 1.16373 K-INF= 1.16373 UNDER GEOMTRICAL BUCKLING=  .10000E-19
+  WARNING **** PINBA010 ALREADY EXISTS IN MACRO FILE ]] 
+  WARNING **** PINBA01N ALREADY EXISTS IN MACRO FILE ]] 
+  WARNING **** PINBA01Z ALREADY EXISTS IN MACRO FILE ]] 
+  WARNING **** PINBA010 ALREADY EXISTS IN FLUX FILE ]] 
+
+
+1
+ *** STEP 20 FOR EFFECTIVE X-SECTION IN
+ ===CASEID=PINB3 : =TITLE=Variasi Boron 3                                                         ===
+
+                MATERIAL-WISE POWER DISTRIBUTION 
+
+          MTNAME     VOLUME      RELATIVE    FISSILE     FERTILE     CONVERSION
+          NAME        (CC)       POWER       ABSORPTION  CAPTURE     RATIO
+
+          FUELX01X   4.82749E-01 4.73016E-01 5.31628E-01 3.46595E-01 6.51950E-01
+           TOTAL     4.82749E-01 4.73016E-01 5.31628E-01 3.46595E-01 6.51950E-01
+
+1     **** CASE ID === PINB4 :  *** TITLE === Variasi Boron 4                                                          ***
+
+
+     USE OF COLLISION PROB. ROUTINE (NO,CALL:0,1)             1
+     SELECT OF ROUTINE FOR FIX S CALC(NO,PIJ,1D SN ,2D SN , 
+      1D DIFF,2D DIFF:0,1,2,3,4,5)                            1
+     DANCOFF FACTOR BY(INPUT,PIJ,TONE:0,1,2)                  1
+     CALC OF THERMAL RANGE (EXCLUDED,INCLUDED:0,1)            1
+     PROCESS OF RESONANCE 2 RANGE(TABLELOOK,IR,PEACO:0,1,2)   2
+     FLUX CALCULATION BY RANGES(SKIP,CALC:0,1)                1
+     FAST RANGES FOR TRANSPORT CALC(0,1,2,3,4)                4
+     INDICATOR FOR ENRGY STRUCTURE OF UMCROSS (0,1,2,3)       3
+     CALC OF BARE REACTOR SPECTRUM(SKIP,P1,B1:0,1,2)         -2
+     COLLAPSE MACRO X-SECTION BY RANGE(SKIP,CALL:0,1)         1
+     INPUT OF GEOMETRY (NEW,SAME AS PREVIOUS CASE:0,1)        0
+     SELECT ROUTINE FOR EIGENVALUE CALC(NO,PIJ,1D SN,2D SN, 
+      1D DIFF,2D DIFF:0,1,2,3,4,5)                            0
+     COLLAPSE MACRO AFTER EIGENVALUE CALC(SKIP,CALL:0,1)      0
+     PREPARE MACRO FOR CITATION (SKIP,CALL:0,1)               0
+     TOTAL MICRO X-SECTION BY (HARMONIC,ARITHMETIC AV:1,2)    1
+     TRANSPORT MACRO X-SECTION BY (P0,P1,B1,SN:0,1,2,3)       2
+     DIFF COEF (INVERSE TR,BENOIST ISO,BENOIST ANISO:1,2,3)   1
+     REACTION RATE CALCULATION (0,1)                          0
+     PRINT OF MACRO-X (0,1,2)                                 0
+     BURN-UP CALCULATION (0,1:SKIP,EXECUTE)                   0
+1PINB4 : Variasi Boron 4                                                         *** STEP *** INPUT FOR PIJ *** 
+                     GEOMETRY TYPE                             4     ( SQUARE CYLINDER )                                             
+                     NUMBER OF SUB - REGIONS                   8
+                     NUMBER OF  T  - REGIONS                   8
+                     NUMBER OF  R  - REGIONS                   4
+                     NUMBER OF  X  - REGIONS                   1
+                     OUTER BOUNDARY CONDITION (-1,0,1,2)       1
+                     DIRECTIONAL PIJ (1,2)                     1  INDICATED BY IC17
+                     NUMBER OF R OR X MESH                     8
+                     NUMBER OF THETA OR Y MESH                 0
+                     TOTAL NUMBER OF PIN RODS                  0
+                     NUMBER OF RINGS OF PIN ROD ARRAY          0
+                     NUMBER OF LATTICE CELLS TRACED            5
+                     PRINT CONTROL OF PIJ (0,1)                0
+                     ORDER OF GAUSS RADIAL INTEGRATION        10
+                     NO. OF DIVISION FOR ANGULAR INTEGRATION  15
+                     NUMBER OF ANNULAR DIVISION IN A PIN ROD   0
+                     DIVISION BY RPP  (0,1,2)                  0
+                     ANGLE RANGE BY DEGREE                    45
+                     PLOTER OPTION  (0,1)                      0
+0         ===R-REGION NO./T  ===
+                     1           1           1           2           3           4           4           4
+0         ===X-REGION NO./R  ===
+                     1           1           1           1
+0         ===MATERIAL NO./R  ===
+                     1           2           3           4
+0         ===R-X DIVISION    ===
+            .00000E+00  .22600E+00  .32000E+00  .39200E+00  .40000E+00  .45700E+00  .51500E+00  .57200E+00  .63000E+00
+  STRAGE USED      69029 FROM    7000000
+
+          VOLUME OF (S)-REGION
+        1) 1.6046E-01   2) 1.6124E-01   3) 1.6105E-01   4) 1.9905E-02   5) 1.5346E-01   6) 1.7711E-01   7) 1.9465E-01   8) 5.5972E-01
+          VOLUME OF (T)-REGION
+        1) 1.6046E-01   2) 1.6124E-01   3) 1.6105E-01   4) 1.9905E-02   5) 1.5346E-01   6) 1.7711E-01   7) 1.9465E-01   8) 5.5972E-01
+          VOLUME OF (R)-REGION
+        1) 4.8275E-01   2) 1.9905E-02   3) 1.5346E-01   4) 9.3148E-01
+          VOLUME OF (X)-REGION
+        1) 1.5876E+00
+          TOTAL VOLUME                    1.5876E+00
+
+          VOLUME(NUMERICAL)/VOLUME(ANALYTICAL) 
+            1) 1.00007     2)  .99974     3)  .99988     4)  .99993     5)  .99994     6)  .99994     7)  .99994
+            8) 1.00142
+0 *** 1138 LINES DRAWN ON FT84 ***                                                  ****ELAPSED CPU TIME       4 SEC
+
+     NO. OF MATERIALS USED IN THE CASE =  4
+
+1
+
+                     MACROF
+
+           CASE I.D. : PINB4 : 
+           TITLE     : Variasi Boron 4                                                         
+
+
+
+                     COMPOSITION DATA LIST
+
+
+                               ## MATERIAL NAME -----  1   FUELX01X ##
+
+           NUMBER OF NUCLIDE -----------        3
+           TEMPERATURE (K) -------------    1073.15
+           MEAN CHORD LENGTH -----------     .78436
+           DANCOFF FACTOR --------------     .00000
+           WEIGHTING FLUX NAME FOR CHI - ASYMPTO.
+           IDENTIFICATION OF NUCLIDE ---    U05000A     U08000A     O06000A
+           NUMBER DENSITY --------------  3.75030E-04 2.26250E-02 4.58970E-02
+           RESONANT INDICATOR ----------      2           2           0
+           LXMICR ----------------------      0           0           0
+           NUCLIDE-WISE DANCOFF FACTOR WILL BE CALCULATED AT SUBROUTINE(MAFSIG) ]] 
+
+                               ## MATERIAL NAME -----  2   HELIX02X ##
+
+           NUMBER OF NUCLIDE -----------        1
+           TEMPERATURE (K) -------------     773.15
+           MEAN CHORD LENGTH -----------     .03117
+           DANCOFF FACTOR --------------     .00000
+           WEIGHTING FLUX NAME FOR CHI - ASYMPTO.
+           IDENTIFICATION OF NUCLIDE ---    HE40009
+           NUMBER DENSITY --------------  1.87370E-04
+           RESONANT INDICATOR ----------      0
+           LXMICR ----------------------      0
+
+                               ## MATERIAL NAME -----  3   CLADX03X ##
+
+           NUMBER OF NUCLIDE -----------        5
+           TEMPERATURE (K) -------------     598.15
+           MEAN CHORD LENGTH -----------     .21431
+           DANCOFF FACTOR --------------     .00000
+           WEIGHTING FLUX NAME FOR CHI - ASYMPTO.
+           IDENTIFICATION OF NUCLIDE ---    ZRN0008     SNN0008     FEN0008     CRN0008     HFN0008
+ 
+           NUMBER DENSITY --------------  4.25400E-02 4.82530E-04 1.48540E-04 7.59860E-05 2.21330E-06
+ 
+           RESONANT INDICATOR ----------      2           2           2           2           2
+ 
+           LXMICR ----------------------      0           0           0           0           0
+ 
+           NUCLIDE-WISE DANCOFF FACTOR WILL BE CALCULATED AT SUBROUTINE(MAFSIG) ]] 
+
+                               ## MATERIAL NAME -----  4   MODEX04X ##
+
+           NUMBER OF NUCLIDE -----------        4
+           TEMPERATURE (K) -------------     573.15
+           MEAN CHORD LENGTH -----------     .56916
+           DANCOFF FACTOR --------------     .00000
+           WEIGHTING FLUX NAME FOR CHI - ASYMPTO.
+           IDENTIFICATION OF NUCLIDE ---    H01H007     O060007     B000007     B010007
+           NUMBER DENSITY --------------  4.85485E-02 2.42742E-02 1.00177E-05 4.03224E-05
+           RESONANT INDICATOR ----------      0           0           0           0
+           LXMICR ----------------------      0           0           0           0
+
+                               ## RESONANT NUCLIDE NAME LIST ##
+
+           NUMBER OF RESONANT NUCLIDE --      7
+           RESONANT NUCLIDE NAME -------  U05   U08   ZRN   SNN   FEN   CRN   HFN
+
+                               ## STANDARD TEMPERATUE ARRAY LIST (STND) ##
+
+  TAG         :    1        2        3        4        5        6        7        8        9        A
+  TAG         :    B        C
+  TEMPERATURE :    300.00   325.00   350.00   400.00   450.00   500.00   550.00   600.00   900.00  1200.00
+  TEMPERATURE :   1600.00  2100.00
+  ## MEMBER(FUELF012) ALREADY EXISTS IN MACRO LIB. ##
+  ## MEMBER(HELIF022) ALREADY EXISTS IN MACRO LIB. ##
+  ## MEMBER(CLADF032) ALREADY EXISTS IN MACRO LIB. ##
+  ## MEMBER(MODEF042) ALREADY EXISTS IN MACRO LIB. ##
+          STRAGE USED      64214 WITHIN    7000000 IN PIJ2-STEP
+1
+
+          ===PIJ3 STEP===
+          ***PINB4 : ***Variasi Boron 4                                                         *** IN FAST     RANGE ***
+
+          ITERATION PARAMETERS 
+          PRINT (1+2+4+8)(FLUX,XEC,PIJ,S)              0
+          MAX OF INNER ITERATIONS PER OUTER           50
+          MAX OF OUTER ITERATIONS                     50
+          EARLIST EXTRAPOLATION                        5
+          NUMBER OF ITERATIONS TESTED                  5
+          MINIMUM DELAY                                5
+          MONITOR PRINT(0,1)(SKIP,PRINT)              -1
+          CONVERGENCE CRITERION OF INNER      .10000E-03
+          CONVERGENCE CRITERION OF OUTER      .10000E-04
+          EXTRAPOLATION CRITERION             .10000E-02
+          OVER-RELAXATION (INITIAL)           .10000E+01
+          MAX EXTRAPOLATION                   .10000E+02
+          BASE FACTOR OF OVER-RELAXATION      .50000E+00
+
+          PROBLEM TYPE  
+          ITYPE (0/1  =EIGENVALUE/FIXED S)             1
+          IRANG (0/1/2=FAST/THERMAL/ALL)               0
+          IFIXS (0/1/2)                                0
+
+0            ITERATION POWER-SCALING   RESIDUE CRITERON
+
+              1          .13492E+00  .69091E-01  .10000E-04
+              2          .12718E+00  .77424E-02  .10000E-04
+              3          .12631E+00  .86761E-03  .10000E-04
+              4          .12626E+00  .48244E-03  .10000E-04
+              5          .12624E+00  .26824E-03  .10000E-04
+              6          .12622E+00  .14915E-03  .10000E-04
+              7          .12621E+00  .82910E-04  .10000E-04
+              8          .12621E+00  .46104E-04  .10000E-04
+              9          .12621E+00  .25660E-04  .10000E-04
+             10          .12621E+00  .14260E-04  .10000E-04
+             11          .12620E+00  .79423E-05  .10000E-04
+
+
+
+          === ITERATION END IN PIJF STEP ===
+          === FIXED SOURCE TYPE PROBLEM ===
+          TOTAL THERMAL INNER ITERATION COUNT             0
+          INITIAL SOURCE NORMALIZATION FACTOR    .12919E+01
+          THERMAL SOURCE NORMALIZATION FACTOR    .10000E+01
+          RENORMALIZATION FACTOR (INNER)         .00000E+00
+          RESIDUE IN FINAL INNER ITERATION       .00000E+00
+          FINAL FISSION SOURCE NORMALIZATION     .12620E+00
+          RESIDUE IN FINAL FISSION RATE          .79423E-05
+
+
+                                    ENERGY GROUP STRUCTURE FOR USER'S MCROSS
+0                              ENERGY (EV)           LETHAGY         NUMBER OF   START     LENGTH OF
+                       NO.  UPPER   -    LOWER       WIDTH           I.M. GROUP  POSITION  SUBSECTION 
+                        1 961.1165  -  748.5183       .25000         100   100     1         500
+                        2 748.5183  -  582.9467       .25000         100   200   101
+                        3 582.9467  -  453.9993       .25000         100   300   201
+                        4 453.9993  -  353.5750       .25000         100   400   301
+                        5 353.5750  -  275.3645       .25000         100   500   401
+                        6 275.3645  -  214.4541       .25000         100   600     1         500
+                        7 214.4541  -  167.0170       .25000         100   700   101
+                        8 167.0170  -  130.0730       .25000         100   800   201
+                        9 130.0730  -  101.3009       .25000          50   850   301
+                       10 101.3009  -   78.8932       .25000          50   900   351
+                       11  78.8932  -   61.4421       .25000          50   950   401
+                       12  61.4421  -   47.8512       .25000          50  1000   451
+                       13  47.8512  -   37.2665       .25000          50  1050     1         500
+                       14  37.2665  -   29.0232       .25000          50  1100    51
+                       15  29.0232  -   22.6033       .25000          50  1150   101
+                       16  22.6033  -   17.6035       .25000          50  1200   151
+                       17  17.6035  -   13.7096       .25000          50  1250   201
+                       18  13.7096  -   10.6770       .25000          50  1300   251
+                       19  10.6770  -    8.3153       .25000          50  1350   301
+                       20   8.3153  -    6.4760       .25000          50  1400   351
+                       21   6.4760  -    5.0435       .25000          50  1450   401
+                       22   5.0435  -    3.9279       .25000          50  1500   451
+                       23   3.9279  -    3.0590       .25000          50  1550     1         150
+                       24   3.0590  -    2.3824       .25000          50  1600    51
+                       25   2.3824  -    1.8554       .25000          50  1650   101
+          NOTE ---> NUCLIDE 0ZRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0SNN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0FEN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0CRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0HFN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          STRAGE USED     205731 WITHIN    7000000 IN PIJ2-STEP
+
+
+
+         *** MIX-X-SECTION STEP IN *** FAST ENERGY RANGE
+          *** PINB4 : ***Variasi Boron 4                                                         ***
+0         X-REGION  1***
+          SIGNED MAT ID BY R-REG =   1   2   3   4
+          ONE GROUP CONSTANTS
+          * ACTIVATION CROSS SECTION      .47710E-01
+          * FISSION    CROSS SECTION      .16774E-02
+          * NU*FISSION CROSS SECTION      .43955E-02
+          * TOTAL      CROSS SECTION      .23427E+00
+          * DIFFUSION  COEFFICIENT 1      .14228E+01
+          * DIFFUSION  COEFFICIENT 2      .14228E+01
+          * ABSORPTION CROSS SECTION      .85481E-02
+          * SCATTEROUT CROSS SECTION      .18556E-01
+          * INTEGRATED FLUX-X-REGION      .40674E+02
+          STRAGE USED     144270 WITHIN    7000000 IN PIJ2-STEP
+1
+
+          ===PIJ3 STEP===
+          ***PINB4 : ***Variasi Boron 4                                                         *** IN THERMAL  RANGE ***
+
+          ITERATION PARAMETERS 
+          PRINT (1+2+4+8)(FLUX,XEC,PIJ,S)              0
+          MAX OF INNER ITERATIONS PER OUTER          200
+          MAX OF OUTER ITERATIONS                      1
+          EARLIST EXTRAPOLATION                        5
+          NUMBER OF ITERATIONS TESTED                  5
+          MINIMUM DELAY                                5
+          MONITOR PRINT(0,1)(SKIP,PRINT)              -1
+          CONVERGENCE CRITERION OF INNER      .10000E-03
+          CONVERGENCE CRITERION OF OUTER      .10000E-04
+          EXTRAPOLATION CRITERION             .10000E-02
+          OVER-RELAXATION (INITIAL)           .10000E+01
+          MAX EXTRAPOLATION                   .10000E+02
+          BASE FACTOR OF OVER-RELAXATION      .50000E+00
+
+          PROBLEM TYPE  
+          ITYPE (0/1  =EIGENVALUE/FIXED S)             1
+          IRANG (0/1/2=FAST/THERMAL/ALL)               1
+          IFIXS (0/1/2)                                0
+
+
+
+
+          === ITERATION END IN PIJF STEP ===
+          === FIXED SOURCE TYPE PROBLEM ===
+          TOTAL THERMAL INNER ITERATION COUNT            22
+          INITIAL SOURCE NORMALIZATION FACTOR    .75475E+00
+          THERMAL SOURCE NORMALIZATION FACTOR    .10000E+01
+          RENORMALIZATION FACTOR (INNER)         .10000E+01
+          RESIDUE IN FINAL INNER ITERATION       .27186E-05
+          FINAL FISSION SOURCE NORMALIZATION     .00000E+00
+          RESIDUE IN FINAL FISSION RATE          .73908E-11
+
+
+
+         *** MIX-X-SECTION STEP IN *** THER ENERGY RANGE
+          *** PINB4 : ***Variasi Boron 4                                                         ***
+0         X-REGION  1***
+          SIGNED MAT ID BY R-REG =   1   2   3   4
+          ONE GROUP CONSTANTS
+          * ACTIVATION CROSS SECTION      .32942E+01
+          * FISSION    CROSS SECTION      .29768E-01
+          * NU*FISSION CROSS SECTION      .72537E-01
+          * TOTAL      CROSS SECTION      .81323E+00
+          * DIFFUSION  COEFFICIENT 1      .40989E+00
+          * DIFFUSION  COEFFICIENT 2      .40989E+00
+          * ABSORPTION CROSS SECTION      .49844E-01
+          * SCATTEROUT CROSS SECTION      .15790E-03
+          * INTEGRATED FLUX-X-REGION      .15095E+02
+1            ***  BARE REACTOR SPECTRUM CALCULATION *** OF STEP 15 ***
+          ***PINB4 : ***Variasi Boron 4                                                         ***
+          *** BY B1 APPROXIMATION *** BUCKLING SERACH OPTION IS         0 (0/1:NO/YES) 
+          RATIO OF THERMAL SOURCE TO REMOVAL   .10000E+01
+          NEUTRON SPECTRUM PER LETHARGY
+            .36543E+00  .10388E+01  .22408E+01  .34382E+01  .49196E+01  .69304E+01  .62957E+01  .66181E+01  .61548E+01  .58618E+01
+            .69766E+01  .59291E+01  .40757E+01  .46915E+01  .41692E+01  .36020E+01  .31741E+01  .28273E+01  .25661E+01  .23513E+01
+            .21921E+01  .20331E+01  .19604E+01  .18606E+01  .17830E+01  .17456E+01  .16977E+01  .16583E+01  .16252E+01  .16119E+01
+            .15882E+01  .15717E+01  .15303E+01  .15580E+01  .15274E+01  .15208E+01  .15041E+01  .14898E+01  .14696E+01  .14641E+01
+            .14563E+01  .14306E+01  .14195E+01  .13972E+01  .14036E+01  .13154E+01  .13772E+01  .13123E+01  .13517E+01  .13113E+01
+            .11846E+01  .12944E+01  .10628E+01  .12386E+01  .12336E+01  .12116E+01  .96972E+00  .10099E+01  .11287E+01  .11325E+01
+            .11345E+01  .11278E+01  .12202E+01  .11975E+01  .11938E+01  .11980E+01  .12116E+01  .12357E+01  .12621E+01  .12877E+01
+            .13242E+01  .13679E+01  .14368E+01  .15444E+01  .16699E+01  .17737E+01  .19106E+01  .20829E+01  .22996E+01  .25589E+01
+            .28739E+01  .32460E+01  .36586E+01  .41027E+01  .45595E+01  .50005E+01  .54057E+01  .57426E+01  .59776E+01  .60892E+01
+            .60497E+01  .58550E+01  .54998E+01  .50042E+01  .43911E+01  .37037E+01  .29859E+01  .22872E+01  .16512E+01  .11101E+01
+            .68388E+00  .37674E+00  .17807E+00  .67604E-01  .17795E-01  .22656E-02  .53369E-04
+          NEUTRON CURRENT PER LETHARGY
+            .13469E-19  .38257E-19  .73826E-19  .97323E-19  .12694E-18  .18507E-18  .15477E-18  .14356E-18  .11695E-18  .89988E-19
+            .10887E-18  .94146E-19  .53756E-19  .55011E-19  .48941E-19  .42082E-19  .36042E-19  .30987E-19  .27197E-19  .23998E-19
+            .21695E-19  .19375E-19  .18279E-19  .17008E-19  .15871E-19  .14973E-19  .14551E-19  .14219E-19  .13593E-19  .13092E-19
+            .13037E-19  .12537E-19  .12104E-19  .12397E-19  .12352E-19  .12271E-19  .12055E-19  .11813E-19  .11480E-19  .11652E-19
+            .11572E-19  .10943E-19  .10930E-19  .10272E-19  .11128E-19  .94454E-20  .10982E-19  .98605E-20  .10780E-19  .96067E-20
+            .87237E-20  .10218E-19  .77175E-20  .10115E-19  .99243E-20  .96743E-20  .69166E-20  .81838E-20  .91999E-20  .92209E-20
+            .92991E-20  .92654E-20  .10150E-19  .98972E-20  .99565E-20  .98213E-20  .98161E-20  .99554E-20  .10054E-19  .10127E-19
+            .10228E-19  .10335E-19  .10520E-19  .10856E-19  .11293E-19  .11664E-19  .12170E-19  .12821E-19  .13653E-19  .14665E-19
+            .15904E-19  .17365E-19  .18948E-19  .20559E-19  .22093E-19  .23418E-19  .24438E-19  .25026E-19  .25074E-19  .24533E-19
+            .23355E-19  .21591E-19  .19301E-19  .16630E-19  .13724E-19  .10786E-19  .80022E-20  .55579E-20  .35793E-20  .21095E-20
+            .11190E-20  .52036E-21  .20223E-21  .60589E-22  .11613E-22  .90968E-24  .94763E-26
+          FAST FISSION              .16007E+00
+          FAST ABSORPTION           .31211E+00
+          FAST LEAKAGE              .51488E-18
+          TOTAL FISSION             .11611E+01
+          TOTAL ABSORPTION          .10000E+01
+          TOTAL LEAKAGE             .57540E-18
+          K-EFF= 1.16113 K-INF= 1.16113 UNDER GEOMTRICAL BUCKLING=  .10000E-19
+  WARNING **** PINBA010 ALREADY EXISTS IN MACRO FILE ]] 
+  WARNING **** PINBA01N ALREADY EXISTS IN MACRO FILE ]] 
+  WARNING **** PINBA01Z ALREADY EXISTS IN MACRO FILE ]] 
+  WARNING **** PINBA010 ALREADY EXISTS IN FLUX FILE ]] 
+
+
+1
+ *** STEP 20 FOR EFFECTIVE X-SECTION IN
+ ===CASEID=PINB4 : =TITLE=Variasi Boron 4                                                         ===
+
+                MATERIAL-WISE POWER DISTRIBUTION 
+
+          MTNAME     VOLUME      RELATIVE    FISSILE     FERTILE     CONVERSION
+          NAME        (CC)       POWER       ABSORPTION  CAPTURE     RATIO
+
+          FUELX01X   4.82749E-01 4.71949E-01 5.30361E-01 3.46064E-01 6.52507E-01
+           TOTAL     4.82749E-01 4.71949E-01 5.30361E-01 3.46064E-01 6.52507E-01
+
+1     **** CASE ID === PINB5 :  *** TITLE === Variasi Boron 5                                                          ***
+
+
+     USE OF COLLISION PROB. ROUTINE (NO,CALL:0,1)             1
+     SELECT OF ROUTINE FOR FIX S CALC(NO,PIJ,1D SN ,2D SN , 
+      1D DIFF,2D DIFF:0,1,2,3,4,5)                            1
+     DANCOFF FACTOR BY(INPUT,PIJ,TONE:0,1,2)                  1
+     CALC OF THERMAL RANGE (EXCLUDED,INCLUDED:0,1)            1
+     PROCESS OF RESONANCE 2 RANGE(TABLELOOK,IR,PEACO:0,1,2)   2
+     FLUX CALCULATION BY RANGES(SKIP,CALC:0,1)                1
+     FAST RANGES FOR TRANSPORT CALC(0,1,2,3,4)                4
+     INDICATOR FOR ENRGY STRUCTURE OF UMCROSS (0,1,2,3)       3
+     CALC OF BARE REACTOR SPECTRUM(SKIP,P1,B1:0,1,2)         -2
+     COLLAPSE MACRO X-SECTION BY RANGE(SKIP,CALL:0,1)         1
+     INPUT OF GEOMETRY (NEW,SAME AS PREVIOUS CASE:0,1)        0
+     SELECT ROUTINE FOR EIGENVALUE CALC(NO,PIJ,1D SN,2D SN, 
+      1D DIFF,2D DIFF:0,1,2,3,4,5)                            0
+     COLLAPSE MACRO AFTER EIGENVALUE CALC(SKIP,CALL:0,1)      0
+     PREPARE MACRO FOR CITATION (SKIP,CALL:0,1)               0
+     TOTAL MICRO X-SECTION BY (HARMONIC,ARITHMETIC AV:1,2)    1
+     TRANSPORT MACRO X-SECTION BY (P0,P1,B1,SN:0,1,2,3)       2
+     DIFF COEF (INVERSE TR,BENOIST ISO,BENOIST ANISO:1,2,3)   1
+     REACTION RATE CALCULATION (0,1)                          0
+     PRINT OF MACRO-X (0,1,2)                                 0
+     BURN-UP CALCULATION (0,1:SKIP,EXECUTE)                   0
+1PINB5 : Variasi Boron 5                                                         *** STEP *** INPUT FOR PIJ *** 
+                     GEOMETRY TYPE                             4     ( SQUARE CYLINDER )                                             
+                     NUMBER OF SUB - REGIONS                   8
+                     NUMBER OF  T  - REGIONS                   8
+                     NUMBER OF  R  - REGIONS                   4
+                     NUMBER OF  X  - REGIONS                   1
+                     OUTER BOUNDARY CONDITION (-1,0,1,2)       1
+                     DIRECTIONAL PIJ (1,2)                     1  INDICATED BY IC17
+                     NUMBER OF R OR X MESH                     8
+                     NUMBER OF THETA OR Y MESH                 0
+                     TOTAL NUMBER OF PIN RODS                  0
+                     NUMBER OF RINGS OF PIN ROD ARRAY          0
+                     NUMBER OF LATTICE CELLS TRACED            5
+                     PRINT CONTROL OF PIJ (0,1)                0
+                     ORDER OF GAUSS RADIAL INTEGRATION        10
+                     NO. OF DIVISION FOR ANGULAR INTEGRATION  15
+                     NUMBER OF ANNULAR DIVISION IN A PIN ROD   0
+                     DIVISION BY RPP  (0,1,2)                  0
+                     ANGLE RANGE BY DEGREE                    45
+                     PLOTER OPTION  (0,1)                      0
+0         ===R-REGION NO./T  ===
+                     1           1           1           2           3           4           4           4
+0         ===X-REGION NO./R  ===
+                     1           1           1           1
+0         ===MATERIAL NO./R  ===
+                     1           2           3           4
+0         ===R-X DIVISION    ===
+            .00000E+00  .22600E+00  .32000E+00  .39200E+00  .40000E+00  .45700E+00  .51500E+00  .57200E+00  .63000E+00
+  STRAGE USED      69029 FROM    7000000
+
+          VOLUME OF (S)-REGION
+        1) 1.6046E-01   2) 1.6124E-01   3) 1.6105E-01   4) 1.9905E-02   5) 1.5346E-01   6) 1.7711E-01   7) 1.9465E-01   8) 5.5972E-01
+          VOLUME OF (T)-REGION
+        1) 1.6046E-01   2) 1.6124E-01   3) 1.6105E-01   4) 1.9905E-02   5) 1.5346E-01   6) 1.7711E-01   7) 1.9465E-01   8) 5.5972E-01
+          VOLUME OF (R)-REGION
+        1) 4.8275E-01   2) 1.9905E-02   3) 1.5346E-01   4) 9.3148E-01
+          VOLUME OF (X)-REGION
+        1) 1.5876E+00
+          TOTAL VOLUME                    1.5876E+00
+
+          VOLUME(NUMERICAL)/VOLUME(ANALYTICAL) 
+            1) 1.00007     2)  .99974     3)  .99988     4)  .99993     5)  .99994     6)  .99994     7)  .99994
+            8) 1.00142
+0 *** 1138 LINES DRAWN ON FT84 ***                                                  ****ELAPSED CPU TIME       5 SEC
+
+     NO. OF MATERIALS USED IN THE CASE =  4
+
+1
+
+                     MACROF
+
+           CASE I.D. : PINB5 : 
+           TITLE     : Variasi Boron 5                                                         
+
+
+
+                     COMPOSITION DATA LIST
+
+
+                               ## MATERIAL NAME -----  1   FUELX01X ##
+
+           NUMBER OF NUCLIDE -----------        3
+           TEMPERATURE (K) -------------    1073.15
+           MEAN CHORD LENGTH -----------     .78436
+           DANCOFF FACTOR --------------     .00000
+           WEIGHTING FLUX NAME FOR CHI - ASYMPTO.
+           IDENTIFICATION OF NUCLIDE ---    U05000A     U08000A     O06000A
+           NUMBER DENSITY --------------  3.75030E-04 2.26250E-02 4.58970E-02
+           RESONANT INDICATOR ----------      2           2           0
+           LXMICR ----------------------      0           0           0
+           NUCLIDE-WISE DANCOFF FACTOR WILL BE CALCULATED AT SUBROUTINE(MAFSIG) ]] 
+
+                               ## MATERIAL NAME -----  2   HELIX02X ##
+
+           NUMBER OF NUCLIDE -----------        1
+           TEMPERATURE (K) -------------     773.15
+           MEAN CHORD LENGTH -----------     .03117
+           DANCOFF FACTOR --------------     .00000
+           WEIGHTING FLUX NAME FOR CHI - ASYMPTO.
+           IDENTIFICATION OF NUCLIDE ---    HE40009
+           NUMBER DENSITY --------------  1.87370E-04
+           RESONANT INDICATOR ----------      0
+           LXMICR ----------------------      0
+
+                               ## MATERIAL NAME -----  3   CLADX03X ##
+
+           NUMBER OF NUCLIDE -----------        5
+           TEMPERATURE (K) -------------     598.15
+           MEAN CHORD LENGTH -----------     .21431
+           DANCOFF FACTOR --------------     .00000
+           WEIGHTING FLUX NAME FOR CHI - ASYMPTO.
+           IDENTIFICATION OF NUCLIDE ---    ZRN0008     SNN0008     FEN0008     CRN0008     HFN0008
+ 
+           NUMBER DENSITY --------------  4.25400E-02 4.82530E-04 1.48540E-04 7.59860E-05 2.21330E-06
+ 
+           RESONANT INDICATOR ----------      2           2           2           2           2
+ 
+           LXMICR ----------------------      0           0           0           0           0
+ 
+           NUCLIDE-WISE DANCOFF FACTOR WILL BE CALCULATED AT SUBROUTINE(MAFSIG) ]] 
+
+                               ## MATERIAL NAME -----  4   MODEX04X ##
+
+           NUMBER OF NUCLIDE -----------        4
+           TEMPERATURE (K) -------------     573.15
+           MEAN CHORD LENGTH -----------     .56916
+           DANCOFF FACTOR --------------     .00000
+           WEIGHTING FLUX NAME FOR CHI - ASYMPTO.
+           IDENTIFICATION OF NUCLIDE ---    H01H007     O060007     B000007     B010007
+           NUMBER DENSITY --------------  4.85485E-02 2.42742E-02 1.33569E-05 5.37632E-05
+           RESONANT INDICATOR ----------      0           0           0           0
+           LXMICR ----------------------      0           0           0           0
+
+                               ## RESONANT NUCLIDE NAME LIST ##
+
+           NUMBER OF RESONANT NUCLIDE --      7
+           RESONANT NUCLIDE NAME -------  U05   U08   ZRN   SNN   FEN   CRN   HFN
+
+                               ## STANDARD TEMPERATUE ARRAY LIST (STND) ##
+
+  TAG         :    1        2        3        4        5        6        7        8        9        A
+  TAG         :    B        C
+  TEMPERATURE :    300.00   325.00   350.00   400.00   450.00   500.00   550.00   600.00   900.00  1200.00
+  TEMPERATURE :   1600.00  2100.00
+  ## MEMBER(FUELF012) ALREADY EXISTS IN MACRO LIB. ##
+  ## MEMBER(HELIF022) ALREADY EXISTS IN MACRO LIB. ##
+  ## MEMBER(CLADF032) ALREADY EXISTS IN MACRO LIB. ##
+  ## MEMBER(MODEF042) ALREADY EXISTS IN MACRO LIB. ##
+          STRAGE USED      64214 WITHIN    7000000 IN PIJ2-STEP
+1
+
+          ===PIJ3 STEP===
+          ***PINB5 : ***Variasi Boron 5                                                         *** IN FAST     RANGE ***
+
+          ITERATION PARAMETERS 
+          PRINT (1+2+4+8)(FLUX,XEC,PIJ,S)              0
+          MAX OF INNER ITERATIONS PER OUTER           50
+          MAX OF OUTER ITERATIONS                     50
+          EARLIST EXTRAPOLATION                        5
+          NUMBER OF ITERATIONS TESTED                  5
+          MINIMUM DELAY                                5
+          MONITOR PRINT(0,1)(SKIP,PRINT)              -1
+          CONVERGENCE CRITERION OF INNER      .10000E-03
+          CONVERGENCE CRITERION OF OUTER      .10000E-04
+          EXTRAPOLATION CRITERION             .10000E-02
+          OVER-RELAXATION (INITIAL)           .10000E+01
+          MAX EXTRAPOLATION                   .10000E+02
+          BASE FACTOR OF OVER-RELAXATION      .50000E+00
+
+          PROBLEM TYPE  
+          ITYPE (0/1  =EIGENVALUE/FIXED S)             1
+          IRANG (0/1/2=FAST/THERMAL/ALL)               0
+          IFIXS (0/1/2)                                0
+
+0            ITERATION POWER-SCALING   RESIDUE CRITERON
+
+              1          .13492E+00  .69095E-01  .10000E-04
+              2          .12718E+00  .77426E-02  .10000E-04
+              3          .12631E+00  .86762E-03  .10000E-04
+              4          .12626E+00  .48240E-03  .10000E-04
+              5          .12623E+00  .26824E-03  .10000E-04
+              6          .12622E+00  .14916E-03  .10000E-04
+              7          .12621E+00  .82955E-04  .10000E-04
+              8          .12621E+00  .46104E-04  .10000E-04
+              9          .12620E+00  .25645E-04  .10000E-04
+             10          .12620E+00  .14260E-04  .10000E-04
+             11          .12620E+00  .79274E-05  .10000E-04
+
+
+
+          === ITERATION END IN PIJF STEP ===
+          === FIXED SOURCE TYPE PROBLEM ===
+          TOTAL THERMAL INNER ITERATION COUNT             0
+          INITIAL SOURCE NORMALIZATION FACTOR    .12919E+01
+          THERMAL SOURCE NORMALIZATION FACTOR    .10000E+01
+          RENORMALIZATION FACTOR (INNER)         .00000E+00
+          RESIDUE IN FINAL INNER ITERATION       .00000E+00
+          FINAL FISSION SOURCE NORMALIZATION     .12620E+00
+          RESIDUE IN FINAL FISSION RATE          .79274E-05
+
+
+                                    ENERGY GROUP STRUCTURE FOR USER'S MCROSS
+0                              ENERGY (EV)           LETHAGY         NUMBER OF   START     LENGTH OF
+                       NO.  UPPER   -    LOWER       WIDTH           I.M. GROUP  POSITION  SUBSECTION 
+                        1 961.1165  -  748.5183       .25000         100   100     1         500
+                        2 748.5183  -  582.9467       .25000         100   200   101
+                        3 582.9467  -  453.9993       .25000         100   300   201
+                        4 453.9993  -  353.5750       .25000         100   400   301
+                        5 353.5750  -  275.3645       .25000         100   500   401
+                        6 275.3645  -  214.4541       .25000         100   600     1         500
+                        7 214.4541  -  167.0170       .25000         100   700   101
+                        8 167.0170  -  130.0730       .25000         100   800   201
+                        9 130.0730  -  101.3009       .25000          50   850   301
+                       10 101.3009  -   78.8932       .25000          50   900   351
+                       11  78.8932  -   61.4421       .25000          50   950   401
+                       12  61.4421  -   47.8512       .25000          50  1000   451
+                       13  47.8512  -   37.2665       .25000          50  1050     1         500
+                       14  37.2665  -   29.0232       .25000          50  1100    51
+                       15  29.0232  -   22.6033       .25000          50  1150   101
+                       16  22.6033  -   17.6035       .25000          50  1200   151
+                       17  17.6035  -   13.7096       .25000          50  1250   201
+                       18  13.7096  -   10.6770       .25000          50  1300   251
+                       19  10.6770  -    8.3153       .25000          50  1350   301
+                       20   8.3153  -    6.4760       .25000          50  1400   351
+                       21   6.4760  -    5.0435       .25000          50  1450   401
+                       22   5.0435  -    3.9279       .25000          50  1500   451
+                       23   3.9279  -    3.0590       .25000          50  1550     1         150
+                       24   3.0590  -    2.3824       .25000          50  1600    51
+                       25   2.3824  -    1.8554       .25000          50  1650   101
+          NOTE ---> NUCLIDE 0ZRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0SNN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0FEN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0CRN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          NOTE ---> NUCLIDE 0HFN0008(CLADF032) IS NOT TREATED WITH PEACO BECAUSE IT HAS NO MCROSS LIBRARY
+          STRAGE USED     205731 WITHIN    7000000 IN PIJ2-STEP
+
+
+
+         *** MIX-X-SECTION STEP IN *** FAST ENERGY RANGE
+          *** PINB5 : ***Variasi Boron 5                                                         ***
+0         X-REGION  1***
+          SIGNED MAT ID BY R-REG =   1   2   3   4
+          ONE GROUP CONSTANTS
+          * ACTIVATION CROSS SECTION      .47638E-01
+          * FISSION    CROSS SECTION      .16770E-02
+          * NU*FISSION CROSS SECTION      .43947E-02
+          * TOTAL      CROSS SECTION      .23427E+00
+          * DIFFUSION  COEFFICIENT 1      .14228E+01
+          * DIFFUSION  COEFFICIENT 2      .14228E+01
+          * ABSORPTION CROSS SECTION      .85970E-02
+          * SCATTEROUT CROSS SECTION      .18514E-01
+          * INTEGRATED FLUX-X-REGION      .40665E+02
+          STRAGE USED     144270 WITHIN    7000000 IN PIJ2-STEP
+1
+
+          ===PIJ3 STEP===
+          ***PINB5 : ***Variasi Boron 5                                                         *** IN THERMAL  RANGE ***
+
+          ITERATION PARAMETERS 
+          PRINT (1+2+4+8)(FLUX,XEC,PIJ,S)              0
+          MAX OF INNER ITERATIONS PER OUTER          200
+          MAX OF OUTER ITERATIONS                      1
+          EARLIST EXTRAPOLATION                        5
+          NUMBER OF ITERATIONS TESTED                  5
+          MINIMUM DELAY                                5
+          MONITOR PRINT(0,1)(SKIP,PRINT)              -1
+          CONVERGENCE CRITERION OF INNER      .10000E-03
+          CONVERGENCE CRITERION OF OUTER      .10000E-04
+          EXTRAPOLATION CRITERION             .10000E-02
+          OVER-RELAXATION (INITIAL)           .10000E+01
+          MAX EXTRAPOLATION                   .10000E+02
+          BASE FACTOR OF OVER-RELAXATION      .50000E+00
+
+          PROBLEM TYPE  
+          ITYPE (0/1  =EIGENVALUE/FIXED S)             1
+          IRANG (0/1/2=FAST/THERMAL/ALL)               1
+          IFIXS (0/1/2)                                0
+
+
+
+
+          === ITERATION END IN PIJF STEP ===
+          === FIXED SOURCE TYPE PROBLEM ===
+          TOTAL THERMAL INNER ITERATION COUNT            22
+          INITIAL SOURCE NORMALIZATION FACTOR    .75289E+00
+          THERMAL SOURCE NORMALIZATION FACTOR    .10000E+01
+          RENORMALIZATION FACTOR (INNER)         .10000E+01
+          RESIDUE IN FINAL INNER ITERATION       .27440E-05
+          FINAL FISSION SOURCE NORMALIZATION     .00000E+00
+          RESIDUE IN FINAL FISSION RATE          .75295E-11
+
+
+
+         *** MIX-X-SECTION STEP IN *** THER ENERGY RANGE
+          *** PINB5 : ***Variasi Boron 5                                                         ***
+0         X-REGION  1***
+          SIGNED MAT ID BY R-REG =   1   2   3   4
+          ONE GROUP CONSTANTS
+          * ACTIVATION CROSS SECTION      .32942E+01
+          * FISSION    CROSS SECTION      .29768E-01
+          * NU*FISSION CROSS SECTION      .72537E-01
+          * TOTAL      CROSS SECTION      .81323E+00
+          * DIFFUSION  COEFFICIENT 1      .40989E+00
+          * DIFFUSION  COEFFICIENT 2      .40989E+00
+          * ABSORPTION CROSS SECTION      .49844E-01
+          * SCATTEROUT CROSS SECTION      .15787E-03
+          * INTEGRATED FLUX-X-REGION      .15057E+02
+1            ***  BARE REACTOR SPECTRUM CALCULATION *** OF STEP 15 ***
+          ***PINB5 : ***Variasi Boron 5                                                         ***
+          *** BY B1 APPROXIMATION *** BUCKLING SERACH OPTION IS         0 (0/1:NO/YES) 
+          RATIO OF THERMAL SOURCE TO REMOVAL   .10000E+01
+          NEUTRON SPECTRUM PER LETHARGY
+            .36543E+00  .10388E+01  .22408E+01  .34382E+01  .49196E+01  .69304E+01  .62957E+01  .66181E+01  .61548E+01  .58618E+01
+            .69766E+01  .59291E+01  .40757E+01  .46915E+01  .41692E+01  .36020E+01  .31741E+01  .28273E+01  .25661E+01  .23513E+01
+            .21921E+01  .20331E+01  .19604E+01  .18606E+01  .17830E+01  .17456E+01  .16977E+01  .16583E+01  .16252E+01  .16119E+01
+            .15882E+01  .15717E+01  .15303E+01  .15580E+01  .15274E+01  .15208E+01  .15041E+01  .14897E+01  .14693E+01  .14639E+01
+            .14560E+01  .14303E+01  .14191E+01  .13968E+01  .14030E+01  .13148E+01  .13765E+01  .13115E+01  .13508E+01  .13103E+01
+            .11836E+01  .12931E+01  .10617E+01  .12370E+01  .12318E+01  .12095E+01  .96793E+00  .10078E+01  .11259E+01  .11293E+01
+            .11308E+01  .11236E+01  .12169E+01  .11945E+01  .11908E+01  .11950E+01  .12085E+01  .12326E+01  .12589E+01  .12845E+01
+            .13209E+01  .13644E+01  .14332E+01  .15405E+01  .16658E+01  .17693E+01  .19058E+01  .20777E+01  .22939E+01  .25524E+01
+            .28667E+01  .32379E+01  .36494E+01  .40924E+01  .45481E+01  .49879E+01  .53921E+01  .57281E+01  .59626E+01  .60738E+01
+            .60345E+01  .58403E+01  .54859E+01  .49916E+01  .43801E+01  .36944E+01  .29784E+01  .22815E+01  .16471E+01  .11074E+01
+            .68216E+00  .37579E+00  .17762E+00  .67434E-01  .17750E-01  .22599E-02  .53235E-04
+          NEUTRON CURRENT PER LETHARGY
+            .13469E-19  .38257E-19  .73826E-19  .97323E-19  .12694E-18  .18507E-18  .15477E-18  .14356E-18  .11695E-18  .89988E-19
+            .10887E-18  .94146E-19  .53756E-19  .55011E-19  .48941E-19  .42082E-19  .36042E-19  .30987E-19  .27197E-19  .23998E-19
+            .21695E-19  .19375E-19  .18279E-19  .17008E-19  .15871E-19  .14973E-19  .14551E-19  .14219E-19  .13593E-19  .13092E-19
+            .13037E-19  .12537E-19  .12104E-19  .12397E-19  .12352E-19  .12271E-19  .12055E-19  .11811E-19  .11478E-19  .11649E-19
+            .11569E-19  .10939E-19  .10926E-19  .10267E-19  .11122E-19  .94402E-20  .10974E-19  .98532E-20  .10771E-19  .95973E-20
+            .87144E-20  .10205E-19  .77070E-20  .10098E-19  .99055E-20  .96534E-20  .69008E-20  .81619E-20  .91712E-20  .91881E-20
+            .92612E-20  .92224E-20  .10119E-19  .98679E-20  .99273E-20  .97929E-20  .97882E-20  .99274E-20  .10026E-19  .10099E-19
+            .10200E-19  .10307E-19  .10492E-19  .10827E-19  .11263E-19  .11634E-19  .12139E-19  .12788E-19  .13618E-19  .14628E-19
+            .15863E-19  .17321E-19  .18899E-19  .20506E-19  .22037E-19  .23358E-19  .24376E-19  .24963E-19  .25011E-19  .24471E-19
+            .23296E-19  .21537E-19  .19252E-19  .16588E-19  .13690E-19  .10759E-19  .79821E-20  .55439E-20  .35703E-20  .21042E-20
+            .11162E-20  .51905E-21  .20172E-21  .60436E-22  .11584E-22  .90738E-24  .94524E-26
+          FAST FISSION              .16000E+00
+          FAST ABSORPTION           .31384E+00
+          FAST LEAKAGE              .51480E-18
+          TOTAL FISSION             .11585E+01
+          TOTAL ABSORPTION          .10000E+01
+          TOTAL LEAKAGE             .57515E-18
+          K-EFF= 1.15854 K-INF= 1.15854 UNDER GEOMTRICAL BUCKLING=  .10000E-19
+  WARNING **** PINBA010 ALREADY EXISTS IN MACRO FILE ]] 
+  WARNING **** PINBA01N ALREADY EXISTS IN MACRO FILE ]] 
+  WARNING **** PINBA01Z ALREADY EXISTS IN MACRO FILE ]] 
+  WARNING **** PINBA010 ALREADY EXISTS IN FLUX FILE ]] 
+
+
+1
+ *** STEP 20 FOR EFFECTIVE X-SECTION IN
+ ===CASEID=PINB5 : =TITLE=Variasi Boron 5                                                         ===
+
+                MATERIAL-WISE POWER DISTRIBUTION 
+
+          MTNAME     VOLUME      RELATIVE    FISSILE     FERTILE     CONVERSION
+          NAME        (CC)       POWER       ABSORPTION  CAPTURE     RATIO
+
+          FUELX01X   4.82749E-01 4.70887E-01 5.29099E-01 3.45535E-01 6.53063E-01
+           TOTAL     4.82749E-01 4.70887E-01 5.29099E-01 3.45535E-01 6.53063E-01
+
+1     **** CASE ID ===          *** TITLE ===                                                                          ***
+
+
+
+ =========================== END OF SRAC CALCULATION ==========================
