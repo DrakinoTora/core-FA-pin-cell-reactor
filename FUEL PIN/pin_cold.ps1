@@ -155,13 +155,12 @@ $PDS_DIR/MICREF     S        C
 ***** Enter one blank line after input for energy group structure
 
 ***** Input for PIJ (Collision Probability Method)
-4 8 8 4 1   1 8 0 0 0   5 0 6 15 0   0 45 1         / Pij Control
+4 8 8 4 1   1 8 0 0 0   5 0 10 15 0   0 45 0         / Pij Control
 0 50 50 5 5 5 -1  0.0001 0.00001 0.001 1.0 10. 0.5  / PIJ Block-2
 1 1 1 2 3 4 4 4  /  R-S
 4(1)             /  X-R
 1 2 3 4          /  M-R
 0.0  0.234  0.331  0.406  0.414  0.475  0.528  0.580  0.6325    / RX
-31 3 1  /Block 13
 ****** Input for material specification*****************************
 4 / NMAT
 FUELX01X  0 5  300  0.812    0.0  / 1 : UO2 Fuel
