@@ -160,7 +160,7 @@ $PDS_DIR/MICREF     S        C
 1 1 1 2 3 4 4 4  /  R-S
 4(1)             /  X-R
 1 2 3 4          /  M-R
-0.0  0.234  0.331  0.406  0.414  0.475  0.5  0.515  0.555    / RX
+0.0  0.226  0.320  0.392  0.400  0.457  0.45701  0.45702  0.45703    / RX (menggunakan P/D 1.0)
 ****** Input for material specification*****************************
 4 / NMAT
 FU01X01X  0 5  1073.15  0.812    0.0  / 1 : UO2 Fuel
@@ -200,7 +200,7 @@ XZR10000  0 0  4.7601E-03       /23 Zr-91
 XZR20000  0 0  7.2759E-03       /24 Zr-92
 XZR40000  0 0  7.3734E-03       /25 Zr-94
 XZR60000  0 0  1.1879E-03       /26 Zr-96
-MO01X04X  0 2  573.15  0.315      0.0  / 4 : Moderator Water
+MO01X04X  0 2  573.15  0.0      0.0  / 4 : Moderator Water
 XH01H000  0 0  4.8507E-02    /1 H-1
 XO060000  0 0  2.4254E-02    /2 O-16
 ****** Input for cell burn-up calculation (when IC20=1) hapus *$
@@ -228,7 +228,7 @@ UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 2 3 4 4 4  /  R-S
 4(1)             /  X-R
 1 2 3 4          /  M-R
-0.0  0.234  0.331  0.406  0.414  0.475  0.491  0.507  0.522    / RX
+0.0  0.226  0.320  0.392  0.400  0.457  0.473  0.488  0.503    / RX (menggunakan P/D 1.1)
 ****** Input for material specification*****************************
 4 / NMAT
 FU02X01X  0 5  1073.15  0.812    0.0  / 1 : UO2 Fuel
@@ -268,7 +268,7 @@ XZR10000  0 0  4.7601E-03       /23 Zr-91
 XZR20000  0 0  7.2759E-03       /24 Zr-92
 XZR40000  0 0  7.3734E-03       /25 Zr-94
 XZR60000  0 0  1.1879E-03       /26 Zr-96
-MO02X04X  0 2  573.15  0.315      0.0  / 4 : Moderator Water
+MO02X04X  0 2  573.15  0.091      0.0  / 4 : Moderator Water
 XH01H000  0 0  4.8507E-02    /1 H-1
 XO060000  0 0  2.4254E-02    /2 O-16
 ****** Input for cell burn-up calculation (when IC20=1) hapus *$
@@ -296,7 +296,7 @@ UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 2 3 4 4 4  /  R-S
 4(1)             /  X-R
 1 2 3 4          /  M-R
-0.0  0.234  0.331  0.406  0.414  0.475  0.491  0.507  0.522    / RX
+0.0  0.226  0.320  0.392  0.400  0.457  0.490  0.520  0.549    / RX (menggunakan P/D 1.2)
 ****** Input for material specification*****************************
 4 / NMAT
 FU03X01X  0 5  1073.15  0.812    0.0  / 1 : UO2 Fuel
@@ -336,7 +336,7 @@ XZR10000  0 0  4.7601E-03       /23 Zr-91
 XZR20000  0 0  7.2759E-03       /24 Zr-92
 XZR40000  0 0  7.3734E-03       /25 Zr-94
 XZR60000  0 0  1.1879E-03       /26 Zr-96
-MO03X04X  0 2  573.15  0.315      0.0  / 4 : Moderator Water
+MO03X04X  0 2  573.15  0.183      0.0  / 4 : Moderator Water
 XH01H000  0 0  4.8507E-02    /1 H-1
 XO060000  0 0  2.4254E-02    /2 O-16
 ****** Input for cell burn-up calculation (when IC20=1) hapus *$
@@ -364,7 +364,7 @@ UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 2 3 4 4 4  /  R-S
 4(1)             /  X-R
 1 2 3 4          /  M-R
-0.0  0.234  0.331  0.406  0.414  0.475  0.491  0.507  0.522    / RX
+0.0  0.226  0.320  0.392  0.400  0.457  0.507  0.552  0.594    / RX (menggunakan P/D 1.3)
 ****** Input for material specification*****************************
 4 / NMAT
 FU04X01X  0 5  1073.15  0.812    0.0  / 1 : UO2 Fuel
@@ -404,7 +404,7 @@ XZR10000  0 0  4.7601E-03       /23 Zr-91
 XZR20000  0 0  7.2759E-03       /24 Zr-92
 XZR40000  0 0  7.3734E-03       /25 Zr-94
 XZR60000  0 0  1.1879E-03       /26 Zr-96
-MO04X04X  0 2  573.15  0.315      0.0  / 4 : Moderator Water
+MO04X04X  0 2  573.15  0.274      0.0  / 4 : Moderator Water
 XH01H000  0 0  4.8507E-02    /1 H-1
 XO060000  0 0  2.4254E-02    /2 O-16
 ****** Input for cell burn-up calculation (when IC20=1) hapus *$
@@ -432,7 +432,7 @@ UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 2 3 4 4 4  /  R-S
 4(1)             /  X-R
 1 2 3 4          /  M-R
-0.0  0.234  0.331  0.406  0.414  0.475  0.491  0.507  0.522    / RX
+0.0  0.226  0.320  0.392  0.400  0.457  0.525  0.586  0.640    / RX (menggunakan P/D 1.4)
 ****** Input for material specification*****************************
 4 / NMAT
 FU05X01X  0 5  1073.15  0.812    0.0  / 1 : UO2 Fuel
@@ -472,7 +472,7 @@ XZR10000  0 0  4.7601E-03       /23 Zr-91
 XZR20000  0 0  7.2759E-03       /24 Zr-92
 XZR40000  0 0  7.3734E-03       /25 Zr-94
 XZR60000  0 0  1.1879E-03       /26 Zr-96
-MO05X04X  0 2  573.15  0.315      0.0  / 4 : Moderator Water
+MO05X04X  0 2  573.15  0.457      0.0  / 4 : Moderator Water
 XH01H000  0 0  4.8507E-02    /1 H-1
 XO060000  0 0  2.4254E-02    /2 O-16
 ****** Input for cell burn-up calculation (when IC20=1) hapus *$
@@ -500,7 +500,7 @@ UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 2 3 4 4 4  /  R-S
 4(1)             /  X-R
 1 2 3 4          /  M-R
-0.0  0.234  0.331  0.406  0.414  0.475  0.491  0.507  0.522    / RX
+0.0  0.226  0.320  0.392  0.400  0.457  0.544  0.619  0.686    / RX (menggunakan P/D 1.5)
 ****** Input for material specification*****************************
 4 / NMAT
 FU06X01X  0 5  1073.15  0.812    0.0  / 1 : UO2 Fuel
@@ -540,7 +540,7 @@ XZR10000  0 0  4.7601E-03       /23 Zr-91
 XZR20000  0 0  7.2759E-03       /24 Zr-92
 XZR40000  0 0  7.3734E-03       /25 Zr-94
 XZR60000  0 0  1.1879E-03       /26 Zr-96
-MO06X04X  0 2  573.15  0.315      0.0  / 4 : Moderator Water
+MO06X04X  0 2  573.15  0.457      0.0  / 4 : Moderator Water
 XH01H000  0 0  4.8507E-02    /1 H-1
 XO060000  0 0  2.4254E-02    /2 O-16
 ****** Input for cell burn-up calculation (when IC20=1) hapus *$
@@ -568,7 +568,7 @@ UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 2 3 4 4 4  /  R-S
 4(1)             /  X-R
 1 2 3 4          /  M-R
-0.0  0.234  0.331  0.406  0.414  0.475  0.491  0.507  0.522    / RX
+0.0  0.226  0.320  0.392  0.400  0.457  0.564  0.653  0.732    / RX (menggunakan P/D 1.6)
 ****** Input for material specification*****************************
 4 / NMAT
 FU07X01X  0 5  1073.15  0.812    0.0  / 1 : UO2 Fuel
@@ -608,7 +608,7 @@ XZR10000  0 0  4.7601E-03       /23 Zr-91
 XZR20000  0 0  7.2759E-03       /24 Zr-92
 XZR40000  0 0  7.3734E-03       /25 Zr-94
 XZR60000  0 0  1.1879E-03       /26 Zr-96
-MO07X04X  0 2  573.15  0.315      0.0  / 4 : Moderator Water
+MO07X04X  0 2  573.15  0.549      0.0  / 4 : Moderator Water
 XH01H000  0 0  4.8507E-02    /1 H-1
 XO060000  0 0  2.4254E-02    /2 O-16
 ****** Input for cell burn-up calculation (when IC20=1) hapus *$
@@ -636,7 +636,7 @@ UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 2 3 4 4 4  /  R-S
 4(1)             /  X-R
 1 2 3 4          /  M-R
-0.0  0.234  0.331  0.406  0.414  0.475  0.491  0.507  0.522    / RX
+0.0  0.226  0.320  0.392  0.400  0.457  0.584  0.687  0.777    / RX (menggunakan P/D 1.7)
 ****** Input for material specification*****************************
 4 / NMAT
 FU08X01X  0 5  1073.15  0.812    0.0  / 1 : UO2 Fuel
@@ -676,7 +676,7 @@ XZR10000  0 0  4.7601E-03       /23 Zr-91
 XZR20000  0 0  7.2759E-03       /24 Zr-92
 XZR40000  0 0  7.3734E-03       /25 Zr-94
 XZR60000  0 0  1.1879E-03       /26 Zr-96
-MO08X04X  0 2  573.15  0.315      0.0  / 4 : Moderator Water
+MO08X04X  0 2  573.15  0.640      0.0  / 4 : Moderator Water
 XH01H000  0 0  4.8507E-02    /1 H-1
 XO060000  0 0  2.4254E-02    /2 O-16
 ****** Input for cell burn-up calculation (when IC20=1) hapus *$
@@ -704,7 +704,7 @@ UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 2 3 4 4 4  /  R-S
 4(1)             /  X-R
 1 2 3 4          /  M-R
-0.0  0.234  0.331  0.406  0.414  0.475  0.491  0.507  0.522    / RX
+0.0  0.226  0.320  0.392  0.400  0.457  0.604  0.722  0.823    / RX (menggunakan P/D 1.8)
 ****** Input for material specification*****************************
 4 / NMAT
 FU09X01X  0 5  1073.15  0.812    0.0  / 1 : UO2 Fuel
@@ -744,7 +744,7 @@ XZR10000  0 0  4.7601E-03       /23 Zr-91
 XZR20000  0 0  7.2759E-03       /24 Zr-92
 XZR40000  0 0  7.3734E-03       /25 Zr-94
 XZR60000  0 0  1.1879E-03       /26 Zr-96
-MO09X04X  0 2  573.15  0.315      0.0  / 4 : Moderator Water
+MO09X04X  0 2  573.15  0.732      0.0  / 4 : Moderator Water
 XH01H000  0 0  4.8507E-02    /1 H-1
 XO060000  0 0  2.4254E-02    /2 O-16
 ****** Input for cell burn-up calculation (when IC20=1) hapus *$
@@ -772,7 +772,7 @@ UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 2 3 4 4 4  /  R-S
 4(1)             /  X-R
 1 2 3 4          /  M-R
-0.0  0.234  0.331  0.406  0.414  0.475  0.491  0.507  0.522    / RX
+0.0  0.226  0.320  0.392  0.400  0.457  0.625  0.757  0.869    / RX (menggunakan P/D 1.9)
 ****** Input for material specification*****************************
 4 / NMAT
 FU10X01X  0 5  1073.15  0.812    0.0  / 1 : UO2 Fuel
@@ -812,7 +812,7 @@ XZR10000  0 0  4.7601E-03       /23 Zr-91
 XZR20000  0 0  7.2759E-03       /24 Zr-92
 XZR40000  0 0  7.3734E-03       /25 Zr-94
 XZR60000  0 0  1.1879E-03       /26 Zr-96
-MO10X04X  0 2  573.15  0.315      0.0  / 4 : Moderator Water
+MO10X04X  0 2  573.15  0.823      0.0  / 4 : Moderator Water
 XH01H000  0 0  4.8507E-02    /1 H-1
 XO060000  0 0  2.4254E-02    /2 O-16
 ****** Input for cell burn-up calculation (when IC20=1) hapus *$
@@ -840,7 +840,7 @@ UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 2 3 4 4 4  /  R-S
 4(1)             /  X-R
 1 2 3 4          /  M-R
-0.0  0.234  0.331  0.406  0.414  0.475  0.491  0.507  0.522    / RX
+0.0  0.226  0.320  0.392  0.400  0.457  0.647  0.792  0.914    / RX (menggunakan P/D 2.0)
 ****** Input for material specification*****************************
 4 / NMAT
 FU11X01X  0 5  1073.15  0.812    0.0  / 1 : UO2 Fuel
@@ -880,7 +880,7 @@ XZR10000  0 0  4.7601E-03       /23 Zr-91
 XZR20000  0 0  7.2759E-03       /24 Zr-92
 XZR40000  0 0  7.3734E-03       /25 Zr-94
 XZR60000  0 0  1.1879E-03       /26 Zr-96
-MO11X04X  0 2  573.15  0.315      0.0  / 4 : Moderator Water
+MO11X04X  0 2  573.15  0.914      0.0  / 4 : Moderator Water
 XH01H000  0 0  4.8507E-02    /1 H-1
 XO060000  0 0  2.4254E-02    /2 O-16
 ****** Input for cell burn-up calculation (when IC20=1) hapus *$
