@@ -160,7 +160,7 @@ $PDS_DIR/MICREF     S        C
 1 1 1 2 3 4 4 4  /  R-S
 4(1)             /  X-R
 1 2 3 4          /  M-R
-0.0  0.234  0.331  0.406  0.414  0.475  0.528  0.580  0.6325    / RX
+0.0  0.226  0.320  0.392  0.400  0.457  0.544  0.619  0.686    / RX (menggunakan P/D 1.5)
 ****** Input for material specification*****************************
 4 / NMAT
 FUELX01X  0 5  1073.15  0.812    0.0  / 1 : UO2 Fuel
@@ -173,7 +173,7 @@ XO070000  0 0  1.7436E-05    /5 O-17
 HELIX02X  0 2  773.15  0.016     0.0  / 2 : Gap Helium
 XHE30000  0 0  2.5108E-10       /1 Helium-3
 XHE40000  0 0  1.8737E-04       /2 Helium-4
-CLADX03X  0 25  593.15  0.122     0.0  / 3 : Cladding Zirconium-Alloy
+CLADX03X  0 25  598.15  0.114     0.0  / 3 : Cladding Zirconium-Alloy
 XCR00000  0 0  3.2962E-06       /1 Cr-50
 XCR20000  0 0  6.3564E-05       /2 Cr-52
 XCR30000  0 0  7.2076E-06       /3 Cr-53
@@ -200,11 +200,14 @@ XZR10000  0 0  4.7601E-03       /23 Zr-91
 XZR20000  0 0  7.2759E-03       /24 Zr-92
 XZR40000  0 0  7.3734E-03       /25 Zr-94
 XZR60000  0 0  1.1879E-03       /26 Zr-96
-MOD1X04X  0 4  488.706  0.315      0.0  / 4 : Moderator Water
-XH01H000  0 0  5.7134E-02    /1 H1
-XO060000  0 0  2.8567E-02    /2 O-16
-XB000000  0 0  0.0000E-00    /3 B-10
-XB010000  0 0  0.0000E-00    /4 B-11
+MOD1X04X  0 5  573.15  0.457      0.0  / 4 : Moderator Water Borated (0 ppm)
+XH01H000  0 0  4.8500E-02    /1 H-1
+*XH02H000  0 0  7.2761E-06    /1 H-2
+XO060000  0 0  2.4196E-02    /2 O-16
+XO070000  0 0  9.2164E-06    /2 O-17
+*XO080000  0 0  4.8507E-05    /2 O-18
+XB000000  0 0  0.0000E+00    /3 B-10
+XB010000  0 0  0.0000E+00    /4 B-11
 ****** Input for cell burn-up calculation (when IC20=1)
 *  12 1 1 0 0  0 0 0 0 0  10(0)   / IBC
 *  12(1.790E-04)   / Power level  (MWt/cm)
@@ -230,7 +233,7 @@ UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 2 3 4 4 4  /  R-S
 4(1)             /  X-R
 1 2 3 4          /  M-R
-0.0  0.234  0.331  0.406  0.414  0.475  0.528  0.580  0.6325    / RX
+0.0  0.226  0.320  0.392  0.400  0.457  0.544  0.619  0.686    / RX (menggunakan P/D 1.5)
 ****** Input for material specification*****************************
 4 / NMAT
 FU02X01X  0 5  1073.15  0.812    0.0  / 1 : UO2 Fuel
@@ -243,7 +246,7 @@ XO070000  0 0  1.7436E-05    /5 O-17
 HE02X02X  0 2  773.15  0.016     0.0  / 2 : Gap Helium
 XHE30000  0 0  2.5108E-10       /1 Helium-3
 XHE40000  0 0  1.8737E-04       /2 Helium-4
-CL02X03X  0 25  593.15  0.122     0.0  / 3 : Cladding Zirconium-Alloy
+CL02X03X  0 25  598.15  0.114     0.0  / 3 : Cladding Zirconium-Alloy
 XCR00000  0 0  3.2962E-06       /1 Cr-50
 XCR20000  0 0  6.3564E-05       /2 Cr-52
 XCR30000  0 0  7.2076E-06       /3 Cr-53
@@ -270,11 +273,14 @@ XZR10000  0 0  4.7601E-03       /23 Zr-91
 XZR20000  0 0  7.2759E-03       /24 Zr-92
 XZR40000  0 0  7.3734E-03       /25 Zr-94
 XZR60000  0 0  1.1879E-03       /26 Zr-96
-MO02X04X  0 4  488.706  0.315      0.0  / 4 : Moderator Water
-XH01H000  0 0  5.7134E-02    /1 H1
-XO060000  0 0  2.8567E-02    /2 O-16
-XB000000  0 0  0.0000E-00    /3 B-10
-XB010000  0 0  0.0000E-00    /4 B-11
+MO02X04X  0 5  573.15  0.457      0.0  / 4 : Moderator Water Borated (500 ppm)
+XH01H000  0 0  4.8476E-02    /1 H-1
+*XH02H000  0 0  7.2724E-06    /1 H-2
+XO060000  0 0  2.4184E-02    /2 O-16
+XO070000  0 0  9.2117E-06     /2 O-17
+*XO080000  0 0  4.8483E-05    /2 O-18
+XB000000  0 0  4.0217E-06    /3 B-10
+XB010000  0 0  1.6188E-05    /4 B-11
 ****** Input for cell burn-up calculation (when IC20=1)
 *  12 1 1 0 0  0 0 0 0 0  10(0)   / IBC
 *  12(1.790E-04)   / Power level  (MWt/cm)
@@ -300,7 +306,7 @@ UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 2 3 4 4 4  /  R-S
 4(1)             /  X-R
 1 2 3 4          /  M-R
-0.0  0.234  0.331  0.406  0.414  0.475  0.528  0.580  0.6325    / RX
+0.0  0.226  0.320  0.392  0.400  0.457  0.544  0.619  0.686    / RX (menggunakan P/D 1.5)
 ****** Input for material specification*****************************
 4 / NMAT
 FU03X01X  0 5  1073.15  0.812    0.0  / 1 : UO2 Fuel
@@ -313,7 +319,7 @@ XO070000  0 0  1.7436E-05    /5 O-17
 HE03X02X  0 2  773.15  0.016     0.0  / 2 : Gap Helium
 XHE30000  0 0  2.5108E-10       /1 Helium-3
 XHE40000  0 0  1.8737E-04       /2 Helium-4
-CL03X03X  0 25  593.15  0.122     0.0  / 3 : Cladding Zirconium-Alloy
+CL03X03X  0 25  598.15  0.114     0.0  / 3 : Cladding Zirconium-Alloy
 XCR00000  0 0  3.2962E-06       /1 Cr-50
 XCR20000  0 0  6.3564E-05       /2 Cr-52
 XCR30000  0 0  7.2076E-06       /3 Cr-53
@@ -340,11 +346,14 @@ XZR10000  0 0  4.7601E-03       /23 Zr-91
 XZR20000  0 0  7.2759E-03       /24 Zr-92
 XZR40000  0 0  7.3734E-03       /25 Zr-94
 XZR60000  0 0  1.1879E-03       /26 Zr-96
-MO03X04X  0 4  488.706  0.315      0.0  / 4 : Moderator Water
-XH01H000  0 0  5.7134E-02    /1 H1
-XO060000  0 0  2.8567E-02    /2 O-16
-XB000000  0 0  0.0000E-00    /3 B-10
-XB010000  0 0  0.0000E-00    /4 B-11
+MO03X04X  0 5  573.15  0.457      0.0  / 4 : Moderator Water Borated (1000 ppm)
+XH01H000  0 0  4.8451E-02    /1 H-1
+*XH02H000  0 0  7.2688E-06    /1 H-2
+XO060000  0 0  2.4172E-02    /2 O-16
+XO070000  0 0  9.2071E-06     /2 O-17
+*XO080000  0 0  4.8459E-05    /2 O-18
+XB000000  0 0  8.0435E-06    /3 B-10
+XB010000  0 0  3.2376E-05    /4 B-11
 ****** Input for cell burn-up calculation (when IC20=1)
 *  12 1 1 0 0  0 0 0 0 0  10(0)   / IBC
 *  12(1.790E-04)   / Power level  (MWt/cm)
@@ -370,7 +379,7 @@ UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 2 3 4 4 4  /  R-S
 4(1)             /  X-R
 1 2 3 4          /  M-R
-0.0  0.234  0.331  0.406  0.414  0.475  0.528  0.580  0.6325    / RX
+0.0  0.226  0.320  0.392  0.400  0.457  0.544  0.619  0.686    / RX (menggunakan P/D 1.5)
 ****** Input for material specification*****************************
 4 / NMAT
 FU04X01X  0 5  1073.15  0.812    0.0  / 1 : UO2 Fuel
@@ -383,7 +392,7 @@ XO070000  0 0  1.7436E-05    /5 O-17
 HE04X02X  0 2  773.15  0.016     0.0  / 2 : Gap Helium
 XHE30000  0 0  2.5108E-10       /1 Helium-3
 XHE40000  0 0  1.8737E-04       /2 Helium-4
-CL04X03X  0 25  593.15  0.122     0.0  / 3 : Cladding Zirconium-Alloy
+CL04X03X  0 25  598.15  0.114     0.0  / 3 : Cladding Zirconium-Alloy
 XCR00000  0 0  3.2962E-06       /1 Cr-50
 XCR20000  0 0  6.3564E-05       /2 Cr-52
 XCR30000  0 0  7.2076E-06       /3 Cr-53
@@ -410,11 +419,14 @@ XZR10000  0 0  4.7601E-03       /23 Zr-91
 XZR20000  0 0  7.2759E-03       /24 Zr-92
 XZR40000  0 0  7.3734E-03       /25 Zr-94
 XZR60000  0 0  1.1879E-03       /26 Zr-96
-MO04X04X  0 4  488.706  0.315      0.0  / 4 : Moderator Water
-XH01H000  0 0  5.7134E-02    /1 H1
-XO060000  0 0  2.8567E-02    /2 O-16
-XB000000  0 0  0.0000E-00    /3 B-10
-XB010000  0 0  0.0000E-00    /4 B-11
+MO04X04X  0 5  573.15  0.457      0.0  / 4 : Moderator Water Borated (1500 ppm)
+XH01H000  0 0  4.8427E-02    /1 H-1
+*XH02H000  0 0  7.2652E-06    /1 H-2
+XO060000  0 0  2.4160E-02    /2 O-16
+XO070000  0 0  9.2025E-06     /2 O-17
+*XO080000  0 0  4.8434E-05    /2 O-18
+XB000000  0 0  1.2065E-05    /3 B-10
+XB010000  0 0  4.8564E-05    /4 B-11
 ****** Input for cell burn-up calculation (when IC20=1)
 *  12 1 1 0 0  0 0 0 0 0  10(0)   / IBC
 *  12(1.790E-04)   / Power level  (MWt/cm)
@@ -440,7 +452,7 @@ UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 2 3 4 4 4  /  R-S
 4(1)             /  X-R
 1 2 3 4          /  M-R
-0.0  0.234  0.331  0.406  0.414  0.475  0.528  0.580  0.6325    / RX
+0.0  0.226  0.320  0.392  0.400  0.457  0.544  0.619  0.686    / RX (menggunakan P/D 1.5)
 ****** Input for material specification*****************************
 4 / NMAT
 FU05X01X  0 5  1073.15  0.812    0.0  / 1 : UO2 Fuel
@@ -453,7 +465,7 @@ XO070000  0 0  1.7436E-05    /5 O-17
 HE05X02X  0 2  773.15  0.016     0.0  / 2 : Gap Helium
 XHE30000  0 0  2.5108E-10       /1 Helium-3
 XHE40000  0 0  1.8737E-04       /2 Helium-4
-CL05X03X  0 25  593.15  0.122     0.0  / 3 : Cladding Zirconium-Alloy
+CL05X03X  0 25  598.15  0.114     0.0  / 3 : Cladding Zirconium-Alloy
 XCR00000  0 0  3.2962E-06       /1 Cr-50
 XCR20000  0 0  6.3564E-05       /2 Cr-52
 XCR30000  0 0  7.2076E-06       /3 Cr-53
@@ -480,151 +492,14 @@ XZR10000  0 0  4.7601E-03       /23 Zr-91
 XZR20000  0 0  7.2759E-03       /24 Zr-92
 XZR40000  0 0  7.3734E-03       /25 Zr-94
 XZR60000  0 0  1.1879E-03       /26 Zr-96
-MO05X04X  0 4  488.706  0.315      0.0  / 4 : Moderator Water
-XH01H000  0 0  5.7134E-02    /1 H1
-XO060000  0 0  2.8567E-02    /2 O-16
-XB000000  0 0  0.0000E-00    /3 B-10
-XB010000  0 0  0.0000E-00    /4 B-11
-****** Input for cell burn-up calculation (when IC20=1)
-*  12 1 1 0 0  0 0 0 0 0  10(0)   / IBC
-*  12(1.790E-04)   / Power level  (MWt/cm)
-*  12(1.790E-04) 6(0) 6(1.790E-04)  / Power level  (MWt/cm)
-*  0.10E+03  1.00E+03  2.50E+03  5.00E+03  7.50E+03  1.00E+04
-*  1.25E+04  1.50E+04  1.75E+04  2.00E+04  2.25E+04  2.50E+04
-*        -10       -10      -10        -10      -10       -10
-*  2.75E+04  3.00E+04  3.25E+04  3.50E+04  3.75E+04  4.00E+04
-*  4.25E+04  4.50E+04  4.75E+04  5.00E+04  5.25E+04  5.50E+04
-*  5.75E+04  6.00E+04  6.25E+04  6.50E+04  6.75E+04  7.00E+04
-*  7.25E+04  /  keff calculation is not done at the last step 
-****** Input for PEACO option
-0    / no plot
-****** Enter one blank line to terminate repeatation on calculation cases
-*--------------------------------------------------------------------------------------------- 05 ------------------------------------------------------
-PIN6 : Case name (A4)
-UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
-1 1 1 1 2   1 4 3 -2 1   0 0 0 0 1   2 1 0 0 0 / SRAC CONTROL
-1.000E-20 / Geometrical buckling for P1/B1 calculation
-***** Input for PIJ (Collision Probability Method)
-4 8 8 4 1   1 8 0 0 0   5 0 6 15 0   0 45 0         / Pij Control
-0 50 50 5 5 5 -1  0.0001 0.00001 0.001 1.0 10. 0.5  / PIJ Block-2
-1 1 1 2 3 4 4 4  /  R-S
-4(1)             /  X-R
-1 2 3 4          /  M-R
-0.0  0.234  0.331  0.406  0.414  0.475  0.528  0.580  0.6325    / RX
-****** Input for material specification*****************************
-4 / NMAT
-FU06X01X  0 5  1073.15  0.812    0.0  / 1 : UO2 Fuel
-XU040000  2 0  3.0131E-06    /1 U-234
-XU050000  2 0  3.7503E-04    /2 U-235
-XU080000  2 0  2.2625E-02    /3 U-238
-XO060000  0 0  4.5897E-02    /4 O-16
-XO070000  0 0  1.7436E-05    /5 O-17
-*XO080000  0 0  9.2032E-05    /6 O-18
-HE06X02X  0 2  773.15  0.016     0.0  / 2 : Gap Helium
-XHE30000  0 0  2.5108E-10       /1 Helium-3
-XHE40000  0 0  1.8737E-04       /2 Helium-4
-CL06X03X  0 25  593.15  0.122     0.0  / 3 : Cladding Zirconium-Alloy
-XCR00000  0 0  3.2962E-06       /1 Cr-50
-XCR20000  0 0  6.3564E-05       /2 Cr-52
-XCR30000  0 0  7.2076E-06       /3 Cr-53
-XCR40000  0 0  1.7941E-06       /4 Cr-54
-XFE40000  0 0  8.6698E-06       /5 Fe-54
-XFE60000  0 0  1.3610E-04       /6 Fe-56
-XFE70000  0 0  3.1431E-06       /7 Fe-57
-XFE80000  0 0  4.1829E-07       /8 Fe-58
-XO060000  0 0  3.0744E-04    /9 O-16
-XO070000  0 0  1.1680E-07    /10 O-17
-*XO080000  0 0  6.1648E-07    /11 O-18
-XSN20000  0 0  4.6735E-06       /12 Sn-112
-XSN40000  0 0  3.1799E-06       /13 Sn-114
-XSN50000  0 0  1.6381E-06       /14 Sn-115
-XSN60000  0 0  7.0055E-05       /15 Sn-116
-XSN70000  0 0  3.7003E-05       /16 Sn-117
-XSN80000  0 0  1.1669E-04       /17 Sn-118
-XSN90000  0 0  4.1387E-05       /18 Sn-119
-XSNC0000  0 0  1.5697E-04       /19 Sn-120
-XSNE0000  0 0  2.2308E-05       /20 Sn-122
-XSNG0000  0 0  2.7897E-05       /21 Sn-124
-XZR00000  0 0  2.1828E-02       /22 Zr-90
-XZR10000  0 0  4.7601E-03       /23 Zr-91
-XZR20000  0 0  7.2759E-03       /24 Zr-92
-XZR40000  0 0  7.3734E-03       /25 Zr-94
-XZR60000  0 0  1.1879E-03       /26 Zr-96
-MO06X04X  0 4  488.706  0.315      0.0  / 4 : Moderator Water
-XH01H000  0 0  5.7134E-02    /1 H1
-XO060000  0 0  2.8567E-02    /2 O-16
-XB000000  0 0  0.0000E-00    /3 B-10
-XB010000  0 0  0.0000E-00    /4 B-11
-****** Input for cell burn-up calculation (when IC20=1)
-*  12 1 1 0 0  0 0 0 0 0  10(0)   / IBC
-*  12(1.790E-04)   / Power level  (MWt/cm)
-*  12(1.790E-04) 6(0) 6(1.790E-04)  / Power level  (MWt/cm)
-*  0.10E+03  1.00E+03  2.50E+03  5.00E+03  7.50E+03  1.00E+04
-*  1.25E+04  1.50E+04  1.75E+04  2.00E+04  2.25E+04  2.50E+04
-*        -10       -10      -10        -10      -10       -10
-*  2.75E+04  3.00E+04  3.25E+04  3.50E+04  3.75E+04  4.00E+04
-*  4.25E+04  4.50E+04  4.75E+04  5.00E+04  5.25E+04  5.50E+04
-*  5.75E+04  6.00E+04  6.25E+04  6.50E+04  6.75E+04  7.00E+04
-*  7.25E+04  /  keff calculation is not done at the last step 
-****** Input for PEACO option
-0    / no plot
-****** Enter one blank line to terminate repeatation on calculation cases
-*--------------------------------------------------------------------------------------------- 06 ------------------------------------------------------
-PIN7 : Case name (A4)
-UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
-1 1 1 1 2   1 4 3 -2 1   0 0 0 0 1   2 1 0 0 0 / SRAC CONTROL
-1.000E-20 / Geometrical buckling for P1/B1 calculation
-***** Input for PIJ (Collision Probability Method)
-4 8 8 4 1   1 8 0 0 0   5 0 6 15 0   0 45 0         / Pij Control
-0 50 50 5 5 5 -1  0.0001 0.00001 0.001 1.0 10. 0.5  / PIJ Block-2
-1 1 1 2 3 4 4 4  /  R-S
-4(1)             /  X-R
-1 2 3 4          /  M-R
-0.0  0.234  0.331  0.406  0.414  0.475  0.528  0.580  0.6325    / RX
-****** Input for material specification*****************************
-4 / NMAT
-FU07X01X  0 5  1073.15  0.812    0.0  / 1 : UO2 Fuel
-XU040000  2 0  3.0131E-06    /1 U-234
-XU050000  2 0  3.7503E-04    /2 U-235
-XU080000  2 0  2.2625E-02    /3 U-238
-XO060000  0 0  4.5897E-02    /4 O-16
-XO070000  0 0  1.7436E-05    /5 O-17
-*XO080000  0 0  9.2032E-05    /6 O-18
-HE07X02X  0 2  773.15  0.016     0.0  / 2 : Gap Helium
-XHE30000  0 0  2.5108E-10       /1 Helium-3
-XHE40000  0 0  1.8737E-04       /2 Helium-4
-CL07X03X  0 25  593.15  0.122     0.0  / 3 : Cladding Zirconium-Alloy
-XCR00000  0 0  3.2962E-06       /1 Cr-50
-XCR20000  0 0  6.3564E-05       /2 Cr-52
-XCR30000  0 0  7.2076E-06       /3 Cr-53
-XCR40000  0 0  1.7941E-06       /4 Cr-54
-XFE40000  0 0  8.6698E-06       /5 Fe-54
-XFE60000  0 0  1.3610E-04       /6 Fe-56
-XFE70000  0 0  3.1431E-06       /7 Fe-57
-XFE80000  0 0  4.1829E-07       /8 Fe-58
-XO060000  0 0  3.0744E-04    /9 O-16
-XO070000  0 0  1.1680E-07    /10 O-17
-*XO080000  0 0  6.1648E-07    /11 O-18
-XSN20000  0 0  4.6735E-06       /12 Sn-112
-XSN40000  0 0  3.1799E-06       /13 Sn-114
-XSN50000  0 0  1.6381E-06       /14 Sn-115
-XSN60000  0 0  7.0055E-05       /15 Sn-116
-XSN70000  0 0  3.7003E-05       /16 Sn-117
-XSN80000  0 0  1.1669E-04       /17 Sn-118
-XSN90000  0 0  4.1387E-05       /18 Sn-119
-XSNC0000  0 0  1.5697E-04       /19 Sn-120
-XSNE0000  0 0  2.2308E-05       /20 Sn-122
-XSNG0000  0 0  2.7897E-05       /21 Sn-124
-XZR00000  0 0  2.1828E-02       /22 Zr-90
-XZR10000  0 0  4.7601E-03       /23 Zr-91
-XZR20000  0 0  7.2759E-03       /24 Zr-92
-XZR40000  0 0  7.3734E-03       /25 Zr-94
-XZR60000  0 0  1.1879E-03       /26 Zr-96
-MO07X04X  0 4  488.706  0.315      0.0  / 4 : Moderator Water
-XH01H000  0 0  5.7134E-02    /1 H1
-XO060000  0 0  2.8567E-02    /2 O-16
-XB000000  0 0  0.0000E-00    /3 B-10
-XB010000  0 0  0.0000E-00    /4 B-11
+MO05X04X  0 5  573.15  0.457      0.0  / 4 : Moderator Water Borated (2000 ppm)
+XH01H000  0 0  4.8403E-02    /1 H-1
+*XH02H000  0 0  7.2615E-06    /1 H-2
+XO060000  0 0  2.4147E-02    /2 O-16
+XO070000  0 0  9.1979E-06     /2 O-17
+*XO080000  0 0  4.8410E-05    /2 O-18
+XB000000  0 0  1.6087E-05    /3 B-10
+XB010000  0 0  6.4752E-05    /4 B-11
 ****** Input for cell burn-up calculation (when IC20=1)
 *  12 1 1 0 0  0 0 0 0 0  10(0)   / IBC
 *  12(1.790E-04)   / Power level  (MWt/cm)
