@@ -160,10 +160,10 @@ $PDS_DIR/MICREF     S        C
 1 1 1 2 3 4 4 4  /  R-S
 4(1)             /  X-R
 1 2 3 4          /  M-R
-0.0  0.234  0.331  0.406  0.414  0.475  0.528  0.580  0.6325    / RX
+0.0  0.226  0.320  0.392  0.400  0.457  0.544  0.619  0.686    / RX
 ****** Input for material specification*****************************
 4 / NMAT
-FUELX01X  0 5  300  0.812    0.0  / 1 : UO2 Fuel
+FUELX01X  0 5  300  0.784    0.0  / 1 : UO2 Fuel
 XU040000  2 0  3.0131E-06    /1 U-234
 XU050000  2 0  3.7503E-04    /2 U-235
 XU080000  2 0  2.2625E-02    /3 U-238
@@ -173,7 +173,7 @@ XO070000  0 0  1.7436E-05    /5 O-17
 HELIX02X  0 2  300  0.016     0.0  / 2 : Gap Helium
 XHE30000  0 0  6.4707E-10       /1 Helium-3
 XHE40000  0 0  4.8289E-04       /2 Helium-4
-CLADX03X  0 25  300  0.122     0.0  / 3 : Cladding Zirconium-Alloy
+CLADX03X  0 25  300  0.114     0.0  / 3 : Cladding Zirconium-Alloy
 XCR00000  0 0  3.2962E-06       /1 Cr-50
 XCR20000  0 0  6.3564E-05       /2 Cr-52
 XCR30000  0 0  7.2076E-06       /3 Cr-53
@@ -200,7 +200,7 @@ XZR10000  0 0  4.7601E-03       /23 Zr-91
 XZR20000  0 0  7.2759E-03       /24 Zr-92
 XZR40000  0 0  7.3734E-03       /25 Zr-94
 XZR60000  0 0  1.1879E-03       /26 Zr-96
-MODEX04X  0 2  300  0.315      0.0  / 4 : Moderator Water
+MODEX04X  0 2  300  0.458      0.0  / 4 : Moderator Water
 XH01H000  0 0  6.7066E-02    /1 H-1
 XO060000  0 0  3.3533E-02    /2 O-16
 ****** Input for cell burn-up calculation (when IC20=1) hapus *$
