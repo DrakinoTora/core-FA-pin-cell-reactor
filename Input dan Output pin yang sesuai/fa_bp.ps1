@@ -306,7 +306,7 @@ Tabung instrumen dan batang kendali diisi dengan air
 0.0  0.214  0.23051  0.2413  0.42672  0.43688  0.48387  0.56134  0.602  0.616  0.63  / RX, masing-masing bagian 1 subregion, kecuali moderator/H2O luar dengan 2 subregion
 ****** Input for material specification
 9 / NMAT
-UDA0X01X  0 2  573.15  1.12268      0.0  / 1 : Udara dalam tabung
+UDA0X01X  0 2  573.15  0.428      0.0  / 1 : Udara dalam tabung
 XAR60000  0 0  7.8730E-09    /1 Ar36
 XAR80000  0 0  1.4844E-09     /2 Ar38
 XAR00000  0 0  2.3506E-06    /3 Ar40
@@ -317,7 +317,7 @@ XN050000  0 0  7.2354E-07    /7 N15
 XO060000  0 0  5.2866E-05     /8 O16
 XO070000  0 0  2.0084E-08    /9 O17
 XO080000  0 0  1.0601E-02     /10 O18
-S304X02X  0 5  598.15  0.1570727426    0.0  / 2 : Cladding Stainless Steel 304
+S304X02X  0 5  598.15  0.06367498243    0.0  / 2 : Cladding Stainless Steel 304
 XCR00000  2 0  7.6778E-02       /1 CR
 XCR20000  2 0  1.4806E-04       /2 CR
 XCR30000  2 0  1.6789E-04       /3 CR
@@ -334,9 +334,9 @@ XNI40000  2 0  2.9945E-04       /13 NI
 XSI80000  2 0  4.8381E-05       /14 SI
 XSI90000  2 0  4.8381E-06       /15 SI
 XSI00000  2 0  3.1893E-04       /17 SI
-HEL1X03X  0 1  773.15  0.03117     0.0  / 3 : Gap Helium SS304-B2O4
+HEL1X03X  0 1  773.15  0.04219502611     0.0  / 3 : Gap Helium SS304-B2O4
 XHE40000  0 0  1.8737E-04       /1 Helium-4
-B2O3X04X  0 1  773.15  0.03117     0.0  / 4 : Borosilicate Glass dengan densitas 2.26 g/cc dengan fraksi massa B2O3 sebesar 12.5 wt%
+B2O3X04X  0 1  773.15  0.5805411905     0.0  / 4 : Borosilicate Glass dengan densitas 2.26 g/cc dengan fraksi massa B2O3 sebesar 12.5 wt%
 XALN0000  0 0  1.7352e-03    /1 AL
 XB000000  0 0  9.72606E-04     /2 B-10
 XB010000  0 0  3.91486E-03    /3 B-11
@@ -346,9 +346,9 @@ XO080000  0 0  1.46624E-05     /6 O-18
 XSI80000  0 0  1.6926E-02    /7 SI-28
 XSI90000  0 0  8.5944E-04     /8 SI-29
 XSI00000  0 0  5.6654E-04       / 9 SI-30
-HEL2X05X  0 1  773.15  0.03117     0.0  / 5 : Gap Helium B2O4-SS304
+HEL2X05X  0 1  773.15  0.04016744186     0.0  / 5 : Gap Helium B2O4-SS304
 XHE40000  0 0  1.8737E-04       /1 Helium-4
-S304X06X  0 5  598.15  0.1570727426    0.0  / 2 : Cladding Stainless Steel 304
+S304X06X  0 5  598.15  0.1788333333    0.0  / 2 : Cladding Stainless Steel 304
 XCR00000  2 0  7.6778E-02       /1 CR
 XCR20000  2 0  1.4806E-04       /2 CR
 XCR30000  2 0  1.6789E-04       /3 CR
@@ -365,16 +365,16 @@ XNI40000  2 0  2.9945E-04       /13 NI
 XSI80000  2 0  4.8381E-05       /14 SI
 XSI90000  2 0  4.8381E-06       /15 SI
 XSI00000  2 0  3.1893E-04       /17 SI
-WAT0X07X  0 2  573.15  1.12268      0.0  / 7 : H2O bagian dalam Zircaloy
+WAT0X07X  0 2  573.15  0.2884968778      0.0  / 7 : H2O bagian dalam Zircaloy
 XH01H000  0 0  4.85485E-02    /1 H1
 XO060000  0 0  2.42742E-02     /2
-ZIRCX08X  0 5  598.15  0.21431    0.0  / 8 : Cladding Zirconium-Alloy, berdasarkan perhitungan, tidak mengikuti data Zircaloy-4 BEAVR karena tidak dicantum elemen natural spesifik ZRN, SNN, dst.
+ZIRCX08X  0 5  598.15  0.1570727426    0.0  / 8 : Cladding Zirconium-Alloy, berdasarkan perhitungan, tidak mengikuti data Zircaloy-4 BEAVR karena tidak dicantum elemen natural spesifik ZRN, SNN, dst.
 XZRN0000  2 0  4.2540E-02       /1 ZRN
 XSNN0000  2 0  4.8253E-04       /2 SNN
 XFEN0000  2 0  1.4854E-04       /3 FEN
 XCRN0000  2 0  7.5986E-05       /4 CRN
 XHFN0000  2 0  2.2133E-06       /5 HFN
-MODEX09X  0 2  573.15  0.1092814516      0.0  / 9 : Moderator Water
+MODEX09X  0 2  573.15  0.1095875543      0.0  / 9 : Moderator Water
 XH01H000  0 0  4.85485E-02    /1 H1
 XO060000  0 0  2.42742E-02     /2
 ****** Input for cell burn-up calculation (when IC20=1)
@@ -406,8 +406,8 @@ AP01
 7 5 5 5 5 5 5 5 5 / T-R, thimble: 1,2,3,4; fuel: 5,6,7; BP: 8
 8(1) / R-R
 2 2 2 2 1 1 1 3 / M-R
-0.0 1.25984 2.51968 3.77952 5.03936 6.2992 7.55904 8.81888 10.07872 11.33856 / RX, sesuai pitch 1,25984 cm dari BEAVRS, ukuran RX/TY melebihi panjang 1/2 FA sedikit tapi ini perlu agar geometri tetap homogen dan simulasi tetap valid
-0.0 1.25984 2.51968 3.77952 5.03936 6.2992 7.55904 8.81888 10.07872 11.33856 / TY
+0.0 0.62992 1.88976 3.1496 4.40944 5.66928 6.92912 8.18896 9.4488 10.70864 / RX  
+0.0 0.62992 1.88976 3.1496 4.40944 5.66928 6.92912 8.18896 9.4488 10.70864 / TY
 31 3 1 / Plot Geometry
 3 / NMAT
 FP01A010 0 0 0.0 0.0 0.0 / 1.6% U
@@ -431,8 +431,8 @@ AP02
 7 5 5 5 5 5 5 5 5 / T-R, thimble: 1,2,3,4; fuel: 5,6,7; BP: 8
 8(1) / R-R
 2 2 2 2 1 1 1 3 / M-R
-0.0 1.25984 2.51968 3.77952 5.03936 6.2992 7.55904 8.81888 10.07872 11.33856 / RX, sesuai pitch 1,25984 cm dari BEAVRS, ukuran RX/TY melebihi panjang 1/2 FA sedikit tapi ini perlu agar geometri tetap homogen dan simulasi tetap valid
-0.0 1.25984 2.51968 3.77952 5.03936 6.2992 7.55904 8.81888 10.07872 11.33856 / TY
+0.0 0.62992 1.88976 3.1496 4.40944 5.66928 6.92912 8.18896 9.4488 10.70864 / RX  
+0.0 0.62992 1.88976 3.1496 4.40944 5.66928 6.92912 8.18896 9.4488 10.70864 / TY
 31 3 1 / Plot Geometry
 3 / NMAT
 FP02A010 0 0 0.0 0.0 0.0 / 2.4% U
@@ -456,8 +456,8 @@ AP03
 7 5 5 5 5 5 5 5 5 / T-R, thimble: 1,2,3,4; fuel: 5,6,7; BP: 8
 8(1) / R-R
 2 2 2 2 1 1 1 3 / M-R
-0.0 1.25984 2.51968 3.77952 5.03936 6.2992 7.55904 8.81888 10.07872 11.33856 / RX, sesuai pitch 1,25984 cm dari BEAVRS, ukuran RX/TY melebihi panjang 1/2 FA sedikit tapi ini perlu agar geometri tetap homogen dan simulasi tetap valid
-0.0 1.25984 2.51968 3.77952 5.03936 6.2992 7.55904 8.81888 10.07872 11.33856 / TY
+0.0 0.62992 1.88976 3.1496 4.40944 5.66928 6.92912 8.18896 9.4488 10.70864 / RX  
+0.0 0.62992 1.88976 3.1496 4.40944 5.66928 6.92912 8.18896 9.4488 10.70864 / TY
 31 3 1 / Plot Geometry
 3 / NMAT
 FP03A010 0 0 0.0 0.0 0.0 / 3.1% U
