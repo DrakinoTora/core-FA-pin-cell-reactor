@@ -340,7 +340,7 @@ XO060000  0 0  2.4254E-02    /2 O-16
 0    / no plot
 ****** Enter one blank line to terminate repeatation on calculation cases
 *------------------------------------------------------------------------------------------ 03 ----------------------------
-FP04 : Thimble (A4)
+FP04 : Guide-tube (A4)
 UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 1 2   1 4 3 -2 1   0 0 0 0 1   2 1 0 0 0 / SRAC CONTROL
 1.000E-20 / Geometrical buckling for P1/B1 calculation
@@ -350,13 +350,13 @@ UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 2 3 3 3 3  /  R-S
 3(1)             /  X-R
 1 2 3          /  M-R
-0.0  0.226  0.320  0.392  0.400  0.457  0.544  0.619  0.686    / RX (menggunakan P/D 1.5)
+0.0  0.324  0.458  0.561  0.602  0.624  0.645  0.666  0.686    / RX (menggunakan P/D 1.5)
 ****** Input for material specification*****************************
 3 / NMAT
 FU04X01X  0 2  573.15  1.123    0.0  / 1 : Tabung Instrumen
 XH01H000  0 0  4.8507E-02    /1 H-1
 XO060000  0 0  2.4254E-02    /2 O-16
-CL04X03X  0 25  598.15  0.081     0.0  / 2 : Cladding Zirconium-Alloy
+CL04X02X  0 25  598.15  0.081     0.0  / 2 : Cladding Zirconium-Alloy
 XCR00000  0 0  3.2962E-06       /1 Cr-50
 XCR20000  0 0  6.3564E-05       /2 Cr-52
 XCR30000  0 0  7.2076E-06       /3 Cr-53
@@ -401,31 +401,31 @@ XO060000  0 0  2.4254E-02    /2 O-16
 0    / no plot
 ****** Enter one blank line to terminate repeatation on calculation cases
 *------------------------------------------------------------------------------------------ 04 ----------------------------
-FP05 : Thimble (A4)
+FP05 : Instrument-tube (A4)
 UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 1 2   1 4 3 -2 1   0 0 0 0 1   2 1 0 0 0 / SRAC CONTROL
 1.000E-20 / Geometrical buckling for P1/B1 calculation
 ***** Input for PIJ (Collision Probability Method)
 4 8 8 5 1   1 8 0 0 0   5 0 10 15 0   0 45 0         / Pij Control
 0 50 50 5 5 5 -1  0.0001 0.00001 0.001 1.0 10. 0.5  / PIJ Block-2
-1 1 2 3 3 4 5 5 5  /  R-S
+1 1 2 3 3 4 5 5   /  R-S
 5(1)             /  X-R
 1 2 3 4 5           /  M-R
-0.0  0.226  0.320  0.392  0.400  0.457  0.544  0.619  0.686    / RX (menggunakan P/D 1.5)
+0.0  0.309  0.437  0.484  0.524  0.561  0.602  0.645  0.686    / RX (menggunakan P/D 1.5)
 ****** Input for material specification*****************************
 5 / NMAT
-FU05X01X  0 6  573.15  1.123    0.0  / 1 : Air
-*XAR00000  0 0  7.8730E-09    /1 Ar-36
-*XAR80000  0 0  1.4844E-09    /2 Ar-38
-XAR00000  0 0  2.3506E-06    /3 Ar-40
-XC020000  0 0  6.7539E-08    /4 C-12
-*XC030000  0 0  7.5658E-10    /5 C-13
-XN040000  0 0  1.9680E-04    /6 N-14
-XN050000  0 0  7.2354E-07    /7 N-15
-XO060000  0 0  5.2866E-05    /8 O-16
-XO070000  0 0  2.0084E-08    /9 O-17
-*XO080000  0 0  1.0601E-07    /10 O-18
-CL05X03X  0 25  598.15  0.081     0.0  / 2 : Cladding Zirconium-Alloy
+FU05X01X  0 7  573.15  0.874    0.0  / 1 : Air
+XAR60000  0 0  7.8730E-09       /1 Ar-36
+*XAR80000  0 0  1.4844e-09       /2 Ar-38
+XAR00000  0 0  2.3506E-06       /3 Ar-40
+XC020000  0 0  6.7539E-08       /4 C-12
+*XC030000  0 0  7.5658E-10       /5 C-13
+XN040000  0 0  1.9680E-04       /6 N-14
+XN050000  0 0  7.2354E-07       /7 N-15
+XO060000  0 0  5.2866E-05       /8 O-16
+XO070000  0 0  2.0084E-08       /9 O-17
+*XO080000  0 0  1.0601E-07       /10 O-18
+CL05X02X  0 25  598.15  0.094     0.0  / 2 : Cladding Zirconium-Alloy
 XCR00000  0 0  3.2962E-06       /1 Cr-50
 XCR20000  0 0  6.3564E-05       /2 Cr-52
 XCR30000  0 0  7.2076E-06       /3 Cr-53
@@ -452,10 +452,10 @@ XZR10000  0 0  4.7601E-03       /23 Zr-91
 XZR20000  0 0  7.2759E-03       /24 Zr-92
 XZR40000  0 0  7.3734E-03       /25 Zr-94
 XZR60000  0 0  1.1879E-03       /26 Zr-96
-WT05X03X  0 2  573.15  0.168      0.0  / 3 : Moderator Water
+WT05X03X  0 2  573.15  0.155      0.0  / 3 : Moderator Water
 XH01H000  0 0  4.8507E-02    /1 H-1
 XO060000  0 0  2.4254E-02    /2 O-16
-CL15X03X  0 25  598.15  0.081     0.0  / 2 : Cladding Zirconium-Alloy
+CL15X04X  0 25  598.15  0.081     0.0  / 4 : Cladding Zirconium-Alloy
 XCR00000  0 0  3.2962E-06       /1 Cr-50
 XCR20000  0 0  6.3564E-05       /2 Cr-52
 XCR30000  0 0  7.2076E-06       /3 Cr-53
@@ -482,7 +482,7 @@ XZR10000  0 0  4.7601E-03       /23 Zr-91
 XZR20000  0 0  7.2759E-03       /24 Zr-92
 XZR40000  0 0  7.3734E-03       /25 Zr-94
 XZR60000  0 0  1.1879E-03       /26 Zr-96
-MO05X03X  0 2  573.15  0.168      0.0  / 3 : Moderator Water
+MO05X05X  0 2  573.15  0.168      0.0  / 5 : Moderator Water
 XH01H000  0 0  4.8507E-02    /1 H-1
 XO060000  0 0  2.4254E-02    /2 O-16
 ****** Input for cell burn-up calculation (when IC20=1)
