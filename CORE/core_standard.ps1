@@ -77,7 +77,7 @@ $SRAC_DIR = "C:\SRACW\SRAC"
 $LMN = "SRAC.exe"
 $BRN = "u4cm6fp50bp16T"
 $ODR = "$SRAC_DIR\smpl\outp"
-$Case = "core_standard"
+$Case = "fa_standard"
 $PDSD = "$SRAC_DIR\tmp"
 
 #
@@ -340,7 +340,7 @@ XO060000  0 0  2.4254E-02    /2 O-16
 0    / no plot
 ****** Enter one blank line to terminate repeatation on calculation cases
 *------------------------------------------------------------------------------------------ 03 ----------------------------
-FP04 : Thimble (A4)
+FP04 : Guide-tube (A4)
 UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 1 2   1 4 3 -2 1   0 0 0 0 1   2 1 0 0 0 / SRAC CONTROL
 1.000E-20 / Geometrical buckling for P1/B1 calculation
@@ -350,13 +350,13 @@ UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 2 3 3 3 3  /  R-S
 3(1)             /  X-R
 1 2 3          /  M-R
-0.0  0.226  0.320  0.392  0.400  0.457  0.544  0.619  0.686    / RX (menggunakan P/D 1.5)
+0.0  0.324  0.458  0.561  0.602  0.624  0.645  0.666  0.686    / RX (menggunakan P/D 1.5)
 ****** Input for material specification*****************************
 3 / NMAT
 FU04X01X  0 2  573.15  1.123    0.0  / 1 : Tabung Instrumen
 XH01H000  0 0  4.8507E-02    /1 H-1
 XO060000  0 0  2.4254E-02    /2 O-16
-CL04X03X  0 25  598.15  0.081     0.0  / 2 : Cladding Zirconium-Alloy
+CL04X02X  0 25  598.15  0.081     0.0  / 2 : Cladding Zirconium-Alloy
 XCR00000  0 0  3.2962E-06       /1 Cr-50
 XCR20000  0 0  6.3564E-05       /2 Cr-52
 XCR30000  0 0  7.2076E-06       /3 Cr-53
@@ -401,31 +401,31 @@ XO060000  0 0  2.4254E-02    /2 O-16
 0    / no plot
 ****** Enter one blank line to terminate repeatation on calculation cases
 *------------------------------------------------------------------------------------------ 04 ----------------------------
-FP05 : Thimble (A4)
+FP05 : Instrument-tube (A4)
 UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 1 2   1 4 3 -2 1   0 0 0 0 1   2 1 0 0 0 / SRAC CONTROL
 1.000E-20 / Geometrical buckling for P1/B1 calculation
 ***** Input for PIJ (Collision Probability Method)
 4 8 8 5 1   1 8 0 0 0   5 0 10 15 0   0 45 0         / Pij Control
 0 50 50 5 5 5 -1  0.0001 0.00001 0.001 1.0 10. 0.5  / PIJ Block-2
-1 1 2 3 3 4 5 5 5  /  R-S
+1 1 2 3 3 4 5 5   /  R-S
 5(1)             /  X-R
 1 2 3 4 5           /  M-R
-0.0  0.226  0.320  0.392  0.400  0.457  0.544  0.619  0.686    / RX (menggunakan P/D 1.5)
+0.0  0.309  0.437  0.484  0.524  0.561  0.602  0.645  0.686    / RX (menggunakan P/D 1.5)
 ****** Input for material specification*****************************
 5 / NMAT
-FU05X01X  0 6  573.15  1.123    0.0  / 1 : Air
-*XAR00000  0 0  7.8730E-09    /1 Ar-36
-*XAR80000  0 0  1.4844E-09    /2 Ar-38
-XAR00000  0 0  2.3506E-06    /3 Ar-40
-XC020000  0 0  6.7539E-08    /4 C-12
-*XC030000  0 0  7.5658E-10    /5 C-13
-XN040000  0 0  1.9680E-04    /6 N-14
-XN050000  0 0  7.2354E-07    /7 N-15
-XO060000  0 0  5.2866E-05    /8 O-16
-XO070000  0 0  2.0084E-08    /9 O-17
-*XO080000  0 0  1.0601E-07    /10 O-18
-CL05X03X  0 25  598.15  0.081     0.0  / 2 : Cladding Zirconium-Alloy
+FU05X01X  0 7  573.15  0.874    0.0  / 1 : Air
+XAR60000  0 0  7.8730E-09       /1 Ar-36
+*XAR80000  0 0  1.4844e-09       /2 Ar-38
+XAR00000  0 0  2.3506E-06       /3 Ar-40
+XC020000  0 0  6.7539E-08       /4 C-12
+*XC030000  0 0  7.5658E-10       /5 C-13
+XN040000  0 0  1.9680E-04       /6 N-14
+XN050000  0 0  7.2354E-07       /7 N-15
+XO060000  0 0  5.2866E-05       /8 O-16
+XO070000  0 0  2.0084E-08       /9 O-17
+*XO080000  0 0  1.0601E-07       /10 O-18
+CL05X02X  0 25  598.15  0.094     0.0  / 2 : Cladding Zirconium-Alloy
 XCR00000  0 0  3.2962E-06       /1 Cr-50
 XCR20000  0 0  6.3564E-05       /2 Cr-52
 XCR30000  0 0  7.2076E-06       /3 Cr-53
@@ -452,10 +452,10 @@ XZR10000  0 0  4.7601E-03       /23 Zr-91
 XZR20000  0 0  7.2759E-03       /24 Zr-92
 XZR40000  0 0  7.3734E-03       /25 Zr-94
 XZR60000  0 0  1.1879E-03       /26 Zr-96
-WT05X03X  0 2  573.15  0.168      0.0  / 3 : Moderator Water
+WT05X03X  0 2  573.15  0.155      0.0  / 3 : Moderator Water
 XH01H000  0 0  4.8507E-02    /1 H-1
 XO060000  0 0  2.4254E-02    /2 O-16
-CL15X03X  0 25  598.15  0.081     0.0  / 2 : Cladding Zirconium-Alloy
+CL15X04X  0 25  598.15  0.081     0.0  / 4 : Cladding Zirconium-Alloy
 XCR00000  0 0  3.2962E-06       /1 Cr-50
 XCR20000  0 0  6.3564E-05       /2 Cr-52
 XCR30000  0 0  7.2076E-06       /3 Cr-53
@@ -482,7 +482,7 @@ XZR10000  0 0  4.7601E-03       /23 Zr-91
 XZR20000  0 0  7.2759E-03       /24 Zr-92
 XZR40000  0 0  7.3734E-03       /25 Zr-94
 XZR60000  0 0  1.1879E-03       /26 Zr-96
-MO05X03X  0 2  573.15  0.168      0.0  / 3 : Moderator Water
+MO05X05X  0 2  573.15  0.168      0.0  / 5 : Moderator Water
 XH01H000  0 0  4.8507E-02    /1 H-1
 XO060000  0 0  2.4254E-02    /2 O-16
 ****** Input for cell burn-up calculation (when IC20=1)
@@ -577,48 +577,6 @@ FP03A010 0 0 0.0 0.0 0.0 / 3.1% U
 FP04A010 0 0 0.0 0.0 0.0 / Guide-tube
 FP05A010 0 0 0.0 0.0 0.0 / Instrument-tube
 ****** Enter one blank line to terminate repeatation on calculation cases
-COR0 : Case name (A4)
-1/4 core
-0 0 0 1 0  1 0 0 0 1  0 5 0 0 2  0 1 0 0 0 / SRAC CONTROL 
-1.000E-20  / BUCKLING 
-3 0 -1     / NM jumlah komponen digunakan adalah 3 yang meliputi pin bahan bakar dengan pengayaan berbeda, NXR, ID mengikuti setting SRAC control yakni D1 IC17 = +-1 
-1 1        / IXXY IDELAY (Calculate Kinetic Parameters)
-5.375 cm mesh size in each direction
-EPS(FLUX) < 1.0E-4, EPS(KEFF) < 1.0E-5, ZONE 4:BLACKNESS
-001
-* 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
-  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
-  1  0  0  0  0  0  0  0  0  0  0  1  1  1  0  0  0  0  0  0  0  0  0  0
-999
-  0.0
-003
-  0  0  0  0  6  0  0  0  0  0  1  0  0  1  0  0  4  1  0  0  0  0  0  0
-  0.0001    0.00001
-  0.0       0.0         0.01         1.0         0.2500
-004 
-  2    10.75  4    21.50  4    21.50  4    21.50  4    21.50  4    21.50
-  4    21.50  4    21.50  0
-  4    21.50  4    21.50  4    21.50  4    21.50  4    21.50  4    21.50
-  4    21.50  2    10.75  0
-005
-  1  2  1  2  1  2  1  3
-  2  1  2  1  2  1  3  3
-  1  2  1  2  1  2  1  3
-  2  1  2  1  2  1  3  3
-  1  2  1  2  2  2  3  4
-  2  1  2  1  2  3  3  4
-  1  3  1  3  3  3  4  4
-  3  3  3  3  4  4  4  4
-008
- -2  1  1
-999
-
-1  2  3  / Material No by zone
-3       / NMAT for CORE
-AS01A010  0 0 0.0  0.0  0.0   / UO2 1.6%
-AS02A010  0 0 0.0  0.0  0.0   / UO2 2.4%
-AS03A010  0 0 0.0  0.0  0.0   / UO2 3.1%
-******Enter one blank line to terminate
 
 "@
 
