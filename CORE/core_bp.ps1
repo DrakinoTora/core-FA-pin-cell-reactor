@@ -340,7 +340,7 @@ XO060000  0 0  2.4254E-02    /2 O-16
 0    / no plot
 ****** Enter one blank line to terminate repeatation on calculation cases
 *------------------------------------------------------------------------------------------ 03 ----------------------------
-FP04 : Thimble (A4)
+FP04 : Guide-tube (A4)
 UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 1 2   1 4 3 -2 1   0 0 0 0 1   2 1 0 0 0 / SRAC CONTROL
 1.000E-20 / Geometrical buckling for P1/B1 calculation
@@ -350,13 +350,13 @@ UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 2 3 3 3 3  /  R-S
 3(1)             /  X-R
 1 2 3          /  M-R
-0.0  0.226  0.320  0.392  0.400  0.457  0.544  0.619  0.686    / RX (menggunakan P/D 1.5)
+0.0  0.324  0.458  0.561  0.602  0.624  0.645  0.666  0.686    / RX (menggunakan P/D 1.5)
 ****** Input for material specification*****************************
 3 / NMAT
 FU04X01X  0 2  573.15  1.123    0.0  / 1 : Tabung Instrumen
 XH01H000  0 0  4.8507E-02    /1 H-1
 XO060000  0 0  2.4254E-02    /2 O-16
-CL04X03X  0 25  598.15  0.081     0.0  / 2 : Cladding Zirconium-Alloy
+CL04X02X  0 25  598.15  0.081     0.0  / 2 : Cladding Zirconium-Alloy
 XCR00000  0 0  3.2962E-06       /1 Cr-50
 XCR20000  0 0  6.3564E-05       /2 Cr-52
 XCR30000  0 0  7.2076E-06       /3 Cr-53
@@ -401,8 +401,107 @@ XO060000  0 0  2.4254E-02    /2 O-16
 0    / no plot
 ****** Enter one blank line to terminate repeatation on calculation cases
 *------------------------------------------------------------------------------------------ 04 ----------------------------
-FP05 : Thimble (A4)
-Tabung instrumen dan batang kendali diisi dengan air
+FP05 : Instrument-tube (A4)
+UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
+1 1 1 1 2   1 4 3 -2 1   0 0 0 0 1   2 1 0 0 0 / SRAC CONTROL
+1.000E-20 / Geometrical buckling for P1/B1 calculation
+***** Input for PIJ (Collision Probability Method)
+4 8 8 5 1   1 8 0 0 0   5 0 10 15 0   0 45 0         / Pij Control
+0 50 50 5 5 5 -1  0.0001 0.00001 0.001 1.0 10. 0.5  / PIJ Block-2
+1 1 2 3 3 4 5 5   /  R-S
+5(1)             /  X-R
+1 2 3 4 5           /  M-R
+0.0  0.309  0.437  0.484  0.524  0.561  0.602  0.645  0.686    / RX (menggunakan P/D 1.5)
+****** Input for material specification*****************************
+5 / NMAT
+FU05X01X  0 7  573.15  0.874    0.0  / 1 : Air
+XAR60000  0 0  7.8730E-09       /1 Ar-36
+*XAR80000  0 0  1.4844e-09       /2 Ar-38
+XAR00000  0 0  2.3506E-06       /3 Ar-40
+XC020000  0 0  6.7539E-08       /4 C-12
+*XC030000  0 0  7.5658E-10       /5 C-13
+XN040000  0 0  1.9680E-04       /6 N-14
+XN050000  0 0  7.2354E-07       /7 N-15
+XO060000  0 0  5.2866E-05       /8 O-16
+XO070000  0 0  2.0084E-08       /9 O-17
+*XO080000  0 0  1.0601E-07       /10 O-18
+CL05X02X  0 25  598.15  0.094     0.0  / 2 : Cladding Zirconium-Alloy
+XCR00000  0 0  3.2962E-06       /1 Cr-50
+XCR20000  0 0  6.3564E-05       /2 Cr-52
+XCR30000  0 0  7.2076E-06       /3 Cr-53
+XCR40000  0 0  1.7941E-06       /4 Cr-54
+XFE40000  0 0  8.6698E-06       /5 Fe-54
+XFE60000  0 0  1.3610E-04       /6 Fe-56
+XFE70000  0 0  3.1431E-06       /7 Fe-57
+XFE80000  0 0  4.1829E-07       /8 Fe-58
+XO060000  0 0  3.0744E-04    /9 O-16
+XO070000  0 0  1.1680E-07    /10 O-17
+*XO080000  0 0  6.1648E-07    /11 O-18
+XSNC0000  0 0  4.6735E-06       /12 Sn-112
+XSNE0000  0 0  3.1799E-06       /13 Sn-114
+XSN50000  0 0  1.6381E-06       /14 Sn-115
+XSN60000  0 0  7.0055E-05       /15 Sn-116
+XSN70000  0 0  3.7003E-05       /16 Sn-117
+XSN80000  0 0  1.1669E-04       /17 Sn-118
+XSN90000  0 0  4.1387E-05       /18 Sn-119
+XSN00000  0 0  1.5697E-04       /19 Sn-120
+XSN20000  0 0  2.2308E-05       /20 Sn-122
+XSN40000  0 0  2.7897E-05       /21 Sn-124
+XZR00000  0 0  2.1828E-02       /22 Zr-90
+XZR10000  0 0  4.7601E-03       /23 Zr-91
+XZR20000  0 0  7.2759E-03       /24 Zr-92
+XZR40000  0 0  7.3734E-03       /25 Zr-94
+XZR60000  0 0  1.1879E-03       /26 Zr-96
+WT05X03X  0 2  573.15  0.155      0.0  / 3 : Moderator Water
+XH01H000  0 0  4.8507E-02    /1 H-1
+XO060000  0 0  2.4254E-02    /2 O-16
+CL15X04X  0 25  598.15  0.081     0.0  / 4 : Cladding Zirconium-Alloy
+XCR00000  0 0  3.2962E-06       /1 Cr-50
+XCR20000  0 0  6.3564E-05       /2 Cr-52
+XCR30000  0 0  7.2076E-06       /3 Cr-53
+XCR40000  0 0  1.7941E-06       /4 Cr-54
+XFE40000  0 0  8.6698E-06       /5 Fe-54
+XFE60000  0 0  1.3610E-04       /6 Fe-56
+XFE70000  0 0  3.1431E-06       /7 Fe-57
+XFE80000  0 0  4.1829E-07       /8 Fe-58
+XO060000  0 0  3.0744E-04    /9 O-16
+XO070000  0 0  1.1680E-07    /10 O-17
+*XO080000  0 0  6.1648E-07    /11 O-18
+XSNC0000  0 0  4.6735E-06       /12 Sn-112
+XSNE0000  0 0  3.1799E-06       /13 Sn-114
+XSN50000  0 0  1.6381E-06       /14 Sn-115
+XSN60000  0 0  7.0055E-05       /15 Sn-116
+XSN70000  0 0  3.7003E-05       /16 Sn-117
+XSN80000  0 0  1.1669E-04       /17 Sn-118
+XSN90000  0 0  4.1387E-05       /18 Sn-119
+XSN00000  0 0  1.5697E-04       /19 Sn-120
+XSN20000  0 0  2.2308E-05       /20 Sn-122
+XSN40000  0 0  2.7897E-05       /21 Sn-124
+XZR00000  0 0  2.1828E-02       /22 Zr-90
+XZR10000  0 0  4.7601E-03       /23 Zr-91
+XZR20000  0 0  7.2759E-03       /24 Zr-92
+XZR40000  0 0  7.3734E-03       /25 Zr-94
+XZR60000  0 0  1.1879E-03       /26 Zr-96
+MO05X05X  0 2  573.15  0.168      0.0  / 5 : Moderator Water
+XH01H000  0 0  4.8507E-02    /1 H-1
+XO060000  0 0  2.4254E-02    /2 O-16
+****** Input for cell burn-up calculation (when IC20=1)
+*  12 1 1 0 0  0 0 0 0 0  10(0)   / IBC
+*  12(1.790E-04)   / Power level  (MWt/cm)
+*  12(1.790E-04) 6(0) 6(1.790E-04)  / Power level  (MWt/cm)
+*  0.10E+03  1.00E+03  2.50E+03  5.00E+03  7.50E+03  1.00E+04
+*  1.25E+04  1.50E+04  1.75E+04  2.00E+04  2.25E+04  2.50E+04
+*        -10       -10      -10        -10      -10       -10
+*  2.75E+04  3.00E+04  3.25E+04  3.50E+04  3.75E+04  4.00E+04
+*  4.25E+04  4.50E+04  4.75E+04  5.00E+04  5.25E+04  5.50E+04
+*  5.75E+04  6.00E+04  6.25E+04  6.50E+04  6.75E+04  7.00E+04
+*  7.25E+04  /  keff calculation is not done at the last step 
+****** Input for PEACO option
+0    / no plot
+****** Enter one blank line to terminate repeatation on calculation cases
+*------------------------------------------------------------------------------------------ 05 ----------------------------
+FP06 : BP-tube(A4)
+UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
 1 1 1 1 2   1 4 3 -2 1   0 0 0 0 1   2 1 0 0 0 / SRAC CONTROL
 1.000E-20 / Geometrical buckling for P1/B1 calculation
 ***** Input for PIJ (Collision Probability Method)
@@ -411,7 +510,7 @@ Tabung instrumen dan batang kendali diisi dengan air
 1 2 3 4 5 6 7 8 9 9  /  R-S
 9(1)           /  X-R
 1 2 3 4 5 6 7 8 9  /  M-R
-0.0  0.214  0.231  0.241  0.428  0.437  0.484  0.561  0.602  0.616  0.686  / RX
+0.0  0.214  0.231  0.241  0.428  0.437  0.484  0.561  0.602  0.616  0.63  / RX
 ****** Input for material specification
 9 / NMAT
 AIR0X01X  0 7  573.15  0.428    0.0  / 1 : Udara dalam tabung
@@ -475,12 +574,33 @@ XSI00000  2 0  3.1893E-04       /16 SI
 WAT0X07X  0 2  573.15  0.2884968778      0.0  / 7 : H2O bagian dalam Zircaloy
 XH01H000  0 0  4.85485E-02    /1 H1
 XO060000  0 0  2.42742E-02     /2
-ZIRCX08X  0 5  598.15  0.1570727426    0.0  / 8 : Cladding Zirconium-Alloy, berdasarkan perhitungan, tidak mengikuti data Zircaloy-4 BEAVR karena tidak dicantum elemen natural spesifik ZRN, SNN, dst.
-XZRN0000  2 0  4.2540E-02       /1 ZRN
-XSNN0000  2 0  4.8253E-04       /2 SNN
-XFEN0000  2 0  1.4854E-04       /3 FEN
-XCRN0000  2 0  7.5986E-05       /4 CRN
-XHFN0000  2 0  2.2133E-06       /5 HFN
+ZIRCX08X  0 25  598.15  0.1570727426    0.0  / 8 : Cladding Zirconium-Alloy,
+XCR00000  0 0  3.2962E-06       /1 Cr-50
+XCR20000  0 0  6.3564E-05       /2 Cr-52
+XCR30000  0 0  7.2076E-06       /3 Cr-53
+XCR40000  0 0  1.7941E-06       /4 Cr-54
+XFE40000  0 0  8.6698E-06       /5 Fe-54
+XFE60000  0 0  1.3610E-04       /6 Fe-56
+XFE70000  0 0  3.1431E-06       /7 Fe-57
+XFE80000  0 0  4.1829E-07       /8 Fe-58
+XO060000  0 0  3.0744E-04    /9 O-16
+XO070000  0 0  1.1680E-07    /10 O-17
+*XO080000  0 0  6.1648E-07    /11 O-18
+XSNC0000  0 0  4.6735E-06       /12 Sn-112
+XSNE0000  0 0  3.1799E-06       /13 Sn-114
+XSN50000  0 0  1.6381E-06       /14 Sn-115
+XSN60000  0 0  7.0055E-05       /15 Sn-116
+XSN70000  0 0  3.7003E-05       /16 Sn-117
+XSN80000  0 0  1.1669E-04       /17 Sn-118
+XSN90000  0 0  4.1387E-05       /18 Sn-119
+XSN00000  0 0  1.5697E-04       /19 Sn-120
+XSN20000  0 0  2.2308E-05       /20 Sn-122
+XSN40000  0 0  2.7897E-05       /21 Sn-124
+XZR00000  0 0  2.1828E-02       /22 Zr-90
+XZR10000  0 0  4.7601E-03       /23 Zr-91
+XZR20000  0 0  7.2759E-03       /24 Zr-92
+XZR40000  0 0  7.3734E-03       /25 Zr-94
+XZR60000  0 0  1.1879E-03       /26 Zr-96
 MODEX09X  0 2  573.15  0.1095875543      0.0  / 9 : Moderator Water
 XH01H000  0 0  4.85485E-02    /1 H1
 XO060000  0 0  2.42742E-02     /2
@@ -498,106 +618,7 @@ XO060000  0 0  2.42742E-02     /2
 ****** Input for PEACO option
 0    / no plot
 ****** Enter one blank line to terminate repeatation on calculation cases
-*------------------------------------------------------------------------------------------ 04 ----------------------------
-FP06 : BP-tube(A4)
-UO2 pin cell problem in LWR next generation fuel benchmark (No burn-up)
-1 1 1 1 2   1 4 3 -2 1   0 0 0 0 1   2 1 0 0 0 / SRAC CONTROL
-1.000E-20 / Geometrical buckling for P1/B1 calculation
-***** Input for PIJ (Collision Probability Method)
-4 8 8 5 1   1 8 0 0 0   5 0 10 15 0   0 45 0         / Pij Control
-0 50 50 5 5 5 -1  0.0001 0.00001 0.001 1.0 10. 0.5  / PIJ Block-2
-1 1 2 3 3 4 5 5 5  /  R-S
-5(1)             /  X-R
-1 2 3 4 5           /  M-R
-0.0  0.226  0.320  0.392  0.400  0.457  0.544  0.619  0.686    / RX (menggunakan P/D 1.5)
-****** Input for material specification*****************************
-5 / NMAT
-FU06X01X  0 6  573.15  1.123    0.0  / 1 : Air
-*XAR00000  0 0  7.8730E-09    /1 Ar-36
-*XAR80000  0 0  1.4844E-09    /2 Ar-38
-XAR00000  0 0  2.3506E-06    /3 Ar-40
-XC020000  0 0  6.7539E-08    /4 C-12
-*XC030000  0 0  7.5658E-10    /5 C-13
-XN040000  0 0  1.9680E-04    /6 N-14
-XN050000  0 0  7.2354E-07    /7 N-15
-XO060000  0 0  5.2866E-05    /8 O-16
-XO070000  0 0  2.0084E-08    /9 O-17
-*XO080000  0 0  1.0601E-07    /10 O-18
-CL06X02X  0 25  598.15  0.081     0.0  / 2 : Cladding Zirconium-Alloy
-XCR00000  0 0  3.2962E-06       /1 Cr-50
-XCR20000  0 0  6.3564E-05       /2 Cr-52
-XCR30000  0 0  7.2076E-06       /3 Cr-53
-XCR40000  0 0  1.7941E-06       /4 Cr-54
-XFE40000  0 0  8.6698E-06       /5 Fe-54
-XFE60000  0 0  1.3610E-04       /6 Fe-56
-XFE70000  0 0  3.1431E-06       /7 Fe-57
-XFE80000  0 0  4.1829E-07       /8 Fe-58
-XO060000  0 0  3.0744E-04    /9 O-16
-XO070000  0 0  1.1680E-07    /10 O-17
-*XO080000  0 0  6.1648E-07    /11 O-18
-XSNC0000  0 0  4.6735E-06       /12 Sn-112
-XSNE0000  0 0  3.1799E-06       /13 Sn-114
-XSN50000  0 0  1.6381E-06       /14 Sn-115
-XSN60000  0 0  7.0055E-05       /15 Sn-116
-XSN70000  0 0  3.7003E-05       /16 Sn-117
-XSN80000  0 0  1.1669E-04       /17 Sn-118
-XSN90000  0 0  4.1387E-05       /18 Sn-119
-XSN00000  0 0  1.5697E-04       /19 Sn-120
-XSN20000  0 0  2.2308E-05       /20 Sn-122
-XSN40000  0 0  2.7897E-05       /21 Sn-124
-XZR00000  0 0  2.1828E-02       /22 Zr-90
-XZR10000  0 0  4.7601E-03       /23 Zr-91
-XZR20000  0 0  7.2759E-03       /24 Zr-92
-XZR40000  0 0  7.3734E-03       /25 Zr-94
-XZR60000  0 0  1.1879E-03       /26 Zr-96
-WT06X03X  0 2  573.15  0.168      0.0  / 3 : Moderator Water
-XH01H000  0 0  4.8507E-02    /1 H-1
-XO060000  0 0  2.4254E-02    /2 O-16
-CL16X04X  0 25  598.15  0.081     0.0  / 4 : Cladding Zirconium-Alloy
-XCR00000  0 0  3.2962E-06       /1 Cr-50
-XCR20000  0 0  6.3564E-05       /2 Cr-52
-XCR30000  0 0  7.2076E-06       /3 Cr-53
-XCR40000  0 0  1.7941E-06       /4 Cr-54
-XFE40000  0 0  8.6698E-06       /5 Fe-54
-XFE60000  0 0  1.3610E-04       /6 Fe-56
-XFE70000  0 0  3.1431E-06       /7 Fe-57
-XFE80000  0 0  4.1829E-07       /8 Fe-58
-XO060000  0 0  3.0744E-04    /9 O-16
-XO070000  0 0  1.1680E-07    /10 O-17
-*XO080000  0 0  6.1648E-07    /11 O-18
-XSNC0000  0 0  4.6735E-06       /12 Sn-112
-XSNE0000  0 0  3.1799E-06       /13 Sn-114
-XSN50000  0 0  1.6381E-06       /14 Sn-115
-XSN60000  0 0  7.0055E-05       /15 Sn-116
-XSN70000  0 0  3.7003E-05       /16 Sn-117
-XSN80000  0 0  1.1669E-04       /17 Sn-118
-XSN90000  0 0  4.1387E-05       /18 Sn-119
-XSN00000  0 0  1.5697E-04       /19 Sn-120
-XSN20000  0 0  2.2308E-05       /20 Sn-122
-XSN40000  0 0  2.7897E-05       /21 Sn-124
-XZR00000  0 0  2.1828E-02       /22 Zr-90
-XZR10000  0 0  4.7601E-03       /23 Zr-91
-XZR20000  0 0  7.2759E-03       /24 Zr-92
-XZR40000  0 0  7.3734E-03       /25 Zr-94
-XZR60000  0 0  1.1879E-03       /26 Zr-96
-MO06X05X  0 2  573.15  0.168      0.0  / 5 : Moderator Water
-XH01H000  0 0  4.8507E-02    /1 H-1
-XO060000  0 0  2.4254E-02    /2 O-16
-****** Input for cell burn-up calculation (when IC20=1)
-*  12 1 1 0 0  0 0 0 0 0  10(0)   / IBC
-*  12(1.790E-04)   / Power level  (MWt/cm)
-*  12(1.790E-04) 6(0) 6(1.790E-04)  / Power level  (MWt/cm)
-*  0.10E+03  1.00E+03  2.50E+03  5.00E+03  7.50E+03  1.00E+04
-*  1.25E+04  1.50E+04  1.75E+04  2.00E+04  2.25E+04  2.50E+04
-*        -10       -10      -10        -10      -10       -10
-*  2.75E+04  3.00E+04  3.25E+04  3.50E+04  3.75E+04  4.00E+04
-*  4.25E+04  4.50E+04  4.75E+04  5.00E+04  5.25E+04  5.50E+04
-*  5.75E+04  6.00E+04  6.25E+04  6.50E+04  6.75E+04  7.00E+04
-*  7.25E+04  /  keff calculation is not done at the last step 
-****** Input for PEACO option
-0    / no plot
-****** Enter one blank line to terminate repeatation on calculation cases
-*------------------------------------------------------------------------------------------ 04 ----------------------------
+*------------------------------------------------------------------------------------------ 06 ----------------------------
 AS01 
 1/4 perangkat bahan bakar dengan bahan bakar pengayaan 1.6%
 1 0 0 1 0  1 0 0 0 1  0 1 0 0 2  0 1 0 0 0 / SRAC CONTROL ASSEMBLY
