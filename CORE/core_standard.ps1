@@ -77,7 +77,7 @@ $SRAC_DIR = "C:\SRACW\SRAC"
 $LMN = "SRAC.exe"
 $BRN = "u4cm6fp50bp16T"
 $ODR = "$SRAC_DIR\smpl\outp"
-$Case = "fa_standard"
+$Case = "core_standard"
 $PDSD = "$SRAC_DIR\tmp"
 
 #
@@ -499,7 +499,7 @@ XO060000  0 0  2.4254E-02    /2 O-16
 ****** Input for PEACO option
 0    / no plot
 ****** Enter one blank line to terminate repeatation on calculation cases
-*------------------------------------------------------------------------------------------ 04 ----------------------------
+*------------------------------------------------------------------------------------------ 05 ----------------------------
 AS01 
 1/4 perangkat bahan bakar dengan bahan bakar pengayaan 1.6%
 1 0 0 1 0  1 0 0 0 1  0 1 0 0 2  0 1 0 0 0 / SRAC CONTROL ASSEMBLY
@@ -577,6 +577,48 @@ FP03A010 0 0 0.0 0.0 0.0 / 3.1% U
 FP04A010 0 0 0.0 0.0 0.0 / Guide-tube
 FP05A010 0 0 0.0 0.0 0.0 / Instrument-tube
 ****** Enter one blank line to terminate repeatation on calculation cases
+COR0 : Case name (A4)
+1/4 core
+0 0 0 1 0  1 0 0 0 1  0 5 0 0 2  0 1 0 0 0 / SRAC CONTROL 
+1.000E-20  / BUCKLING 
+3 0 -1     / NM jumlah komponen digunakan adalah 3 yang meliputi pin bahan bakar dengan pengayaan berbeda, NXR, ID mengikuti setting SRAC control yakni D1 IC17 = +-1 
+1 1        / IXXY IDELAY (Calculate Kinetic Parameters)
+5.375 cm mesh size in each direction
+EPS(FLUX) < 1.0E-4, EPS(KEFF) < 1.0E-5, ZONE 4:BLACKNESS
+001
+* 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+  1  0  0  0  0  0  0  0  0  0  0  1  1  1  0  0  0  0  0  0  0  0  0  0
+999
+  0.0
+003
+  0  0  0  0  6  0  0  0  0  0  1  0  0  1  0  0  4  1  0  0  0  0  0  0
+  0.0001    0.00001
+  0.0       0.0         0.01         1.0         0.2500
+004 
+  2    10.75  4    21.50  4    21.50  4    21.50  4    21.50  4    21.50
+  4    21.50  4    21.50  0
+  4    21.50  4    21.50  4    21.50  4    21.50  4    21.50  4    21.50
+  4    21.50  2    10.75  0
+005
+  1  2  1  2  1  2  1  3
+  2  1  2  1  2  1  3  3
+  1  2  1  2  1  2  1  3
+  2  1  2  1  2  1  3  3
+  1  2  1  2  2  2  3  4
+  2  1  2  1  2  3  3  4
+  1  3  1  3  3  3  4  4
+  3  3  3  3  4  4  4  4
+008
+ -2  1  1
+999
+
+1  2  3  / Material No by zone
+3       / NMAT for CORE
+AS01A010  0 0 0.0  0.0  0.0   / UO2 1.6%
+AS02A010  0 0 0.0  0.0  0.0   / UO2 2.4%
+AS03A010  0 0 0.0  0.0  0.0   / UO2 3.1%
+******Enter one blank line to terminate
 
 "@
 
